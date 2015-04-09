@@ -1,0 +1,1595 @@
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@base <http://rdf.fm/Organization> .
+
+<http://rdf.fm/Organization> rdf:type owl:Ontology ;
+                                         
+                                         rdfs:label "FactMint Organization Schema"@en ;
+                                         
+                                         rdfs:comment """  FactMint data-pack
+  Copyright 2014 FactMint Ltd - info@factmint.com - all rights reserved
+ 
+  This software is shipped with an EULA describing the agreed
+  terms of usage. Unless required by applicable law or agreed 
+  to in writing by the copyright owner, this source code, 
+  binaries compiled from this source code and any other content 
+  supplied with this file (with the exception of source code 
+  supplied with a specific, contradictory licence) must not be
+  duplicated, distributed or altered in any way.
+  This software contains open source software but is not open 
+  source itself. All open source code is supplied with, and 
+  adheres to, its original licence.
+ 
+  This product includes software developed at The Apache 
+  Software Foundation (http://www.apache.org/).
+ 
+ Author(s): chris.scott@factmint.com
+            alex.parkes@factmint.com
+ """@en ;
+                                         
+                                         owl:versionInfo "0.2"@en ;
+                                                                                  
+                                         owl:imports <http://rdf.fm/Core> .
+
+###  Organization/Charity
+
+<#Charity> rdf:type 		owl:Class ;
+           rdfs:label 		"Charity"@en ;
+           rdfs:subClassOf 	<http://rdf.fm/Core#Organization> .
+
+
+
+###  Organization/Company
+
+<#Company> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "Company"@en ;
+                                              
+                                              rdfs:subClassOf <http://rdf.fm/Core#Organization> .
+
+
+
+###  Organization/Educational_Institute
+
+<#Educational_Institute> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:label "Educational Institute"@en ;
+                                                            
+                                                            rdfs:subClassOf <http://rdf.fm/Core#Organization> .
+
+
+
+###  Organization/Faith_Group
+
+<#Faith_Group> rdf:type owl:Class ;
+                                                  
+                                                  rdfs:label "Faith Group"@en ;
+                                                  
+                                                  rdfs:subClassOf <http://rdf.fm/Core#Organization> .
+
+
+
+###  Organization/Healthcare_Organization
+
+<#Healthcare_Organization> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:label "Healthcare Organization"@en ;
+                                                              
+                                                              rdfs:subClassOf <http://rdf.fm/Core#Organization> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service
+
+<#Political_Entity_or_Civil_Service> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:label "Political Entity or Civil Service"@en ;
+                                                                        
+                                                                        rdfs:subClassOf <http://rdf.fm/Core#Organization> .
+
+
+
+###  Organization/Society
+
+<#Society> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "Society"@en ;
+                                              
+                                              rdfs:subClassOf <http://rdf.fm/Core#Organization> .
+
+
+
+###  Organization/Sports_Club
+
+<#Sports_Club> rdf:type owl:Class ;
+                                                  
+                                                  rdfs:label "Sports Club"@en ;
+                                                  
+                                                  rdfs:subClassOf <http://rdf.fm/Core#Organization> .
+
+
+
+###  Organization/Transport_Facility
+
+<#Transport_Facility> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Transport Facility"@en ;
+                                                         
+                                                         rdfs:subClassOf <http://rdf.fm/Core#Organization> .
+
+
+
+###  Organization/Charity/Animal_Charity
+
+<#Animal_Charity> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:label "Animal Charity"@en ;
+                                                             
+                                                             rdfs:subClassOf <http://rdf.fm/Organization#Charity> .
+
+
+
+###  Organization/Charity/Culture_Charity
+
+<#Culture_Charity> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:label "Culture Charity"@en ;
+                                                              
+                                                              rdfs:subClassOf <http://rdf.fm/Organization#Charity> .
+
+
+
+###  Organization/Charity/Disaster_Relief_Charity
+
+<#Disaster_Relief_Charity> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:label "Disaster Relief Charity"@en ;
+                                                                      
+                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Charity> .
+
+
+
+###  Organization/Charity/Education_Charity
+
+<#Education_Charity> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:label "Education Charity"@en ;
+                                                                
+                                                                rdfs:subClassOf <http://rdf.fm/Organization#Charity> .
+
+
+
+###  Organization/Charity/Environmental_Charity
+
+<#Environmental_Charity> rdf:type owl:Class ;
+                                                                    
+                                                                    rdfs:label "Environmental Charity"@en ;
+                                                                    
+                                                                    rdfs:subClassOf <http://rdf.fm/Organization#Charity> .
+
+
+
+###  Organization/Charity/Health_Charity
+
+<#Health_Charity> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:label "Health Charity"@en ;
+                                                             
+                                                             rdfs:subClassOf <http://rdf.fm/Organization#Charity> .
+
+
+
+###  Organization/Charity/Welfare_Charity
+
+<#Welfare_Charity> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:label "Welfare Charity"@en ;
+                                                              
+                                                              rdfs:subClassOf <http://rdf.fm/Organization#Charity> .
+
+
+
+###  Organization/Company/Accommodation
+
+<#Accommodation> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:label "Accommodation Company"@en ;
+                                                            
+                                                            rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Agriculture
+
+<#Agriculture_Company> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:label "Agriculture Company"@en ;
+                                                          
+                                                          rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Automotive
+
+<#Automotive_Company> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Automotive Company"@en ;
+                                                         
+                                                         rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Catering
+
+<#Catering_Company> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:label "Catering Company"@en ;
+                                                       
+                                                       rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Communications
+
+<#Communications_Company> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:label "Communications Company"@en ;
+                                                             
+                                                             rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Construction
+
+<#Construction_Company> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:label "Construction Company"@en ;
+                                                           
+                                                           rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Domestic_Services
+
+<#Domestic_Services_Company> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:label "Domestic Services Company"@en ;
+                                                                
+                                                                rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Entertainment
+
+<#Entertainment_Company> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:label "Entertainment Company"@en ;
+                                                            
+                                                            rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Fashion
+
+<#Fashion_Company> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:label "Fashion Company"@en ;
+                                                      
+                                                      rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Financial_Services_and_Insurance
+
+<#Financial_Services_and_Insurance_Company> rdf:type owl:Class ;
+                                                                               
+                                                                               rdfs:label "Financial Services and Insurance Company"@en ;
+                                                                               
+                                                                               rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Fishing
+
+<#Fishing_Company> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:label "Fishing Company"@en ;
+                                                      
+                                                      rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Food_Processing
+
+<#Food_Processing_Company> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:label "Food Processing Company"@en ;
+                                                              
+                                                              rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Forestry
+
+<#Forestry_Company> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:label "Forestry Company"@en ;
+                                                       
+                                                       rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Gas_Extraction
+
+<#Gas_Extraction_Company> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:label "Gas Extraction Company"@en ;
+                                                             
+                                                             rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Information_Technology
+
+<#Information_Technology_Company rdf:type owl:Class ;
+                                                                     
+                                                                     rdfs:label "Information Technology Company"@en ;
+                                                                     
+                                                                     rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Legal_Services
+
+<#Legal_Services_Company> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:label "Legal Services Company"@en ;
+                                                             
+                                                             rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Logistics
+
+<#Logistics_Company> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Logistics Company"@en ;
+                                                        
+                                                        rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Manufacturing
+
+<#Manufacturing_Company rdf:type owl:Class ;
+                                                            
+                                                            rdfs:label "Manufacturing Company"@en ;
+                                                            
+                                                            rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Mining
+
+<#Mining_Company> rdf:type owl:Class ;
+                                                     
+                                                     rdfs:label "Mining Company"@en ;
+                                                     
+                                                     rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Pharmaceuticals
+
+<#Pharmaceuticals_Company> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:label "Pharmaceuticals Company"@en ;
+                                                              
+                                                              rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Private_Defence
+
+<#Private_Defence_Company> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:label "Private Defence Company"@en ;
+                                                              
+                                                              rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Private_Security
+
+<#Private_Security_Company> rdf:type owl:Class ;
+                                                               
+                                                               rdfs:label "Private Security Company"@en ;
+                                                               
+                                                               rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Quarrying
+
+<#Quarrying_Company rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Quarrying Company"@en ;
+                                                        
+                                                        rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Real_Estate
+
+<#Real_Estate_Company> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:label "Real Estate Company"@en ;
+                                                          
+                                                          rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Recruitment
+
+<#Recruitment_Company> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:label "Recruitment Company"@en ;
+                                                          
+                                                          rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Retail
+
+<#Retail_Company> rdf:type owl:Class ;
+                                                     
+                                                     rdfs:label "Retail Company"@en ;
+                                                     
+                                                     rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Science_and_Engineering
+
+<#Science_and_Engineering_Company> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:label "Science and Engineering Company"@en ;
+                                                                      
+                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Storage
+
+<#Storage_Company> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:label "Storage Company"@en ;
+                                                      
+                                                      rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Tourism
+
+<#Tourism_Company> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:label "Tourism Company"@en ;
+                                                      
+                                                      rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Transport
+
+<#Transport_Company> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Transport Company"@en ;
+                                                        
+                                                        rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Utilities
+
+<#Utilities_Company> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Utilities Company"@en ;
+                                                        
+                                                        rdfs:subClassOf <http://rdf.fm/Organization#Company> .
+
+
+
+###  Organization/Company/Accommodation/Bed_and_Breakfast
+
+<#Bed_and_Breakfast> rdf:type owl:Class ;
+                                                                              
+                                                                              rdfs:label "Bed and Breakfast"@en ;
+                                                                              
+                                                                              rdfs:subClassOf <http://rdf.fm/Organization#Accommodation_Company> .
+
+
+
+###  Organization/Company/Accommodation/Campsite
+
+<#Campsite_Company> rdf:type owl:Class ;
+                                                                     
+                                                                     rdfs:label "Campsite"@en ;
+                                                                     
+                                                                     rdfs:subClassOf <http://rdf.fm/Organization#Accommodation_Company> .
+
+
+
+###  Organization/Company/Accommodation/Hostel
+
+<#Hostel_Company> rdf:type owl:Class ;
+                                                                   
+                                                                   rdfs:label "Hostel"@en ;
+                                                                   
+                                                                   rdfs:subClassOf <http://rdf.fm/Organization#Accommodation_Company> .
+
+
+
+###  Organization/Company/Accommodation/Hotel
+
+<#Hotel_Company> rdf:type owl:Class ;
+                                                                  
+                                                                  rdfs:label "Hotel"@en ;
+                                                                  
+                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Accommodation_Company> .
+
+
+
+###  Organization/Company/Accommodation/Self_Catering
+
+<#Self_Catering_Company> rdf:type owl:Class ;
+                                                                          
+                                                                          rdfs:label "Self Catering"@en ;
+                                                                          
+                                                                          rdfs:subClassOf <http://rdf.fm/Organization#Accommodation_Company> .
+
+
+
+###  Organization/Company/Agriculture/Arable_Farming
+
+<#Arable_Farming_Company> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:label "Arable Farming"@en ;
+                                                                         
+                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Agriculture_Company> .
+
+
+
+###  Organization/Company/Agriculture/Livestock
+
+<#Livestock_Farming_Company> rdf:type owl:Class ;
+                                                                    
+                                                                    rdfs:label "Livestock"@en ;
+                                                                    
+                                                                    rdfs:subClassOf <http://rdf.fm/Organization#Agriculture_Company> .
+
+
+
+###  Organization/Company/Automotive/Automotive_Design
+
+<#Automotive_Design_Company> rdf:type owl:Class ;
+                                                                           
+                                                                           rdfs:label "Automotive Design"@en ;
+                                                                           
+                                                                           rdfs:subClassOf <http://rdf.fm/Organization#Automotive_Company> .
+
+
+
+###  Organization/Company/Automotive/Automotive_Manufacturing
+
+<#Automotive_Manufacturing_Company> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:label "Automotive Manufacturing"@en ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Automotive_Company> .
+
+
+
+###  Organization/Company/Automotive/Automotive_Repair
+
+<#Automotive_Repair_Company> rdf:type owl:Class ;
+                                                                           
+                                                                           rdfs:label "Automotive Repair"@en ;
+                                                                           
+                                                                           rdfs:subClassOf <http://rdf.fm/Organization#Automotive_Company> .
+
+
+
+###  Organization/Company/Catering/Cafe
+
+<#Cafe_Company> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:label "Cafe"@en ;
+                                                            
+                                                            rdfs:subClassOf <http://rdf.fm/Organization#Catering_Company> .
+
+
+
+###  Organization/Company/Catering/Restaurant
+
+<#Restaurant_Company> rdf:type owl:Class ;
+                                                                  
+                                                                  rdfs:label "Restaurant"@en ;
+                                                                  
+                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Catering_Company> .
+
+
+
+###  Organization/Company/Communications/Advertising
+
+<#Advertising_Company> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:label "Advertising"@en ;
+                                                                         
+                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Communications_Company> .
+
+
+
+###  Organization/Company/Communications/Broadcasting
+
+<#Broadcasting_Company> rdf:type owl:Class ;
+                                                                          
+                                                                          rdfs:label "Broadcasting"@en ;
+                                                                          
+                                                                          rdfs:subClassOf <http://rdf.fm/Organization#Communications_Company> .
+
+
+
+###  Organization/Company/Communications/Public_Relations
+
+<http://rdf.fm/Organization/Company/Communications/Public_Relations_Company> rdf:type owl:Class ;
+                                                                              
+                                                                              rdfs:label "Public Relations"@en ;
+                                                                              
+                                                                              rdfs:subClassOf <http://rdf.fm/Organization#Communications_Company> .
+
+
+
+###  Organization/Company/Communications/Publishing
+
+<#Publishing_Company> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:label "Publishing"@en ;
+                                                                        
+                                                                        rdfs:subClassOf <http://rdf.fm/Organization#Communications_Company> .
+
+
+
+###  Organization/Company/Communications/Telecommunications
+
+<#Telecommunications_Company> rdf:type owl:Class ;
+                                                                                
+                                                                                rdfs:label "Telecommunications"@en ;
+                                                                                
+                                                                                rdfs:subClassOf <http://rdf.fm/Organization#Communications_Company> .
+
+
+
+###  Organization/Company/Domestic_Services/Cleaning
+
+<#Cleaning_Company> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:label "Cleaning"@en ;
+                                                                         
+                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Domestic_Services_Company> .
+
+
+
+###  Organization/Company/Domestic_Services/Cooking
+
+<#Cooking_Company> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:label "Cooking"@en ;
+                                                                        
+                                                                        rdfs:subClassOf <http://rdf.fm/Organization#Domestic_Services_Company> .
+
+
+
+###  Organization/Company/Domestic_Services/Gardening
+
+<#Gardening_Company> rdf:type owl:Class ;
+                                                                          
+                                                                          rdfs:label "Gardening"@en ;
+                                                                          
+                                                                          rdfs:subClassOf <http://rdf.fm/Organization#Domestic_Services_Company> .
+
+
+
+###  Organization/Company/Domestic_Services/Laundry
+
+<#Laundry_Company> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:label "Laundry"@en ;
+                                                                        
+                                                                        rdfs:subClassOf <http://rdf.fm/Organization#Domestic_Services_Company> .
+
+
+
+###  Organization/Company/Financial_Services_and_Insurance/Banking
+
+<#Banking_Company> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:label "Banking"@en ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://rdf.fm/Organization#Financial_Services_and_Insurance_Company> .
+
+
+
+###  Organization/Company/Financial_Services_and_Insurance/Insurance
+
+<#Insurance_Company> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:label "Insurance"@en ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Financial_Services_and_Insurance_Company> .
+
+
+
+###  Organization/Company/Logistics/Haulage
+
+<#Haulage_Company> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:label "Haulage"@en ;
+                                                                
+                                                                rdfs:subClassOf <http://rdf.fm/Organization#Logistics_Company> .
+
+
+
+###  Organization/Company/Logistics/Postal_Services
+
+<#Postal_Services_Company> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:label "Postal Services"@en ;
+                                                                        
+                                                                        rdfs:subClassOf <http://rdf.fm/Organization#Logistics_Company> .
+
+
+
+###  Organization/Company/Manufacturing/Chemical_Manufacturing
+
+<#Chemical_Manufacturing_Company> rdf:type owl:Class ;
+                                                                                   
+                                                                                   rdfs:label "Chemical Manufacturing"@en ;
+                                                                                   
+                                                                                   rdfs:subClassOf <http://rdf.fm/Organization#Manufacturing_Company> .
+
+
+
+###  Organization/Company/Manufacturing/Electronics_Manufacturing
+
+<#Electronics_Manufacturing_Company> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:label "Electronics Manufacturing"@en ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Manufacturing_Company> .
+
+
+
+###  Organization/Company/Manufacturing/Furniture_Manufacturing
+
+<#Furniture_Manufacturing_Company> rdf:type owl:Class ;
+                                                                                    
+                                                                                    rdfs:label "Furniture Manufacturing"@en ;
+                                                                                    
+                                                                                    rdfs:subClassOf <http://rdf.fm/Organization#Manufacturing_Company> .
+
+
+
+###  Organization/Company/Manufacturing/Textile_Manufacturing
+
+<#Textile_Manufacturing_Company> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:label "Textile Manufacturing"@en ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Manufacturing_Company> .
+
+
+
+###  Organization/Company/Manufacturing/Tobacco_Manufacturing
+
+<#Tobacco_Manufacturing_Company> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:label "Tobacco Manufacturing"@en ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Manufacturing_Company> .
+
+
+
+###  Organization/Company/Manufacturing/Electronics_Manufacturing/Computer_Manufacturing
+
+<#Computer_Manufacturing_Company> rdf:type owl:Class ;
+                                                                                                             
+                                                                                                             rdfs:label "Computer Manufacturing"@en ;
+                                                                                                             
+                                                                                                             rdfs:subClassOf <http://rdf.fm/Organization#Electronics_Manufacturing_Company> .
+
+
+
+###  Organization/Company/Manufacturing/Electronics_Manufacturing/Home_Electronics_Manufacturing
+
+<#Home_Electronics_Manufacturing_Company> rdf:type owl:Class ;
+                                                                                                                     
+                                                                                                                     rdfs:label "Home Electronics Manufacturing"@en ;
+                                                                                                                     
+                                                                                                                     rdfs:subClassOf <http://rdf.fm/Organization#Electronics_Manufacturing_Company> .
+
+
+
+###  Organization/Company/Transport/Air_Transport
+
+<#Air_Transport_Company> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:label "Air Transport"@en ;
+                                                                      
+                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Transport_Company> .
+
+
+
+###  Organization/Company/Transport/Rail_Transport
+
+<#Rail_Transport_Company> rdf:type owl:Class ;
+                                                                       
+                                                                       rdfs:label "Rail Transport"@en ;
+                                                                       
+                                                                       rdfs:subClassOf <http://rdf.fm/Organization#Transport_Company> .
+
+
+
+###  Organization/Company/Transport/Road_Transport
+
+<#Road_Transport_Company> rdf:type owl:Class ;
+                                                                       
+                                                                       rdfs:label "Road Transport"@en ;
+                                                                       
+                                                                       rdfs:subClassOf <http://rdf.fm/Organization#Transport_Company> .
+
+
+
+###  Organization/Company/Transport/Sea_Transport
+
+<#Sea_Transport_Company> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:label "Sea Transport"@en ;
+                                                                      
+                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Transport_Company> .
+
+
+
+###  Organization/Company/Utilities/Electricity_Supply
+
+<#Electricity_Supply_Company> rdf:type owl:Class ;
+                                                                           
+                                                                           rdfs:label "Electricity Supply"@en ;
+                                                                           
+                                                                           rdfs:subClassOf <http://rdf.fm/Organization#Utilities_Company> .
+
+
+
+###  Organization/Company/Utilities/Gas_Supply
+
+<#Gas_Supply_Company> rdf:type owl:Class ;
+                                                                   
+                                                                   rdfs:label "Gas Supply"@en ;
+                                                                   
+                                                                   rdfs:subClassOf <http://rdf.fm/Organization#Utilities_Company> .
+
+
+
+###  Organization/Company/Utilities/Waste_Management
+
+<#Waste_Management_Company> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:label "Waste Management"@en ;
+                                                                         
+                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Utilities_Company> .
+
+
+
+###  Organization/Company/Utilities/Water_Supply
+
+<#Water_Supply_Company> rdf:type owl:Class ;
+                                                                     
+                                                                     rdfs:label "Water Supply"@en ;
+                                                                     
+                                                                     rdfs:subClassOf <http://rdf.fm/Organization#Utilities_Company> .
+
+
+
+###  Organization/Educational_Institute/College
+
+<#College> rdf:type owl:Class ;
+                                                                    
+                                                                    rdfs:label "College"@en ;
+                                                                    
+                                                                    rdfs:subClassOf <http://rdf.fm/Organization#Educational_Institute> .
+
+
+
+###  Organization/Educational_Institute/School
+
+<#School> rdf:type owl:Class ;
+                                                                   
+                                                                   rdfs:label "School"@en ;
+                                                                   
+                                                                   rdfs:subClassOf <http://rdf.fm/Organization#Educational_Institute> .
+
+
+
+###  Organization/Educational_Institute/University
+
+<#University> rdf:type owl:Class ;
+                                                                       
+                                                                       rdfs:label "University"@en ;
+                                                                       
+                                                                       rdfs:subClassOf <http://rdf.fm/Organization#Educational_Institute> .
+
+
+
+###  Organization/Educational_Institute/College/Further_Education_College
+
+<#Further_Education_College> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:label "Further Education College"@en ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://rdf.fm/Organization#College> .
+
+
+
+###  Organization/Educational_Institute/College/Subject-Specific_College
+
+<#Subject-Specific_College> rdf:type owl:Class ;
+                                                                                             
+                                                                                             rdfs:label "Subject-Specific College"@en ;
+                                                                                             
+                                                                                             rdfs:subClassOf <http://rdf.fm/Organization#College> .
+
+
+
+###  Organization/Educational_Institute/College/Subject-Specific_College/Art_College
+
+<#Art_College> rdf:type owl:Class ;
+                                                                                                         
+                                                                                                         rdfs:label "Art College"@en ;
+                                                                                                         
+                                                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Subject-Specific_College> .
+
+
+
+###  Organization/Educational_Institute/College/Subject-Specific_College/Business_School
+
+<#Business_School> rdf:type owl:Class ;
+                                                                                                             
+                                                                                                             rdfs:label "Business School"@en ;
+                                                                                                             
+                                                                                                             rdfs:subClassOf <http://rdf.fm/Organization#Subject-Specific_College> .
+
+
+
+###  Organization/Educational_Institute/College/Subject-Specific_College/Law_School
+
+<#Law_School> rdf:type owl:Class ;
+                                                                                                        
+                                                                                                        rdfs:label "Law School"@en ;
+                                                                                                        
+                                                                                                        rdfs:subClassOf <http://rdf.fm/Organization#Subject-Specific_College> .
+
+
+
+###  Organization/Educational_Institute/College/Subject-Specific_College/Music_School
+
+<#Music_School> rdf:type owl:Class ;
+                                                                                                          
+                                                                                                          rdfs:label "Music School"@en ;
+                                                                                                          
+                                                                                                          rdfs:subClassOf <http://rdf.fm/Organization#Subject-Specific_College> .
+
+
+
+###  Organization/Educational_Institute/College/Subject-Specific_College/Theological_College
+
+<#Theological_College> rdf:type owl:Class ;
+                                                                                                                 
+                                                                                                                 rdfs:label "Theological College"@en ;
+                                                                                                                 
+                                                                                                                 rdfs:subClassOf <http://rdf.fm/Organization#Subject-Specific_College> .
+
+
+
+###  Organization/Educational_Institute/School/Primary_School
+
+<#Primary_School> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:label "Primary School"@en ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://rdf.fm/Organization#School> .
+
+
+
+###  Organization/Educational_Institute/School/Secondary_School
+
+<#Secondary_School> rdf:type owl:Class ;
+                                                                                    
+                                                                                    rdfs:label "Secondary School"@en ;
+                                                                                    
+                                                                                    rdfs:subClassOf <http://rdf.fm/Organization#School> .
+
+
+
+###  Organization/Educational_Institute/School/Sixth_Form
+
+<#Sixth_Form> rdf:type owl:Class ;
+                                                                              
+                                                                              rdfs:label "Sixth Form"@en ;
+                                                                              
+                                                                              rdfs:subClassOf <http://rdf.fm/Organization#School> .
+
+
+
+###  Organization/Faith_Group/Bahai_Organization
+
+<#Bahai_Organization> rdf:type owl:Class ;
+                                                                     
+                                                                     rdfs:label "Baha'i Organization"@en ;
+                                                                     
+                                                                     rdfs:subClassOf <http://rdf.fm/Organization#Faith_Group> .
+
+
+
+###  Organization/Faith_Group/Buddhist_Organization
+
+<#Buddhist_Organization> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:label "Buddhist Organization"@en ;
+                                                                        
+                                                                        rdfs:subClassOf <http://rdf.fm/Organization#Faith_Group> .
+
+
+
+###  Organization/Faith_Group/Christian_Organization
+
+<#Christian_Organization> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:label "Christian Organization"@en ;
+                                                                         
+                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Faith_Group> .
+
+
+
+###  Organization/Faith_Group/Hindu_Organization
+
+<#Hindu_Organization> rdf:type owl:Class ;
+                                                                     
+                                                                     rdfs:label "Hindu Organization"@en ;
+                                                                     
+                                                                     rdfs:subClassOf <http://rdf.fm/Organization#Faith_Group> .
+
+
+
+###  Organization/Faith_Group/Jainist_Organization
+
+<#Jainist_Organization> rdf:type owl:Class ;
+                                                                       
+                                                                       rdfs:label "Jainist Organization"@en ;
+                                                                       
+                                                                       rdfs:subClassOf <http://rdf.fm/Organization#Faith_Group> .
+
+
+
+###  Organization/Faith_Group/Jewish_Organization
+
+<#Jewish_Organization> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:label "Jewish Organization"@en ;
+                                                                      
+                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Faith_Group> .
+
+
+
+###  Organization/Faith_Group/Muslim_Organization
+
+<#Muslim_Organization> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:label "Muslim Organization"@en ;
+                                                                      
+                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Faith_Group> .
+
+
+
+###  Organization/Faith_Group/Shinto_Organization
+
+<#Shinto_Organization> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:label "Shinto Organization"@en ;
+                                                                      
+                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Faith_Group> .
+
+
+
+###  Organization/Faith_Group/Sikh_Organization
+
+<#Sikh_Organization> rdf:type owl:Class ;
+                                                                    
+                                                                    rdfs:label "Sikh Organization"@en ;
+                                                                    
+                                                                    rdfs:subClassOf <http://rdf.fm/Organization#Faith_Group> .
+
+
+
+###  Organization/Faith_Group/Taoist_Organization
+
+<#Taoist_Organization> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:label "Taoist Organization"@en ;
+                                                                      
+                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Faith_Group> .
+
+
+
+###  Organization/Healthcare_Organization/Acute_Trust
+
+<#Acute_Trust> rdf:type owl:Class ;
+                                                                          
+                                                                          rdfs:label "Acute Trust"@en ;
+                                                                          
+                                                                          rdfs:subClassOf <http://rdf.fm/Organization#Healthcare_Organization> .
+
+
+
+###  Organization/Healthcare_Organization/Ambulance_Trust
+
+<#Ambulance_Trust> rdf:type owl:Class ;
+                                                                              
+                                                                              rdfs:label "Ambulance Trust"@en ;
+                                                                              
+                                                                              rdfs:subClassOf <http://rdf.fm/Organization#Healthcare_Organization> .
+
+
+
+###  Organization/Healthcare_Organization/Care_Trust
+
+<#Care_Trust> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:label "Care Trust"@en ;
+                                                                         
+                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Healthcare_Organization> .
+
+
+
+###  Organization/Healthcare_Organization/Foundation_Trust
+
+<#Foundation_Trust> rdf:type owl:Class ;
+                                                                               
+                                                                               rdfs:label "Foundation Trust"@en ;
+                                                                               
+                                                                               rdfs:subClassOf <http://rdf.fm/Organization#Healthcare_Organization> .
+
+
+
+###  Organization/Healthcare_Organization/GP_Practice
+
+<http://rdf.fm/Organization/Healthcare_Organization/GP_Practice> rdf:type owl:Class ;
+                                                                          
+                                                                          rdfs:label "GP Practice"@en ;
+                                                                          
+                                                                          rdfs:subClassOf <http://rdf.fm/Organization#Healthcare_Organization> .
+
+
+
+###  Organization/Healthcare_Organization/Hospital
+
+<#Hospital> rdf:type owl:Class ;
+                                                                       
+                                                                       rdfs:label "Hospital"@en ;
+                                                                       
+                                                                       rdfs:subClassOf <http://rdf.fm/Organization#Healthcare_Organization> .
+
+
+
+###  Organization/Healthcare_Organization/Mental_Health_Trust
+
+<#Mental_Health_Trust> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:label "Mental Health Trust"@en ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Healthcare_Organization> .
+
+
+
+###  Organization/Healthcare_Organization/Primary_Care_Trust
+
+<#Primary_Care_Trust> rdf:type owl:Class ;
+                                                                                 
+                                                                                 rdfs:label "Primary Care Trust"@en ;
+                                                                                 
+                                                                                 rdfs:subClassOf <http://rdf.fm/Organization#Healthcare_Organization> .
+
+
+
+###  Organization/Healthcare_Organization/Special_Health_Authority
+
+<#Special_Health_Authority> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:label "Special Health Authority"@en ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://rdf.fm/Organization#Healthcare_Organization> .
+
+
+
+###  Organization/Healthcare_Organization/Strategic_Health_Authority
+
+<#Strategic_Health_Authority> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:label "Strategic Health Authority"@en ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Healthcare_Organization> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/Government_Department
+
+<#Government_Department> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:label "Government Department"@en ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://rdf.fm/Organization#Political_Entity_or_Civil_Service> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/Lobbying_Group
+
+<#Lobbying_Group> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:label "Lobbying Group"@en ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://rdf.fm/Organization#Political_Entity_or_Civil_Service> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/Local_Council
+
+<#Local_Council> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:label "Local Council"@en ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Political_Entity_or_Civil_Service> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/Military_Organization
+
+<#Military_Organization> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:label "Military Organization"@en ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://rdf.fm/Organization#Political_Entity_or_Civil_Service> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/National_Government
+
+<#National_Government> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:label "National Government"@en ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://rdf.fm/Organization#Political_Entity_or_Civil_Service> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/Parliament
+
+<#Parliament> rdf:type owl:Class ;
+                                                                                   
+                                                                                   rdfs:label "Parliament"@en ;
+                                                                                   
+                                                                                   rdfs:subClassOf <http://rdf.fm/Organization#Political_Entity_or_Civil_Service> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/Political_Party
+
+<#Political_Party> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:label "Political Party"@en ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://rdf.fm/Organization#Political_Entity_or_Civil_Service> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/Presidential_Candidate_Committee
+
+<#Presidential_Candidate_Committee> rdf:type owl:Class ;
+                                                                                                         
+                                                                                                         rdfs:label "Presidential Candidate Committee"@en ;
+                                                                                                         
+                                                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Political_Entity_or_Civil_Service> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/Quango
+
+<#Quango> rdf:type owl:Class ;
+                                                                               
+                                                                               rdfs:label "Quango"@en ;
+                                                                               
+                                                                               rdfs:subClassOf <http://rdf.fm/Organization#Political_Entity_or_Civil_Service> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/Government_Department/Ministerial_Department
+
+<#Ministerial_Department> rdf:type owl:Class ;
+                                                                                                                     
+                                                                                                                     rdfs:label "Ministerial Department"@en ;
+                                                                                                                     
+                                                                                                                     rdfs:subClassOf <http://rdf.fm/Organization#Government_Department> .
+
+
+
+###  Organization/Political_Entity_or_Civil_Service/Government_Department/Non-Ministerial_Department
+
+<#Non-Ministerial_Department> rdf:type owl:Class ;
+                                                                                                                         
+                                                                                                                         rdfs:label "Non-Ministerial Department"@en ;
+                                                                                                                         
+                                                                                                                         rdfs:subClassOf <http://rdf.fm/Organization#Government_Department> .
+
+
+
+###  Organization/Society/Private_Members_Club
+
+<#Private_Members_Club> rdf:type owl:Class ;
+                                                                   
+                                                                   rdfs:label "Private Member's Club"@en ;
+                                                                   
+                                                                   rdfs:subClassOf <http://rdf.fm/Organization#Society> .
+
+
+
+###  Organization/Society/Professional_Body
+
+<#Professional_Body> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:label "Professional Body"@en ;
+                                                                
+                                                                rdfs:subClassOf <http://rdf.fm/Organization#Society> .
+
+
+
+###  Organization/Sports_Club/Athletics_Club
+
+<#Athletics_Club> rdf:type owl:Class ;
+                                                                 
+                                                                 rdfs:label "Athletics Club"@en ;
+                                                                 
+                                                                 rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Cricket_Club
+
+<#Cricket_Club> rdf:type owl:Class ;
+                                                               
+                                                               rdfs:label "Cricket Club"@en ;
+                                                               
+                                                               rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Cycling_Club
+
+<#Cycling_Club> rdf:type owl:Class ;
+                                                               
+                                                               rdfs:label "Cycling Club"@en ;
+                                                               
+                                                               rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Equestrian_Club
+
+<#Equestrian_Club> rdf:type owl:Class ;
+                                                                  
+                                                                  rdfs:label "Equestrian Club"@en ;
+                                                                  
+                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Football_Club
+
+<#Football_Club> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:label "Football Club"@en ;
+                                                                
+                                                                rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Golf_Club
+
+<#Golf_Club> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:label "Golf Club"@en ;
+                                                            
+                                                            rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Hockey_Club
+
+<#Hockey_Club> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:label "Hockey Club"@en ;
+                                                              
+                                                              rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Martial_Arts_Club
+
+<#Martial_Arts_Club> rdf:type owl:Class ;
+                                                                    
+                                                                    rdfs:label "Martial Arts Club"@en ;
+                                                                    
+                                                                    rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Motorsport_Club
+
+<#Motorsport_Club> rdf:type owl:Class ;
+                                                                  
+                                                                  rdfs:label "Motorsport Club"@en ;
+                                                                  
+                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Racquet_Sports_Club
+
+<#Racquet_Sports_Club> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:label "Racquet Sports Club"@en ;
+                                                                      
+                                                                      rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Rugby_Club
+
+<#Rugby_Club> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:label "Rugby Club"@en ;
+                                                             
+                                                             rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Skiing_Club
+
+<#Skiing_Club> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:label "Skiing Club"@en ;
+                                                              
+                                                              rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Swimming_Club
+
+<#Swimming_Club> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:label "Swimming Club"@en ;
+                                                                
+                                                                rdfs:subClassOf <http://rdf.fm/Organization#Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Hockey_Club/Field_Hockey_Club
+
+<#Field_Hockey_Club> rdf:type owl:Class ;
+                                                                                
+                                                                                rdfs:label "Field Hockey Club"@en ;
+                                                                                
+                                                                                rdfs:subClassOf <http://rdf.fm/Organization#Hockey_Club> .
+
+
+
+###  Organization/Sports_Club/Hockey_Club/Ice_Hockey_Club
+
+<#Ice_Hockey_Club> rdf:type owl:Class ;
+                                                                              
+                                                                              rdfs:label "Ice Hockey Club"@en ;
+                                                                              
+                                                                              rdfs:subClassOf <http://rdf.fm/Organization#Hockey_Club> .
+
+
+
+###  Organization/Sports_Club/Martial_Arts_Club/Boxing_Club
+
+<#Boxing_Club> rdf:type owl:Class ;
+                                                                                
+                                                                                rdfs:label "Boxing Club"@en ;
+                                                                                
+                                                                                rdfs:subClassOf <http://rdf.fm/Organization#Martial_Arts_Club> .
+
+
+
+###  Organization/Sports_Club/Martial_Arts_Club/Judo_Club
+
+<#Judo_Club> rdf:type owl:Class ;
+                                                                              
+                                                                              rdfs:label "Judo Club"@en ;
+                                                                              
+                                                                              rdfs:subClassOf <http://rdf.fm/Organization#Martial_Arts_Club> .
+
+
+
+###  Organization/Sports_Club/Motorsport_Club/Go_Karting_Club
+
+<#Go_Karting_Club> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:label "Go-Karting Club"@en ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Motorsport_Club> .
+
+
+
+###  Organization/Sports_Club/Racquet_Sports_Club/Badminton_Club
+
+<#Badminton_Club> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:label "Badminton Club"@en ;
+                                                                                     
+                                                                                     rdfs:subClassOf <http://rdf.fm/Organization#Racquet_Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Racquet_Sports_Club/Squash_Club
+
+<#Squash_Club> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:label "Squash Club"@en ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Racquet_Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Racquet_Sports_Club/Tennis_Club
+
+<#Tennis_Club> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:label "Tennis Club"@en ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://rdf.fm/Organization#Racquet_Sports_Club> .
+
+
+
+###  Organization/Sports_Club/Rugby_Club/Rugby_League_Club
+
+<#Rugby_League_Club> rdf:type owl:Class ;
+                                                                               
+                                                                               rdfs:label "Rugby League Club"@en ;
+                                                                               
+                                                                               rdfs:subClassOf <http://rdf.fm/Organization#Rugby_Club> .
+
+
+
+###  Organization/Sports_Club/Rugby_Club/Rugby_Union_Club
+
+<#Rugby_Union_Club> rdf:type owl:Class ;
+                                                                              
+                                                                              rdfs:label "Rugby Union Club"@en ;
+                                                                              
+                                                                              rdfs:subClassOf <http://rdf.fm/Organization#Rugby_Club> .
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net

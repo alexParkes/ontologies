@@ -1,0 +1,295 @@
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://rdf.fm/organism.owl> rdf:type owl:Ontology ;
+                                         
+                                         rdfs:label "FactMint Organism Schema"@en ;
+                                         
+                                         rdfs:comment """  FactMint data-pack
+  Copyright 2014 FactMint Ltd - info@factmint.com - all rights reserved
+ 
+  This software is shipped with an EULA describing the agreed
+  terms of usage. Unless required by applicable law or agreed 
+  to in writing by the copyright owner, this source code, 
+  binaries compiled from this source code and any other content 
+  supplied with this file (with the exception of source code 
+  supplied with a specific, contradictory licence) must not be
+  duplicated, distributed or altered in any way.
+  This software contains open source software but is not open 
+  source itself. All open source code is supplied with, and 
+  adheres to, its original licence.
+ 
+  This product includes software developed at The Apache 
+  Software Foundation (http://www.apache.org/).
+ 
+ Author(s): chris.scott@factmint.com
+            alex.parkes@factmint.com
+ """@en ;
+                                         
+                                         owl:versionInfo "0.1"@en ;
+                                                                                  
+                                         owl:imports <http://rdf.fm/core.owl> .
+
+###  Organism/Animal
+
+<http://rdf.fm/Organism/Animal> rdf:type owl:Class ;
+                                         
+                                         rdfs:label "Animal"@en ;
+                                         
+                                         rdfs:subClassOf <http://rdf.fm/Organism> .
+
+
+
+###  Organism/Fungus
+
+<http://rdf.fm/Organism/Fungus> rdf:type owl:Class ;
+                                         
+                                         rdfs:label "Fungus"@en ;
+                                         
+                                         rdfs:subClassOf <http://rdf.fm/Organism> .
+
+
+
+###  Organism/Micro_Organism
+
+<http://rdf.fm/Organism/Micro_Organism> rdf:type owl:Class ;
+                                                 
+                                                 rdfs:label "Micro Organism"@en ;
+                                                 
+                                                 rdfs:subClassOf <http://rdf.fm/Organism> .
+
+
+
+###  Organism/Plant
+
+<http://rdf.fm/Organism/Plant> rdf:type owl:Class ;
+                                        
+                                        rdfs:label "Plant"@en ;
+                                        
+                                        rdfs:subClassOf <http://rdf.fm/Organism> .
+
+
+
+###  Organism/Animal/Human
+
+<http://rdf.fm/Organism/Animal/Human> rdf:type owl:Class ;
+                                               
+                                               rdfs:label "Human"@en ;
+                                               
+                                               rdfs:subClassOf <http://rdf.fm/Organism/Animal> .
+
+
+
+###  Organism/Animal/Non-Human_Animal
+
+<http://rdf.fm/Organism/Animal/Non-Human_Animal> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:label "Non-Human Animal"@en ;
+                                                          
+                                                          rdfs:subClassOf <http://rdf.fm/Organism/Animal> .
+
+
+
+###  Organism/Animal/Non-Human_Animal/Amphibian
+
+<http://rdf.fm/Organism/Animal/Non-Human_Animal/Amphibian> rdf:type owl:Class ;
+                                                                    
+                                                                    rdfs:label "Amphibian"@en ;
+                                                                    
+                                                                    rdfs:subClassOf <http://rdf.fm/Organism/Animal/Non-Human_Animal> .
+
+
+
+###  Organism/Animal/Non-Human_Animal/Bird
+
+<http://rdf.fm/Organism/Animal/Non-Human_Animal/Bird> rdf:type owl:Class ;
+                                                               
+                                                               rdfs:label "Bird"@en ;
+                                                               
+                                                               rdfs:subClassOf <http://rdf.fm/Organism/Animal/Non-Human_Animal> .
+
+
+
+###  Organism/Animal/Non-Human_Animal/Fish
+
+<http://rdf.fm/Organism/Animal/Non-Human_Animal/Fish> rdf:type owl:Class ;
+                                                               
+                                                               rdfs:label "Fish"@en ;
+                                                               
+                                                               rdfs:subClassOf <http://rdf.fm/Organism/Animal/Non-Human_Animal> .
+
+
+
+###  Organism/Animal/Non-Human_Animal/Invertibrate
+
+<http://rdf.fm/Organism/Animal/Non-Human_Animal/Invertibrate> rdf:type owl:Class ;
+                                                                       
+                                                                       rdfs:label "Invertibrate"@en ;
+                                                                       
+                                                                       rdfs:subClassOf <http://rdf.fm/Organism/Animal/Non-Human_Animal> .
+
+
+
+###  Organism/Animal/Non-Human_Animal/Mammal
+
+<http://rdf.fm/Organism/Animal/Non-Human_Animal/Mammal> rdf:type owl:Class ;
+                                                                 
+                                                                 rdfs:label "Mammal"@en ;
+                                                                 
+                                                                 rdfs:subClassOf <http://rdf.fm/Organism/Animal/Non-Human_Animal> .
+
+
+
+###  Organism/Animal/Non-Human_Animal/Reptile
+
+<http://rdf.fm/Organism/Animal/Non-Human_Animal/Reptile> rdf:type owl:Class ;
+                                                                  
+                                                                  rdfs:label "Reptile"@en ;
+                                                                  
+                                                                  rdfs:subClassOf <http://rdf.fm/Organism/Animal/Non-Human_Animal> .
+
+
+
+###  Organism/Fungus/Mould
+
+<http://rdf.fm/Organism/Fungus/Mould> rdf:type owl:Class ;
+                                               
+                                               rdfs:label "Mould"@en ;
+                                               
+                                               rdfs:subClassOf <http://rdf.fm/Organism/Fungus> .
+
+
+
+###  Organism/Fungus/Mushroom
+
+<http://rdf.fm/Organism/Fungus/Mushroom> rdf:type owl:Class ;
+                                                  
+                                                  rdfs:label "Mushroom"@en ;
+                                                  
+                                                  rdfs:subClassOf <http://rdf.fm/Organism/Fungus> .
+
+
+
+###  Organism/Fungus/Yeast
+
+<http://rdf.fm/Organism/Fungus/Yeast> rdf:type owl:Class ;
+                                               
+                                               rdfs:label "Yeast"@en ;
+                                               
+                                               rdfs:subClassOf <http://rdf.fm/Organism/Fungus> .
+
+
+
+###  Organism/Micro_Organism/Bacteria
+
+<http://rdf.fm/Organism/Micro_Organism/Bacteria> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:label "Bacteria"@en ;
+                                                          
+                                                          rdfs:subClassOf <http://rdf.fm/Organism/Micro_Organism> .
+
+
+
+###  Organism/Micro_Organism/Pathogen
+
+<http://rdf.fm/Organism/Micro_Organism/Pathogen> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:label "Pathogen"@en ;
+                                                          
+                                                          rdfs:subClassOf <http://rdf.fm/Organism/Micro_Organism> .
+
+
+
+###  Organism/Micro_Organism/Virus
+
+<http://rdf.fm/Organism/Micro_Organism/Virus> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:label "Virus"@en ;
+                                                       
+                                                       rdfs:subClassOf <http://rdf.fm/Organism/Micro_Organism> .
+
+
+
+###  Organism/Plant/Algae
+
+<http://rdf.fm/Organism/Plant/Algae> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "Algae"@en ;
+                                              
+                                              rdfs:subClassOf <http://rdf.fm/Organism/Plant> .
+
+
+
+###  Organism/Plant/Fern
+
+<http://rdf.fm/Organism/Plant/Fern> rdf:type owl:Class ;
+                                             
+                                             rdfs:label "Fern"@en ;
+                                             
+                                             rdfs:subClassOf <http://rdf.fm/Organism/Plant> .
+
+
+
+###  Organism/Plant/Flowering_Plant
+
+<http://rdf.fm/Organism/Plant/Flowering_Plant> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Flowering Plant"@en ;
+                                                        
+                                                        rdfs:subClassOf <http://rdf.fm/Organism/Plant> .
+
+
+
+###  Organism/Plant/Fruit
+
+<http://rdf.fm/Organism/Plant/Fruit> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "Fruit"@en ;
+                                              
+                                              rdfs:subClassOf <http://rdf.fm/Organism/Plant> .
+
+
+
+###  Organism/Plant/Moss
+
+<http://rdf.fm/Organism/Plant/Moss> rdf:type owl:Class ;
+                                             
+                                             rdfs:label "Moss"@en ;
+                                             
+                                             rdfs:subClassOf <http://rdf.fm/Organism/Plant> .
+
+
+
+###  Organism/Plant/Shrub
+
+<http://rdf.fm/Organism/Plant/Shrub> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "Shrub"@en ;
+                                              
+                                              rdfs:subClassOf <http://rdf.fm/Organism/Plant> .
+
+
+
+###  Organism/Plant/Tree
+
+<http://rdf.fm/Organism/Plant/Tree> rdf:type owl:Class ;
+                                             
+                                             rdfs:label "Tree"@en ;
+                                             
+                                             rdfs:subClassOf <http://rdf.fm/Organism/Plant> .
+
+
+
+###  Organism/Plant/Vegetable
+
+<http://rdf.fm/Organism/Plant/Vegetable> rdf:type owl:Class ;
+                                                  
+                                                  rdfs:label "Vegetable"@en ;
+                                                  
+                                                  rdfs:subClassOf <http://rdf.fm/Organism/Plant> .
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
