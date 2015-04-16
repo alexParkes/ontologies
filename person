@@ -4,9 +4,9 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://rdf.fm/Person> .
+@base <http://rdf.fm/person> .
 
-<http://rdf.fm/Person> rdf:type owl:Ontology ;
+<http://rdf.fm/person> rdf:type owl:Ontology ;
                            
                            rdfs:label "FactMint Person Schema"@en ;
                            
@@ -33,7 +33,7 @@
                            
                            owl:versionInfo "0.3"@en ;
                                                                                   
-                           owl:imports <http://rdf.fm/Core> .
+                           owl:imports <http://rdf.fm/core> .
 
 
 #################################################################
@@ -43,7 +43,7 @@
 #################################################################
 
 
-###  http://rdf.fm#hasFamilyRelationship
+###  http://rdf.fm/person#hasFamilyRelationship
 
 <#hasFamilyRelationship> rdf:type owl:ObjectProperty ,
 
@@ -55,7 +55,7 @@
 
 
 
-###  http://rdf.fm#hasBloodRelationship
+###  http://rdf.fm/person#hasBloodRelationship
 
 <#hasBloodRelationship> rdf:type owl:ObjectProperty ,
 
@@ -65,11 +65,11 @@
                                                   
                                                            rdfs:label "has blood relationship"@en ;
                                                   
-                                                           rdfs:subPropertyOf <http://rdf.fm#hasFamilyRelationship> .
+                                                           rdfs:subPropertyOf <http://rdf.fm/person#hasFamilyRelationship> .
 
 
 
-###  http://rdf.fm#hasNonBloodRelationship
+###  http://rdf.fm/person#hasNonBloodRelationship
 
 <#hasNonBloodRelationship> rdf:type owl:ObjectProperty ,
 
@@ -79,70 +79,70 @@
                                                      
                                                               rdfs:label "has non-blood relationship"@en ;
                                                      
-                                                              rdfs:subPropertyOf <http://rdf.fm#hasFamilyRelationship> .
+                                                              rdfs:subPropertyOf <http://rdf.fm/person#hasFamilyRelationship> .
 
 
 
-###  http://rdf.fm#hasChild
+###  http://rdf.fm/person#hasChild
 
 <#hasChild> rdf:type owl:AsymmetricProperty ,
                                   owl:ObjectProperty ;
                                   rdfs:label "has child"@en ;
-                         rdfs:subPropertyOf <http://rdf.fm#hasBloodRelationship> .
+                         rdfs:subPropertyOf <http://rdf.fm/person#hasBloodRelationship> .
 
 
 
-###  http://rdf.fm#hasParent
+###  http://rdf.fm/person#hasParent
 
 <#hasParent> rdf:type owl:AsymmetricProperty ,
                       owl:ObjectProperty ;
              rdfs:label "has parent"@en ;
-             rdfs:subPropertyOf <http://rdf.fm#hasBloodRelationship> .
+             rdfs:subPropertyOf <http://rdf.fm/person#hasBloodRelationship> .
 
 
 
-###  http://rdf.fm#hasSibling
+###  http://rdf.fm/person#hasSibling
 
 <#hasSibling> rdf:type owl:ObjectProperty ,
                        owl:SymmetricProperty ;
                        rdfs:label "has sibling"@en ;
-                       rdfs:subPropertyOf <http://rdf.fm#hasBloodRelationship> .
+                       rdfs:subPropertyOf <http://rdf.fm/person#hasBloodRelationship> .
 
 
 
-###  http://rdf.fm#hasSpouse
+###  http://rdf.fm/person#hasSpouse
 
 <#hasSpouse> rdf:type owl:ObjectProperty ,
                       owl:SymmetricProperty ;
              rdfs:label "has spouse"@en ;
-             rdfs:subPropertyOf <http://rdf.fm#hasNonBloodRelationship> .
+             rdfs:subPropertyOf <http://rdf.fm/person#hasNonBloodRelationship> .
 
 
 
-###  http://rdf.fm#hasStepChild
+###  http://rdf.fm/person#hasStepChild
 
 <#hasStepChild> rdf:type owl:AsymmetricProperty ,
                          owl:ObjectProperty ;
                 rdfs:label "has step child"@en ;
-                rdfs:subPropertyOf <http://rdf.fm#hasNonBloodRelationship> .
+                rdfs:subPropertyOf <http://rdf.fm/person#hasNonBloodRelationship> .
 
 
 
-###  http://rdf.fm#hasStepParent
+###  http://rdf.fm/person#hasStepParent
 
 <#hasStepParent> rdf:type owl:AsymmetricProperty ,
                           owl:ObjectProperty ;
                  rdfs:label "has step-parent"@en ;
-                 rdfs:subPropertyOf <http://rdf.fm#hasNonBloodRelationship> .
+                 rdfs:subPropertyOf <http://rdf.fm/person#hasNonBloodRelationship> .
 
 
 
-###  http://rdf.fm#hasStepSibling
+###  http://rdf.fm/person#hasStepSibling
 
 <#hasStepSibling> rdf:type owl:ObjectProperty ,
                            owl:SymmetricProperty ;
                   rdfs:label "has step sibling"@en ;
-                  rdfs:subPropertyOf <http://rdf.fm#hasNonBloodRelationship> .
+                  rdfs:subPropertyOf <http://rdf.fm/person#hasNonBloodRelationship> .
 
 
 #################################################################
@@ -160,7 +160,7 @@
                                
                                rdfs:comment "Uses FOAF gender. Its range is just a string at present."@en ;
                                
-                               rdfs:domain <http://rdf.fm#Person> ;
+                               rdfs:domain <http://rdf.fm/core#Person> ;
                                
                                rdfs:range xsd:string .
 
@@ -174,28 +174,28 @@
                              
                              rdfs:comment "The simple FOAF name property. This does not make any distinction between given names, family names, full names or any other type of name. We'll look at ways of handling different name structures in future. Uses the XML datatype of \"Name\", which is a sub-type of a \"String\"."@en ;
                              
-                             rdfs:domain <http://rdf.fm#Person> ;
+                             rdfs:domain <http://rdf.fm/core#Person> ;
 
-                             rdfs:subPropertyOf <http://rdf.fm#hasName> ;                             
+                             rdfs:subPropertyOf <http://rdf.fm/core#hasName> ;                             
                              
                              rdfs:range xsd:Name .
 
 
-###  http://rdf.fm/Person#hasDateOfDeath
+###  http://rdf.fm/person#hasDateOfDeath
 
 <#hasDateOfDeath> rdf:type owl:DatatypeProperty ,
                            owl:FunctionalProperty ;
                   rdfs:label "has date of death"@en ;
-                  rdfs:subPropertyOf <http://rdf.fm#hasEndOfExistence> .
+                  rdfs:subPropertyOf <http://rdf.fm/core#hasEndOfExistence> .
 
 
-###  http://rdf.fm/Person#hasDateOfBirth
+###  http://rdf.fm/person#hasDateOfBirth
 
 <#hasDateOfBirth> rdf:type owl:DatatypeProperty ,
                            owl:FunctionalProperty ;
                   rdfs:label "has date of birth"@en ;
                   rdfs:comment "This is not a concept included in the FOAF specification, so we are using a FactMint URI for now."@en ;
-                  rdfs:subPropertyOf <http://rdf.fm#hasStartOfExistence> .                                    
+                  rdfs:subPropertyOf <http://rdf.fm/core#hasStartOfExistence> .                                    
 
 
 
@@ -210,263 +210,263 @@
 
 
 
-###  http://rdf.fm/Person#Agricultural_Worker
+###  http://rdf.fm/person#Agricultural_Worker
 
 <#Agricultural_Worker> rdf:type owl:Class ;
                        rdfs:label "Agricultural Worker"@en ;
-                       rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                       rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Artist
+###  http://rdf.fm/person#Artist
 
 <#Artist> rdf:type owl:Class ;
                               
                               rdfs:label "Artist"@en ;
                               
-                              rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                              rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Caterer
+###  http://rdf.fm/person#Caterer
 
 <#Caterer> rdf:type owl:Class ;
                                
                                rdfs:label "Caterer"@en ;
                                
-                               rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                               rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Civil_Servant
+###  http://rdf.fm/person#Civil_Servant
 
 <#Civil_Servant> rdf:type owl:Class ;
 
                                      rdfs:label "Civil Servant"@en ;
                                      
-                                     rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                     rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Contributor
+###  http://rdf.fm/person#Contributor
 
 <#Contributor> rdf:type owl:Class ;
                                    
                                    rdfs:label "Contributor"@en ;
                                    
-                                   rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                   rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Criminal
+###  http://rdf.fm/person#Criminal
 
 <#Criminal> rdf:type owl:Class ;
                                 
                                 rdfs:label "Criminal"@en ;
                                 
-                                rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Educator
+###  http://rdf.fm/person#Educator
 
 <#Educator> rdf:type owl:Class ;
                                 
                                 rdfs:label "Educator"@en ;
                                 
-                                rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Engineer
+###  http://rdf.fm/person#Engineer
 
 <#Engineer> rdf:type owl:Class ;
                                 
                                 rdfs:label "Engineer"@en ;
                                 
-                                rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Entertainer
+###  http://rdf.fm/person#Entertainer
 
 <#Entertainer> rdf:type owl:Class ;
                                    
                                    rdfs:label "Entertainer"@en ;
                                    
-                                   rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                   rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Financial_Services_Professional
+###  http://rdf.fm/person#Financial_Services_Professional
 
 <#Financial_Services_Professional> rdf:type owl:Class ;
                                                        
                                                        rdfs:label "Financial Services Professional"@en ;
                                                        
-                                                       rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                                       rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Hotelier
+###  http://rdf.fm/person#Hotelier
 
 <#Hotelier> rdf:type owl:Class ;
                                 
                                 rdfs:label "Hotelier"@en ;
                                 
-                                rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Information_Professional
+###  http://rdf.fm/person#Information_Professional
 
 <#Information_Professional> rdf:type owl:Class ;
                                                 
                                                 rdfs:label "Information Professional"@en ;
                                                 
-                                                rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                                rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Journalist
+###  http://rdf.fm/person#Journalist
 
 <#Journalist> rdf:type owl:Class ;
                                   
                                   rdfs:label "Journalist"@en ;
                                   
-                                  rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                  rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Legal_Professional
+###  http://rdf.fm/person#Legal_Professional
 
 <#Legal_Professional> rdf:type owl:Class ;
                                           
                                           rdfs:label "Legal Professional"@en ;
                                           
-                                          rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                          rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Medical_Professional
+###  http://rdf.fm/person#Medical_Professional
 
 <#Medical_Professional> rdf:type owl:Class ;
                                             
                                             rdfs:label "Medical Professional"@en ;
                                             
-                                            rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                            rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Military_Professional
+###  http://rdf.fm/person#Military_Professional
 
 <#Military_Professional> rdf:type owl:Class ;
                                              
                                              rdfs:label "Military Professional"@en ;
                                              
-                                             rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                             rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Patient
+###  http://rdf.fm/person#Patient
 
 <#Patient> rdf:type owl:Class ;
                                
                                rdfs:label "Patient"@en ;
                                
-                               rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                               rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Politician
+###  http://rdf.fm/person#Politician
 
 <#Politician> rdf:type owl:Class ;
                                   
                                   rdfs:label "Politician"@en ;
                                   
-                                  rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                  rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Publisher
+###  http://rdf.fm/person#Publisher
 
 <#Publisher> rdf:type owl:Class ;
                                  
                                  rdfs:label "Publisher"@en ;
                                  
-                                 rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                 rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Retailer
+###  http://rdf.fm/person#Retailer
 
 <#Retailer> rdf:type owl:Class ;
                                 
                                 rdfs:label "Retailer"@en ;
                                 
-                                rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Scientist
+###  http://rdf.fm/person#Scientist
 
 <#Scientist> rdf:type owl:Class ;
                                  
                                  rdfs:label "Scientist"@en ;
                                  
-                                 rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                 rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Sports_Person
+###  http://rdf.fm/person#Sports_Person
 
 <#Sports_Person> rdf:type owl:Class ;
                                      
                                      rdfs:label "Sports Person"@en ;
                                      
-                                     rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                     rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Veterinarian
+###  http://rdf.fm/person#Veterinarian
 
 <#Veterinarian> rdf:type owl:Class ;
                                     
-                                    rdfs:subClassOf <http://rdf.fm/Core#Person> .
+                                    rdfs:subClassOf <http://rdf.fm/core#Person> .
 
 
 
-###  http://rdf.fm/Person#Agricultural_Worker/Farm_Labourer
+###  http://rdf.fm/person#Agricultural_Worker/Farm_Labourer
 
 <#Farm_Labourer> rdf:type owl:Class ;
                                                          
                                                          rdfs:label "Farm Labourer"@en ;
                                                          
-                                                         rdfs:subClassOf <http://rdf.fm/Person#Agricultural_Worker> .
+                                                         rdfs:subClassOf <http://rdf.fm/person#Agricultural_Worker> .
 
 
 
-###  http://rdf.fm/Person#Agricultural_Worker/Farmer
+###  http://rdf.fm/person#Agricultural_Worker/Farmer
 
 <#Farmer> rdf:type owl:Class ;
                                                   
                                                   rdfs:label "Farmer"@en ;
                                                   
-                                                  rdfs:subClassOf <http://rdf.fm/Person#Agricultural_Worker> .
+                                                  rdfs:subClassOf <http://rdf.fm/person#Agricultural_Worker> .
 
 
 
-###  http://rdf.fm/Person#Film_Maker
+###  http://rdf.fm/person#Film_Maker
 
 <#Film_Maker> rdf:type owl:Class ;
                                          
                                          rdfs:label "Film Maker"@en ;
                                          
-                                         rdfs:subClassOf <http://rdf.fm/Person#Artist> .
+                                         rdfs:subClassOf <http://rdf.fm/person#Artist> .
 
 
 
-###  http://rdf.fm/Person#Graphic_Artist
+###  http://rdf.fm/person#Graphic_Artist
 
 <#Graphic_Artist> rdf:type owl:Class ;
                                              
@@ -476,719 +476,719 @@
 
 
 
-###  http://rdf.fm/Person#Musician
+###  http://rdf.fm/person#Musician
 
 <#Musician> rdf:type owl:Class ;
                                        
                                        rdfs:label "Musician"@en ;
                                        
-                                       rdfs:subClassOf <http://rdf.fm/Person#Artist> .
+                                       rdfs:subClassOf <http://rdf.fm/person#Artist> .
 
 
 
-###  http://rdf.fm/Person#Photographer
+###  http://rdf.fm/person#Photographer
 
 <#Photographer> rdf:type owl:Class ;
                                            
                                            rdfs:label "Photographer"@en ;
                                            
-                                           rdfs:subClassOf <http://rdf.fm/Person#Artist> .
+                                           rdfs:subClassOf <http://rdf.fm/person#Artist> .
 
 
 
-###  http://rdf.fm/Person#Sculptor
+###  http://rdf.fm/person#Sculptor
 
 <#Sculptor> rdf:type owl:Class ;
                                        
                                        rdfs:label "Sculptor"@en ;
                                        
-                                       rdfs:subClassOf <http://rdf.fm/Person#Artist> .
+                                       rdfs:subClassOf <http://rdf.fm/person#Artist> .
 
 
 
-###  http://rdf.fm/Person#Textile_Artist
+###  http://rdf.fm/person#Textile_Artist
 
 <#Textile_Artist> rdf:type owl:Class ;
                                              
                                              rdfs:label "Textile Artist"@en ;
                                              
-                                             rdfs:subClassOf <http://rdf.fm/Person#Artist> .
+                                             rdfs:subClassOf <http://rdf.fm/person#Artist> .
 
 
 
-###  http://rdf.fm/Person#Writer
+###  http://rdf.fm/person#Writer
 
 <#Writer> rdf:type owl:Class ;
                                      
                                      rdfs:label "Writer"@en ;
                                      
-                                     rdfs:subClassOf <http://rdf.fm/Person#Artist> .
+                                     rdfs:subClassOf <http://rdf.fm/person#Artist> .
 
 
 
-###  http://rdf.fm/Person#Painter
+###  http://rdf.fm/person#Painter
 
 <#Painter> rdf:type owl:Class ;
                                                      rdfs:label "Painter"@en ;
                                                      
-                                                     rdfs:subClassOf <http://rdf.fm/Person#Graphic_Artist> .
+                                                     rdfs:subClassOf <http://rdf.fm/person#Graphic_Artist> .
 
 
 
-###  http://rdf.fm/Person#Novelist
+###  http://rdf.fm/person#Novelist
 
 <#Novelist> rdf:type owl:Class ;
                                               
                                               rdfs:label "Novelist"@en ;
                                               
-                                              rdfs:subClassOf <http://rdf.fm/Person#Writer> .
+                                              rdfs:subClassOf <http://rdf.fm/person#Writer> .
 
 
 
-###  http://rdf.fm/Person#Poet
+###  http://rdf.fm/person#Poet
 
 <#Poet> rdf:type owl:Class ;
                                           
                                           rdfs:label "Poet"@en ;
                                           
-                                          rdfs:subClassOf <http://rdf.fm/Person#Writer> .
+                                          rdfs:subClassOf <http://rdf.fm/person#Writer> .
 
 
 
-###  http://rdf.fm/Person#Baker
+###  http://rdf.fm/person#Baker
 
 <#Baker> rdf:type owl:Class ;
                                      
                                      rdfs:label "Baker"@en ;
                                      
-                                     rdfs:subClassOf <http://rdf.fm/Person#Caterer> .
+                                     rdfs:subClassOf <http://rdf.fm/person#Caterer> .
 
 
 
-###  http://rdf.fm/Person#Bar_Worker
+###  http://rdf.fm/person#Bar_Worker
 
 <#Bar_Worker> rdf:type owl:Class ;
                                           
                                           rdfs:label "Bar Worker"@en ;
                                           
-                                          rdfs:subClassOf <http://rdf.fm/Person#Caterer> .
+                                          rdfs:subClassOf <http://rdf.fm/person#Caterer> .
 
 
 
-###  http://rdf.fm/Person#Chef
+###  http://rdf.fm/person#Chef
 
 <#Chef> rdf:type owl:Class ;
                                     
                                     rdfs:label "Chef"@en ;
                                     
-                                    rdfs:subClassOf <http://rdf.fm/Person#Caterer> .
+                                    rdfs:subClassOf <http://rdf.fm/person#Caterer> .
 
 
 
-###  http://rdf.fm/Person#Restauranteur
+###  http://rdf.fm/person#Restauranteur
 
 <#Restauranteur> rdf:type owl:Class ;
                                              
                                              rdfs:label "Restauranteur"@en ;
                                              
-                                             rdfs:subClassOf <http://rdf.fm/Person#Caterer> .
+                                             rdfs:subClassOf <http://rdf.fm/person#Caterer> .
 
 
 
-###  http://rdf.fm/Person#Teacher
+###  http://rdf.fm/person#Teacher
 
 <#Teacher> rdf:type owl:Class ;
                                         
                                         rdfs:label "Teacher"@en ;
                                         
-                                        rdfs:subClassOf <http://rdf.fm/Person#Educator> .
+                                        rdfs:subClassOf <http://rdf.fm/person#Educator> .
 
 
 
-###  http://rdf.fm/Person#Chemical_Engineer
+###  http://rdf.fm/person#Chemical_Engineer
 
 <#Chemical_Engineer> rdf:type owl:Class ;
                                                   rdfs:label "Chemical Engineer"@en ;
                                                   
-                                                  rdfs:subClassOf <http://rdf.fm/Person#Engineer> .
+                                                  rdfs:subClassOf <http://rdf.fm/person#Engineer> .
 
 
 
-###  http://rdf.fm/Person#Civil_Engineer
+###  http://rdf.fm/person#Civil_Engineer
 
 <#Civil_Engineer> rdf:type owl:Class ;
                                                
                                                rdfs:label "Civil Engineer"@en ;
                                                
-                                               rdfs:subClassOf <http://rdf.fm/Person#Engineer> .
+                                               rdfs:subClassOf <http://rdf.fm/person#Engineer> .
 
 
 
-###  http://rdf.fm/Person#Electrical_Engineer
+###  http://rdf.fm/person#Electrical_Engineer
 
 <#Electrical_Engineer> rdf:type owl:Class ;
                                                     
                                                     rdfs:label "Electrical Engineer"@en ;
                                                     
-                                                    rdfs:subClassOf <http://rdf.fm/Person#Engineer> .
+                                                    rdfs:subClassOf <http://rdf.fm/person#Engineer> .
 
 
 
-###  http://rdf.fm/Person#Mechanical_Engineer
+###  http://rdf.fm/person#Mechanical_Engineer
 
 <#Mechanical_Engineer> rdf:type owl:Class ;
                                                     
                                                     rdfs:label "Mechanical Engineer"@en ;
                                                     
-                                                    rdfs:subClassOf <http://rdf.fm/Person#Engineer> .
+                                                    rdfs:subClassOf <http://rdf.fm/person#Engineer> .
 
 
 
-###  http://rdf.fm/Person#Actor
+###  http://rdf.fm/person#Actor
 
 <#Actor> rdf:type owl:Class ;
                                          
                                          rdfs:label "Actor"@en ;
                                          
-                                         rdfs:subClassOf <http://rdf.fm/Person#Entertainer> .
+                                         rdfs:subClassOf <http://rdf.fm/person#Entertainer> .
 
 
 
-###  http://rdf.fm/Person#Comedian
+###  http://rdf.fm/person#Comedian
 
 <#Comedian> rdf:type owl:Class ;
                                             
                                             rdfs:label "Comedian"@en ;
                                             
-                                            rdfs:subClassOf <http://rdf.fm/Person#Entertainer> .
+                                            rdfs:subClassOf <http://rdf.fm/person#Entertainer> .
 
 
 
-###  http://rdf.fm/Person#Accountant
+###  http://rdf.fm/person#Accountant
 
 <#Accountant> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Accountant"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Person#Financial_Services_Professional> .
+                                                                  rdfs:subClassOf <http://rdf.fm/person#Financial_Services_Professional> .
 
 
 
-###  http://rdf.fm/Person#Actuary
+###  http://rdf.fm/person#Actuary
 
 <#Actuary> rdf:type owl:Class ;
                                                                
                                                                rdfs:label "Actuary"@en ;
                                                                
-                                                               rdfs:subClassOf <http://rdf.fm/Person#Financial_Services_Professional> .
+                                                               rdfs:subClassOf <http://rdf.fm/person#Financial_Services_Professional> .
 
 
 
-###  http://rdf.fm/Person#Banker
+###  http://rdf.fm/person#Banker
 
 <#Banker> rdf:type owl:Class ;
                                                               
                                                               rdfs:label "Banker"@en ;
                                                               
-                                                              rdfs:subClassOf <http://rdf.fm/Person#Financial_Services_Professional> .
+                                                              rdfs:subClassOf <http://rdf.fm/person#Financial_Services_Professional> .
 
 
 
-###  http://rdf.fm/Person#Archivist
+###  http://rdf.fm/person#Archivist
 
 <#Archivist> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Archivist"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Person#Information_Professional> .
+                                                          rdfs:subClassOf <http://rdf.fm/person#Information_Professional> .
 
 
 
-###  http://rdf.fm/Person#Librarian
+###  http://rdf.fm/person#Librarian
 
 <#Librarian> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Librarian"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Person#Information_Professional> .
+                                                          rdfs:subClassOf <http://rdf.fm/person#Information_Professional> .
 
 
 
-###  http://rdf.fm/Person#Barrister
+###  http://rdf.fm/person#Barrister
 
 <#Barrister> rdf:type owl:Class ;
                                                     
                                                     rdfs:label "Barrister"@en ;
                                                     
-                                                    rdfs:subClassOf <http://rdf.fm/Person#Legal_Professional> .
+                                                    rdfs:subClassOf <http://rdf.fm/person#Legal_Professional> .
 
 
 
-###  http://rdf.fm/Person#Judge
+###  http://rdf.fm/person#Judge
 
 <#Judge> rdf:type owl:Class ;
                                                 
                                                 rdfs:label "Judge"@en ;
                                                 
-                                                rdfs:subClassOf <http://rdf.fm/Person#Legal_Professional> .
+                                                rdfs:subClassOf <http://rdf.fm/person#Legal_Professional> .
 
 
 
-###  http://rdf.fm/Person#Legal_Clerk
+###  http://rdf.fm/person#Legal_Clerk
 
 <#Legal_Clerk> rdf:type owl:Class ;
                                                       
                                                       rdfs:label "Legal Clerk"@en ;
                                                       
-                                                      rdfs:subClassOf <http://rdf.fm/Person#Legal_Professional> .
+                                                      rdfs:subClassOf <http://rdf.fm/person#Legal_Professional> .
 
 
 
-###  http://rdf.fm/Person#Solicitor
+###  http://rdf.fm/person#Solicitor
 
 <#Solicitor> rdf:type owl:Class ;
                                                     
                                                     rdfs:label "Solicitor"@en ;
                                                     
-                                                    rdfs:subClassOf <http://rdf.fm/Person#Legal_Professional> .
+                                                    rdfs:subClassOf <http://rdf.fm/person#Legal_Professional> .
 
 
 
-###  http://rdf.fm/Person#Circuit_Judge
+###  http://rdf.fm/person#Circuit_Judge
 
 <#Circuit_Judge> rdf:type owl:Class ;
                                                               
                                                               rdfs:label "Circuit Judge"@en ;
                                                               
-                                                              rdfs:subClassOf <http://rdf.fm/Person#Judge> .
+                                                              rdfs:subClassOf <http://rdf.fm/person#Judge> .
 
 
 
-###  http://rdf.fm/Person#High_Court_Judge
+###  http://rdf.fm/person#High_Court_Judge
 
 <#High_Court_Judge> rdf:type owl:Class ;
                                                                  
                                                                  rdfs:label "High Court Judge"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Person#Judge> .
+                                                                 rdfs:subClassOf <http://rdf.fm/person#Judge> .
 
 
 
-###  http://rdf.fm/Person#Magistrate
+###  http://rdf.fm/person#Magistrate
 
 <#Magistrate> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Magistrate"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Person#Judge> .
+                                                           rdfs:subClassOf <http://rdf.fm/person#Judge> .
 
 
 
-###  http://rdf.fm/Person##Dentist
+###  http://rdf.fm/person##Dentist
 
 <#Dentist> rdf:type owl:Class ;
                                                     
                                                     rdfs:label "Dentist"@en ;
                                                     
-                                                    rdfs:subClassOf <http://rdf.fm/Person#Medical_Professional> .
+                                                    rdfs:subClassOf <http://rdf.fm/person#Medical_Professional> .
 
 
 
-###  http://rdf.fm/Person#Doctor
+###  http://rdf.fm/person#Doctor
 
 <#Doctor> rdf:type owl:Class ;
                                                    
                                                    rdfs:label "Doctor"@en ;
                                                    
-                                                   rdfs:subClassOf <http://rdf.fm/Person#Medical_Professional> .
+                                                   rdfs:subClassOf <http://rdf.fm/person#Medical_Professional> .
 
 
 
-###  http://rdf.fm/Person#Mental_Health_Professional
+###  http://rdf.fm/person#Mental_Health_Professional
 
 <#Mental_Health_Professional> rdf:type owl:Class ;
                                                                        
                                                                        rdfs:label "Mental Health Professional"@en ;
                                                                        
-                                                                       rdfs:subClassOf <http://rdf.fm/Person#Medical_Professional> .
+                                                                       rdfs:subClassOf <http://rdf.fm/person#Medical_Professional> .
 
 
 
-###  http://rdf.fm/Person#Nurse
+###  http://rdf.fm/person#Nurse
 
 <#Nurse> rdf:type owl:Class ;
                                                   
                                                   rdfs:label "Nurse"@en ;
                                                   
-                                                  rdfs:subClassOf <http://rdf.fm/Person#Medical_Professional> .
+                                                  rdfs:subClassOf <http://rdf.fm/person#Medical_Professional> .
 
 
 
-###  http://rdf.fm/Person#Pharmacist
+###  http://rdf.fm/person#Pharmacist
 
 <#Pharmacist> rdf:type owl:Class ;
                                                        
                                                        rdfs:label "Pharmacist"@en ;
                                                        
-                                                       rdfs:subClassOf <http://rdf.fm/Person#Medical_Professional> .
+                                                       rdfs:subClassOf <http://rdf.fm/person#Medical_Professional> .
 
 
 
-###  http://rdf.fm/Person#Anaesthetist
+###  http://rdf.fm/person#Anaesthetist
 
 <#Anaesthetist> rdf:type owl:Class ;
                                                                 
                                                                 rdfs:label "Anaesthetist"@en ;
                                                                 
-                                                                rdfs:subClassOf <http://rdf.fm/Person#Doctor> .
+                                                                rdfs:subClassOf <http://rdf.fm/person#Doctor> .
 
 
 
-###  http://rdf.fm/Person#General_Practitioner
+###  http://rdf.fm/person#General_Practitioner
 
 <#General_Practitioner> rdf:type owl:Class ;
                                                                         
                                                                         rdfs:label "General Practitioner"@en ;
                                                                         
-                                                                        rdfs:subClassOf <http://rdf.fm/Person#Doctor> .
+                                                                        rdfs:subClassOf <http://rdf.fm/person#Doctor> .
 
 
 
-###  http://rdf.fm/Person#Psychiatrist
+###  http://rdf.fm/person#Psychiatrist
 
 <#Psychiatrist> rdf:type owl:Class ;
                                                                                     
                                                                                     rdfs:label "Psychiatrist"@en ;
                                                                                     
-                                                                                    rdfs:subClassOf <http://rdf.fm/Person#Mental_Health_Professional> .
+                                                                                    rdfs:subClassOf <http://rdf.fm/person#Mental_Health_Professional> .
 
 
 
-###  http://rdf.fm/Person#Psychologist
+###  http://rdf.fm/person#Psychologist
 
 <#Psychologist> rdf:type owl:Class ;
                                                                                     
                                                                                     rdfs:label "Psychologist"@en ;
                                                                                     
-                                                                                    rdfs:subClassOf <http://rdf.fm/Person#Mental_Health_Professional> .
+                                                                                    rdfs:subClassOf <http://rdf.fm/person#Mental_Health_Professional> .
 
 
 
-###  http://rdf.fm/Person#Councillor
+###  http://rdf.fm/person#Councillor
 
 <#Councillor> rdf:type owl:Class ;
 			  rdfs:label	"Councillor"@en ;
- 			  rdfs:subClassOf <http://rdf.fm/Person#Politician> .
+ 			  rdfs:subClassOf <http://rdf.fm/person#Politician> .
 
 
 
-###  http://rdf.fm/Person#Member_of_Parliament
+###  http://rdf.fm/person#Member_of_Parliament
 
 <#Member_of_Parliament> rdf:type owl:Class ;
 						rdfs:label	"Member of Parliament"@en ;
-						rdfs:subClassOf <http://rdf.fm/Person#Politician> .
+						rdfs:subClassOf <http://rdf.fm/person#Politician> .
 
 
 
-###  http://rdf.fm/Person#President
+###  http://rdf.fm/person#President
 
 <#President> rdf:type owl:Class ;
     			rdfs:label	"President"@en ;
-             rdfs:subClassOf <http://rdf.fm/Person#Politician> .
+             rdfs:subClassOf <http://rdf.fm/person#Politician> .
 
 
 
-###  http://rdf.fm/Person#Presidential_Candidate
+###  http://rdf.fm/person#Presidential_Candidate
 
 <#Presidential_Candidate> rdf:type owl:Class ;
                                                          
                                                          rdfs:label "Presidential Candidate"@en ;
                                                          
-                                                         rdfs:subClassOf <http://rdf.fm/Person#Politician> .
+                                                         rdfs:subClassOf <http://rdf.fm/person#Politician> .
 
 
 
-###  http://rdf.fm/Person#Minister
+###  http://rdf.fm/person#Minister
 
 <#Minister> rdf:type owl:Class ;
 			rdfs:label	"Minister" ;
-                                                                rdfs:subClassOf <http://rdf.fm/Person#Member_of_Parliament> .
+                                                                rdfs:subClassOf <http://rdf.fm/person#Member_of_Parliament> .
 
 
 
-###  http://rdf.fm/Person#Prime_Minister
+###  http://rdf.fm/person#Prime_Minister
 
 <#Prime_Minister> rdf:type owl:Class ;
   					rdfs:label	"Prime Minister"  ;
-                                                                               rdfs:subClassOf <http://rdf.fm/Person#Minister> .
+                                                                               rdfs:subClassOf <http://rdf.fm/person#Minister> .
 
 
 
-###  http://rdf.fm/Person#Athlete
+###  http://rdf.fm/person#Athlete
 
 <#Athlete> rdf:type owl:Class ;
                                              
                                              rdfs:label "Athlete"@en ;
                                              
-                                             rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                             rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Cricketer
+###  http://rdf.fm/person#Cricketer
 
 <#Cricketer> rdf:type owl:Class ;
                                                
                                                rdfs:label "Cricketer"@en ;
                                                
-                                               rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                               rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Cyclist
+###  http://rdf.fm/person#Cyclist
 
 <#Cyclist> rdf:type owl:Class ;
                                              
                                              rdfs:label "Cyclist"@en ;
                                              
-                                             rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                             rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Racing_Driver
+###  http://rdf.fm/person#Racing_Driver
 
 <#Racing_Driver> rdf:type owl:Class ;
                                             
                                             rdfs:label "Racing Driver"@en ;
                                             
-                                            rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                            rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Footballer
+###  http://rdf.fm/person#Footballer
 
 <#Footballer> rdf:type owl:Class ;
                                                 
                                                 rdfs:label "Footballer"@en ;
                                                 
-                                                rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                                rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Gymnast
+###  http://rdf.fm/person#Gymnast
 
 <#Gymnast> rdf:type owl:Class ;
                                              
                                              rdfs:label "Gymnast"@en ;
                                              
-                                             rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                             rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Hockey_Player
+###  http://rdf.fm/person#Hockey_Player
 
 <#Hockey_Player> rdf:type owl:Class ;
                                                    
                                                    rdfs:label "Hockey Player"@en ;
                                                    
-                                                   rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                                   rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Horse_Rider
+###  http://rdf.fm/person#Horse_Rider
 
 <#Horse_Rider> rdf:type owl:Class ;
                                                  
                                                  rdfs:label "Horse Rider"@en ;
                                                  
-                                                 rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                                 rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Rock_Climber
+###  http://rdf.fm/person#Rock_Climber
 
 <#Rock_Climber> rdf:type owl:Class ;
                                                   
                                                   rdfs:label "Rock Climber"@en ;
                                                   
-                                                  rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                                  rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Rugby_Player
+###  http://rdf.fm/person#Rugby_Player
 
 <#Rugby_Player> rdf:type owl:Class ;
                                                   
                                                   rdfs:label "Rugby Player"@en ;
                                                   
-                                                  rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                                  rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Snooker_Player
+###  http://rdf.fm/person#Snooker_Player
 
 <#Snooker_Player> rdf:type owl:Class ;
                                                     
                                                     rdfs:label "Snooker Player"@en ;
                                                     
-                                                    rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                                    rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Swimmer
+###  http://rdf.fm/person#Swimmer
 
 <#Swimmer> rdf:type owl:Class ;
                                              
                                              rdfs:label "Swimmer"@en ;
                                              
-                                             rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                             rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Tennis_Player
+###  http://rdf.fm/person#Tennis_Player
 
 <#Tennis_Player> rdf:type owl:Class ;
                                                    
                                                    rdfs:label "Tennis Player"@en ;
                                                    
-                                                   rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                                   rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Winter_Sports_Person
+###  http://rdf.fm/person#Winter_Sports_Person
 
 <#Winter_Sports_Person> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Winter Sports Person"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Person#Sports_Person> .
+                                                          rdfs:subClassOf <http://rdf.fm/person#Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#BMX_Rider
+###  http://rdf.fm/person#BMX_Rider
 
 <#BMX_Rider> rdf:type owl:Class ;
                                                        
                                                        rdfs:label "BMX Rider"@en ;
                                                        
-                                                       rdfs:subClassOf <http://rdf.fm/Person#Cyclist> .
+                                                       rdfs:subClassOf <http://rdf.fm/person#Cyclist> .
 
 
 
-###  http://rdf.fm/Person#Cyclocross_Rider
+###  http://rdf.fm/person#Cyclocross_Rider
 
 <#Cyclocross_Rider> rdf:type owl:Class ;
                                                               
                                                               rdfs:label "Cyclocross Rider"@en ;
                                                               
-                                                              rdfs:subClassOf <http://rdf.fm/Person#Cyclist> .
+                                                              rdfs:subClassOf <http://rdf.fm/person#Cyclist> .
 
 
 
-###  http://rdf.fm/Person#Mountain_Biker
+###  http://rdf.fm/person#Mountain_Biker
 
 <#Mountain_Biker> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Mountain Biker"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Person#Cyclist> .
+                                                            rdfs:subClassOf <http://rdf.fm/person#Cyclist> .
 
 
 
-###  http://rdf.fm/Person#Road_Cyclist
+###  http://rdf.fm/person#Road_Cyclist
 
 <#Road_Cyclist> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Road Cyclist"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Person#Cyclist> .
+                                                          rdfs:subClassOf <http://rdf.fm/person#Cyclist> .
 
 
 
-###  http://rdf.fm/Person#Track_Cyclist
+###  http://rdf.fm/person#Track_Cyclist
 
 <#Track_Cyclist> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Track Cyclist"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Person#Cyclist> .
+                                                           rdfs:subClassOf <http://rdf.fm/person#Cyclist> .
 
 
 
-###  http://rdf.fm/Person#Rugby_League_Player
+###  http://rdf.fm/person#Rugby_League_Player
 
 <#Rugby_League_Player> rdf:type owl:Class ;
                                                                       
                                                                       rdfs:label "Rugby League Player"@en ;
                                                                       
-                                                                      rdfs:subClassOf <http://rdf.fm/Person#Rugby_Player> .
+                                                                      rdfs:subClassOf <http://rdf.fm/person#Rugby_Player> .
 
 
 
-###  http://rdf.fm/Person#Rugby_Union_Player
+###  http://rdf.fm/person#Rugby_Union_Player
 
 <#Rugby_Union_Player> rdf:type owl:Class ;
                                                                      
                                                                      rdfs:label "Rugby Union Player"@en ;
                                                                      
-                                                                     rdfs:subClassOf <http://rdf.fm/Person#Rugby_Player> .
+                                                                     rdfs:subClassOf <http://rdf.fm/person#Rugby_Player> .
 
 
 
-###  http://rdf.fm/Person#Skiier
+###  http://rdf.fm/person#Skiier
 
 <#Skiier> rdf:type owl:Class ;
                                                                  
                                                                  rdfs:label "Skiier"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Person#Winter_Sports_Person> .
+                                                                 rdfs:subClassOf <http://rdf.fm/person#Winter_Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Snowboarder
+###  http://rdf.fm/person#Snowboarder
 
 <#Snowboarder> rdf:type owl:Class ;
                                                                       
                                                                       rdfs:label "Snowboarder"@en ;
                                                                       
-                                                                      rdfs:subClassOf <http://rdf.fm/Person#Winter_Sports_Person> .
+                                                                      rdfs:subClassOf <http://rdf.fm/person#Winter_Sports_Person> .
 
 
 
-###  http://rdf.fm/Person#Paraveterinary_Worker
+###  http://rdf.fm/person#Paraveterinary_Worker
 
 <#Paraveterinary_Worker> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Paraveterinary Worker"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Person#Veterinarian> .
+                                                          rdfs:subClassOf <http://rdf.fm/person#Veterinarian> .
 
 
 
-###  http://rdf.fm/Person#Veterinary_Surgeon
+###  http://rdf.fm/person#Veterinary_Surgeon
 
 <#Veterinary_Surgeon> rdf:type owl:Class ;
                                                        
-                                                       rdfs:subClassOf <http://rdf.fm/Person#Veterinarian> .
+                                                       rdfs:subClassOf <http://rdf.fm/person#Veterinarian> .
 
 
 
-###  http://rdf.fm/Person#Veterinary_Assistant
+###  http://rdf.fm/person#Veterinary_Assistant
 
 <#Veterinary_Assistant> rdf:type owl:Class ;
                                                                                
                                                                                rdfs:label "Veterinary Assistant"@en ;
                                                                                
-                                                                               rdfs:subClassOf <http://rdf.fm/Person#Paraveterinary_Worker> .
+                                                                               rdfs:subClassOf <http://rdf.fm/person#Paraveterinary_Worker> .
 
 
 
-###  http://rdf.fm/Person#Veterinary_Nurse
+###  http://rdf.fm/person#Veterinary_Nurse
 
 <#Veterinary_Nurse> rdf:type owl:Class ;
                                                                            
                                                                            rdfs:label "Veterinary Nurse"@en ;
                                                                            
-                                                                           rdfs:subClassOf <http://rdf.fm/Person#Paraveterinary_Worker> .
+                                                                           rdfs:subClassOf <http://rdf.fm/person#Paraveterinary_Worker> .
 
 
 
