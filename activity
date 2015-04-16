@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://rdf.fm/Core#Activity> rdf:type owl:Ontology ;
+<http://rdf.fm/activity> rdf:type owl:Ontology ;
                                          
                                          rdfs:label "FactMint Activity Schema"@en ;
                                          
@@ -30,9 +30,9 @@
             alex.parkes@factmint.com
  """@en ;
                                          
-                                         owl:versionInfo "0.2"@en ;
+                                         owl:versionInfo "0.3"@en ;
                                                                                   
-                                         owl:imports <http://rdf.fm/Core> .
+                                         owl:imports <http://rdf.fm/core> .
 
 
 
@@ -42,7 +42,7 @@
                                                     
                                            rdfs:label "Criminal Activity"@en ;
                                           
-                                           rdfs:subClassOf <http://rdf.fm/Core#Activity> .
+                                           rdfs:subClassOf <http://rdf.fm/core#Activity> .
 
 
 
@@ -52,7 +52,7 @@
                                                    
                                           rdfs:label "Leisure Activity"@en ;
                                          
-                                          rdfs:subClassOf <http://rdf.fm/Core#Activity> .
+                                          rdfs:subClassOf <http://rdf.fm/core#Activity> .
 
 
 
@@ -62,7 +62,7 @@
                                                    
                                           rdfs:label "Medical Activity"@en ;
                                          
-                                          rdfs:subClassOf <http://rdf.fm/Core#Activity> .
+                                          rdfs:subClassOf <http://rdf.fm/core#Activity> .
 
 
 
@@ -72,7 +72,7 @@
                                                      
                                             rdfs:label "Political Activity"@en ;
                                            
-                                            rdfs:subClassOf <http://rdf.fm/Core#Activity> .
+                                            rdfs:subClassOf <http://rdf.fm/core#Activity> .
 
 
 
@@ -82,7 +82,7 @@
                                                         
                                                rdfs:label "Professional Activity"@en ;
                                               
-                                               rdfs:subClassOf <http://rdf.fm/Core#Activity> .
+                                               rdfs:subClassOf <http://rdf.fm/core#Activity> .
 
 
 
@@ -92,7 +92,7 @@
                                                     
                                            rdfs:label "Sporting Activity"@en ;
                                           
-                                           rdfs:subClassOf <http://rdf.fm/Core#Activity> .
+                                           rdfs:subClassOf <http://rdf.fm/core#Activity> .
 
 
 
@@ -102,7 +102,7 @@
                                                   
                                          rdfs:label "Travel Activity"@en ;
                                         
-                                         rdfs:subClassOf <http://rdf.fm/Core#Activity> .
+                                         rdfs:subClassOf <http://rdf.fm/core#Activity> .
 
 
 
@@ -112,7 +112,7 @@
                                                                           
                                                                           rdfs:label "Anti-Social Behaviour"@en ;
                                                                           
-                                                                          rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
+                                                                          rdfs:subClassOf <http://rdf.fm/activity#Criminal_Activity> .
 
 
 
@@ -122,7 +122,7 @@
                                                              
                                                              rdfs:label "Burglary"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
+                                                             rdfs:subClassOf <http://rdf.fm/activity#Criminal_Activity> .
 
 
 
@@ -132,7 +132,7 @@
                                                                        
                                                                        rdfs:label "Drug-Related Crime"@en ;
                                                                        
-                                                                       rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
+                                                                       rdfs:subClassOf <http://rdf.fm/activity#Criminal_Activity> .
 
 
 
@@ -142,7 +142,7 @@
                                                             
                                                             rdfs:label "Robbery"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
+                                                            rdfs:subClassOf <http://rdf.fm/activity#Criminal_Activity> .
 
 
 
@@ -152,7 +152,7 @@
                                                           
                                                           rdfs:label "Theft"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
+                                                          rdfs:subClassOf <http://rdf.fm/activity#Criminal_Activity> .
 
 
 
@@ -162,7 +162,7 @@
                                                                   
                                                                   rdfs:label "Vehicle Crime"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
+                                                                  rdfs:subClassOf <http://rdf.fm/activity#Criminal_Activity> .
 
 
 
@@ -172,7 +172,7 @@
                                                                   
                                                                   rdfs:label "Violent Crime"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
+                                                                  rdfs:subClassOf <http://rdf.fm/activity#Criminal_Activity> .
 
 
 
@@ -192,7 +192,7 @@
                                                                  
                                                                  rdfs:label "Investigation"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Activity#Medical_Activity> .
+                                                                 rdfs:subClassOf <http://rdf.fm/activity#Medical_Activity> .
 
 
 
@@ -202,7 +202,7 @@
                                                              
                                                              rdfs:label "Treatment"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Activity#Medical_Activity> .
+                                                             rdfs:subClassOf <http://rdf.fm/activity#Medical_Activity> .
 
 
 
@@ -212,7 +212,7 @@
                                                                      
                                                                      rdfs:label "Regimen"@en ;
                                                                      
-                                                                     rdfs:subClassOf <http://rdf.fm/Activity#Treatment> .
+                                                                     rdfs:subClassOf <http://rdf.fm/activity#Treatment> .
 
 
 
@@ -222,7 +222,7 @@
                                                                    
                                                                    rdfs:label "Occupation"@en ;
                                                                    
-                                                                   rdfs:subClassOf <http://rdf.fm/Activity#Professional_Activity> .
+                                                                   rdfs:subClassOf <http://rdf.fm/activity#Professional_Activity> .
 
 
 
@@ -232,7 +232,7 @@
                                                                          
                                                                          rdfs:label "Association Football"@en ;
                                                                          
-                                                                         rdfs:subClassOf <http://rdf.fm/Activity#Sporting_Activity> .
+                                                                         rdfs:subClassOf <http://rdf.fm/activity#Sporting_Activity> .
 
 
 
@@ -242,7 +242,7 @@
                                                             
                                                             rdfs:label "Cricket"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Activity#Sporting_Activity> .
+                                                            rdfs:subClassOf <http://rdf.fm/activity#Sporting_Activity> .
 
 
 
@@ -252,7 +252,7 @@
                                                             
                                                             rdfs:label "Cycling"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Activity#Sporting_Activity> .
+                                                            rdfs:subClassOf <http://rdf.fm/activity#Sporting_Activity> .
 
 
 
@@ -262,7 +262,7 @@
                                                           
                                                           rdfs:label "Rugby"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Activity#Sporting_Activity> .
+                                                          rdfs:subClassOf <http://rdf.fm/activity#Sporting_Activity> .
 
 
 
@@ -272,7 +272,7 @@
                                                            
                                                            rdfs:label "Tennis"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Activity#Sporting_Activity> .
+                                                           rdfs:subClassOf <http://rdf.fm/activity#Sporting_Activity> .
 
 
 
@@ -282,7 +282,7 @@
                                                                             
                                                                             rdfs:label "Mountain Biking"@en ;
                                                                             
-                                                                            rdfs:subClassOf <http://rdf.fm/Activity#Cycling> .
+                                                                            rdfs:subClassOf <http://rdf.fm/activity#Cycling> .
 
 
 
@@ -292,7 +292,7 @@
                                                                          
                                                                          rdfs:label "Road Cycling"@en ;
                                                                          
-                                                                         rdfs:subClassOf <http://rdf.fm/Activity#Cycling> .
+                                                                         rdfs:subClassOf <http://rdf.fm/activity#Cycling> .
 
 
 
@@ -302,7 +302,7 @@
                                                                           
                                                                           rdfs:label "Track Cycling"@en ;
                                                                           
-                                                                          rdfs:subClassOf <http://rdf.fm/Activity#Cycling> .
+                                                                          rdfs:subClassOf <http://rdf.fm/activity#Cycling> .
 
 
 
@@ -312,7 +312,7 @@
                                                           
                                                           rdfs:label "Journey"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Activity#Travel_Activity> .
+                                                          rdfs:subClassOf <http://rdf.fm/activity#Travel_Activity> .
 
 
 

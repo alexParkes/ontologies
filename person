@@ -31,7 +31,7 @@
             alex.parkes@factmint.com
  """@en ;
                            
-                           owl:versionInfo "0.3"@en ;
+                           owl:versionInfo "0.4"@en ;
                                                                                   
                            owl:imports <http://rdf.fm/core> .
 
