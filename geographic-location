@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://rdf.fm/geographic_location.owl> rdf:type owl:Ontology ;
+<http://rdf.fm/core#Geographic_Location> rdf:type owl:Ontology ;
                                          
                                          rdfs:label "FactMint Geographic Location Schema"@en ;
                                          
@@ -30,9 +30,9 @@
             alex.parkes@factmint.com
  """@en ;
                                          
-                                         owl:versionInfo "0.1"@en ;
+                                         owl:versionInfo "0.2"@en ;
                                                                                   
-                                         owl:imports <http://rdf.fm/core.owl> .
+                                         owl:imports <http://rdf.fm/core> .
 
 
 #################################################################
@@ -45,13 +45,13 @@
 
 ###  http://rdf.fm/hasLocation/hasGeographicLocation
 
-<http://rdf.fm/hasLocation/hasGeographicLocation> rdf:type owl:ObjectProperty ;
+<#hasGeographicLocation> rdf:type owl:ObjectProperty ;
                                                                                                         
                                                   rdfs:label "has geographic location"@en ;
                                                   
                                                   rdfs:comment "This is intended to cover where things are in a geographical sense, e.g. the country, town or street that something is in."@en ;
                                                   
-                                                  rdfs:subPropertyOf <http://rdf.fm/hasLocation> .
+                                                  rdfs:subPropertyOf <http://rdf.fm/core#hasLocation> .
 
 
 
@@ -59,50 +59,50 @@
 
 ###  http://rdf/fm/hasLocation/hasGeographicLocation/hasAreaLocation
 
-<http://rdf/fm/hasLocation/hasGeographicLocation/hasAreaLocation> rdf:type owl:ObjectProperty ;
+<#hasAreaLocation> rdf:type owl:ObjectProperty ;
                                                      
                                                      rdfs:label "has area location"@en ;
                                                      
                                                      rdfs:comment "This is intended to cover geographic areas such as regions, towns and streets."@en ;
                                                      
-                                                     rdfs:subPropertyOf <http://rdf/fm/hasLocation/hasGeographicLocation> .
+                                                     rdfs:subPropertyOf <http://rdf.fm#hasGeographicLocation> .
 
 
 
 ###  http://rdf/fm/hasLocation/hasGeographicLocation/hasPointLocation
 
-<http://rdf/fm/hasLocation/hasGeographicLocation/hasPointLocation> rdf:type owl:ObjectProperty ;
+<#hasPointLocation> rdf:type owl:ObjectProperty ;
                                                       
                                                                   rdfs:label "has point location"@en ;
                                                                   
                                                                   rdfs:comment "This is supposed to cover arbitrary geographic points in space (arguably areas themselves, as they can presumably by sub-divided infinitely). In a more practical sense, this is supposed to cover measurements such as co-ordinates etc."@en ;
                                                                   
-                                                                  rdfs:subPropertyOf <http://rdf/fm/hasLocation/hasGeographicLocation> .
+                                                                  rdfs:subPropertyOf <http://rdf.fm/geographic_location#hasGeographicLocation> .
 
 ###  http://rdf/fm/hasLocation/hasGeographicLocation/includes
 
-<http://rdf/fm/hasLocation/hasGeographicLocation/includes>  rdf:type owl:ObjectProperty ,
+<#includes>  rdf:type owl:ObjectProperty ,
 
                                                             owl:TransitiveProperty ;
                                                        
                                                             rdfs:label "includes"@en ;
                                                              
-                                                            rdfs:range <http://rdf.fm/Geographic_Location> ;
+                                                            rdfs:range <http://rdf.fm/core#Geographic_Location> ;
                                                              
-                                                            rdfs:domain <http://rdf.fm/Geographic_Location> .
+                                                            rdfs:domain <http://rdf.fm/core#Geographic_Location> .
 
 
 ###  http://rdf/fm/hasLocation/hasGeographicLocation/locatedIn
 
-<http://rdf/fm/hasLocation/hasGeographicLocationlocatedIn>      rdf:type owl:ObjectProperty ,
+<#locatedIn>      rdf:type owl:ObjectProperty ,
 
                                                                 owl:TransitiveProperty ;
                                                        
                                                                rdfs:label "is located in"@en ;
                                                                
-                                                               rdfs:range <http://rdf.fm/Geographic_Location> ;
+                                                               rdfs:range <http://rdf.fm/core#Geographic_Location> ;
                                                                
-                                                               rdfs:domain <http://rdf.fm/Geographic_Location> .
+                                                               rdfs:domain <http://rdf.fm/core#Geographic_Location> .
 
 
 
@@ -118,738 +118,726 @@
 
 ###  Geographic_Location/Administrative_Division
 
-<http://rdf.fm/Geographic_Location/Administrative_Division> rdf:type owl:Class ;
+<http://rdf.fm/geographic-location#Administrative_Division> rdf:type owl:Class ;
                                                                      
                                                                      rdfs:label "Administrative Division"@en ;
                                                                      
-                                                                     rdfs:subClassOf <http://rdf.fm/Geographic_Location> .
+                                                                     rdfs:subClassOf <http://rdf.fm/core#Geographic_Location> .
 
 
 
 ###  Geographic_Location/Landform
 
-<http://rdf.fm/Geographic_Location/Landform> rdf:type owl:Class ;
+<#Landform> rdf:type owl:Class ;
                                                       
                                                       rdfs:label "Landform"@en ;
                                                       
-                                                      rdfs:subClassOf <http://rdf.fm/Geographic_Location> .
+                                                      rdfs:subClassOf <http://rdf.fm/core#Geographic_Location> .
 
 
 
 ###  Geographic_Location/Place_of_Interest
 
-<http://rdf.fm/Geographic_Location/Place_of_Interest> rdf:type owl:Class ;
+<#Place_of_Interest> rdf:type owl:Class ;
                                                                
                                                                rdfs:label "Place of Interest"@en ;
                                                                
-                                                               rdfs:subClassOf <http://rdf.fm/Geographic_Location> .
+                                                               rdfs:subClassOf <http://rdf.fm/core#Geographic_Location> .
 
 
 
 ###  Geographic_Location/Settlement
 
-<http://rdf.fm/Geographic_Location/Settlement> rdf:type owl:Class ;
+<#Settlement> rdf:type owl:Class ;
                                                         
                                                         rdfs:label "Settlement"@en ;
                                                         
-                                                        rdfs:subClassOf <http://rdf.fm/Geographic_Location> .
+                                                        rdfs:subClassOf <http://rdf.fm/core#Geographic_Location> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Borough
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Borough> rdf:type owl:Class ;
+<#Borough> rdf:type owl:Class ;
                                                                              
                                                                              rdfs:label "Borough"@en ;
                                                                              
-                                                                             rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                             rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Country
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Country> rdf:type owl:Class ;
+<#Country> rdf:type owl:Class ;
                                                                              
                                                                              rdfs:label "Country"@en ;
                                                                              
-                                                                             rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                             rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/County
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/County> rdf:type owl:Class ;
+<#County> rdf:type owl:Class ;
                                                                             
                                                                             rdfs:label "County"@en ;
                                                                             
-                                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/District
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/District> rdf:type owl:Class ;
+<#District> rdf:type owl:Class ;
                                                                               
                                                                               rdfs:label "District"@en ;
                                                                               
-                                                                              rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                              rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Electoral_District
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Electoral_District> rdf:type owl:Class ;
+<#Electoral_District> rdf:type owl:Class ;
                                                                                         
                                                                                         rdfs:label "Electoral District"@en ;
                                                                                         
-                                                                                        rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
-
-
-
-###  Geographic_Location/Administrative_Division/Greater_London
-
-<http://rdf.fm/Geographic_Location/Administrative_Division/Greater_London> rdf:type owl:Class ;
-                                                                                    
-                                                                                    rdfs:label "Greater London"@en ;
-                                                                                    
-                                                                                    rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> ,
-                                                                                                    <http://rdf.fm/Geographic_Location/Administrative_Division/Upper-Tier_Authority> .
+                                                                                        rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Metropolitan_Area
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Metropolitan_Area> rdf:type owl:Class ;
+<#Metropolitan_Area> rdf:type owl:Class ;
                                                                                        
                                                                                        rdfs:label "Metropolitan Area"@en ;
                                                                                        
-                                                                                       rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                                       rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Parish
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Parish> rdf:type owl:Class ;
+<#Parish> rdf:type owl:Class ;
                                                                             
                                                                             rdfs:label "Parish"@en ;
                                                                             
-                                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Police_Area
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Police_Area> rdf:type owl:Class ;
+<#Police_Area> rdf:type owl:Class ;
                                                                                  
                                                                                  rdfs:label "Police Area"@en ;
                                                                                  
-                                                                                 rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                                 rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Post_Town
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Post_Town> rdf:type owl:Class ;
+<#Post_Town> rdf:type owl:Class ;
                                                                                
                                                                                rdfs:label "Post Town"@en ;
                                                                                
-                                                                               owl:equivalentClass <http://rdf.fm/Geographic_Location/Settlement/Town> ;
+                                                                               owl:equivalentClass <http://rdf.fm/geographic-location#Settlement/Town> ;
                                                                                
-                                                                               rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                               rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Postcode
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Postcode> rdf:type owl:Class ;
+<#Postcode> rdf:type owl:Class ;
                                                                               
                                                                               rdfs:label "Postcode"@en ;
                                                                               
-                                                                              rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                              rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Postcode_Area
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Postcode_Area> rdf:type owl:Class ;
+<#Postcode_Area> rdf:type owl:Class ;
                                                                                    
                                                                                    rdfs:label "Postcode Area"@en ;
                                                                                    
-                                                                                   rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                                   rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Province
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Province> rdf:type owl:Class ;
+<#Province> rdf:type owl:Class ;
                                                                               
                                                                               rdfs:label "Province"@en ;
                                                                               
-                                                                              rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                              rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Region
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Region> rdf:type owl:Class ;
+<#Region> rdf:type owl:Class ;
                                                                             
                                                                             rdfs:label "Region"@en ;
                                                                             
-                                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Republic
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Republic> rdf:type owl:Class ;
+<#Republic> rdf:type owl:Class ;
                                                                               
                                                                               rdfs:label "Republic"@en ;
                                                                               
-                                                                              rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                              rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/State
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/State> rdf:type owl:Class ;
+<#State> rdf:type owl:Class ;
                                                                            
                                                                            rdfs:label "State"@en ;
                                                                            
-                                                                           rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                           rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Unitary_Authority
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Unitary_Authority> rdf:type owl:Class ;
+<#Unitary_Authority> rdf:type owl:Class ;
                                                                                        
                                                                                        rdfs:label "Unitary Authority"@en ;
                                                                                        
-                                                                                       rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> ,
-                                                                                                       <http://rdf.fm/Geographic_Location/Administrative_Division/Upper-Tier_Authority> .
+                                                                                       rdfs:subClassOf	<http://rdf.fm/geographic-location#Upper-Tier_Authority> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Upper-Tier_Authority
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Upper-Tier_Authority> rdf:type owl:Class ;
+<#Upper-Tier_Authority> rdf:type owl:Class ;
                                                                                           
                                                                                           rdfs:label "Upper-Tier Authority"@en ;
                                                                                           
-                                                                                          rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division> .
+                                                                                          rdfs:subClassOf <http://rdf.fm/geographic-location#Administrative_Division> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Borough/London_Borough
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Borough/London_Borough> rdf:type owl:Class ;
+<#London_Borough> rdf:type owl:Class ;
                                                                                             
                                                                                             rdfs:label "London Borough"@en ;
                                                                                             
-                                                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/Borough> .
+                                                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Borough> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Borough/Metropolitan_Borough
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Borough/Metropolitan_Borough> rdf:type owl:Class ;
+<#Metropolitan_Borough> rdf:type owl:Class ;
                                                                                                   
                                                                                                   rdfs:label "Metropolitan Borough"@en ;
                                                                                                   
-                                                                                                  owl:equivalentClass <http://rdf.fm/Geographic_Location/Administrative_Division/District/Metropolitan_District> ;
+                                                                                                  owl:equivalentClass <http://rdf.fm/geographic-location#Metropolitan_District> ;
                                                                                                   
-                                                                                                  rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/Borough> .
+                                                                                                  rdfs:subClassOf <http://rdf.fm/geographic-location#Borough> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Borough/Non-Metropolitan_Borough
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Borough/Non-Metropolitan_Borough> rdf:type owl:Class ;
+<#Non-Metropolitan_Borough> rdf:type owl:Class ;
                                                                                                       
                                                                                                       rdfs:label "Non-Metropolitan Borough"@en ;
                                                                                                       
-                                                                                                      rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/Borough> .
+                                                                                                      rdfs:subClassOf <http://rdf.fm/geographic-location#Borough> .
 
 
 
 ###  Geographic_Location/Administrative_Division/County/Ceremonial_County
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/County/Ceremonial_County> rdf:type owl:Class ;
+<#Ceremonial_County> rdf:type owl:Class ;
                                                                                               
                                                                                               rdfs:label "Ceremonial County"@en ;
                                                                                               
-                                                                                              rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/County> .
+                                                                                              rdfs:subClassOf <http://rdf.fm/geographic-location#County> .
 
 
 
 ###  Geographic_Location/Administrative_Division/County/Metropolitan_County
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/County/Metropolitan_County> rdf:type owl:Class ;
+<#Metropolitan_County> rdf:type owl:Class ;
                                                                                                 
                                                                                                 rdfs:label "Metropolitan County"@en ;
                                                                                                 
-                                                                                                rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/County> ,
-                                                                                                                <http://rdf.fm/Geographic_Location/Administrative_Division/Upper-Tier_Authority> .
+                                                                                                rdfs:subClassOf <http://rdf.fm/geographic-location#County> ,
+                                                                                                                <http://rdf.fm/geographic-location#Upper-Tier_Authority> .
 
 
 
 ###  Geographic_Location/Administrative_Division/County/Non-Metropolitan_County
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/County/Non-Metropolitan_County> rdf:type owl:Class ;
+<#Non-Metropolitan_County> rdf:type owl:Class ;
                                                                                                     
                                                                                                     rdfs:label "Non-Metropolitan County"@en ;
                                                                                                     
-                                                                                                    rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/County> ,
-                                                                                                                    <http://rdf.fm/Geographic_Location/Administrative_Division/Upper-Tier_Authority> .
+                                                                                                    rdfs:subClassOf <http://rdf.fm/geographic-location#County> ,
+                                                                                                                    <http://rdf.fm/geographic-location#Upper-Tier_Authority> .
 
 
 
 ###  Geographic_Location/Administrative_Division/District/Metropolitan_District
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/District/Metropolitan_District> rdf:type owl:Class ;
+<#Metropolitan_District> rdf:type owl:Class ;
                                                                                                     
                                                                                                     rdfs:label "Metropolitan District"@en ;
                                                                                                     
-                                                                                                    rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/District> .
+                                                                                                    rdfs:subClassOf <http://rdf.fm/geographic-location#District> .
 
 
 
 ###  Geographic_Location/Administrative_Division/District/Non-Metropolitan_District
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/District/Non-Metropolitan_District> rdf:type owl:Class ;
+<#Non-Metropolitan_District> rdf:type owl:Class ;
                                                                                                         
                                                                                                         rdfs:label "Non-Metropolitan District"@en ;
                                                                                                         
-                                                                                                        rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/District> .
+                                                                                                        rdfs:subClassOf <http://rdf.fm/geographic-location#District> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Electoral_District/Parliamentary_Constituency
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Electoral_District/Parliamentary_Constituency> rdf:type owl:Class ;
+<#Parliamentary_Constituency> rdf:type owl:Class ;
                                                                                                                    
                                                                                                                    rdfs:label "Parliamentary Constituency"@en ;
                                                                                                                    
-                                                                                                                   rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/Electoral_District> .
+                                                                                                                   rdfs:subClassOf <http://rdf.fm/geographic-location#Electoral_District> .
 
 
 
 ###  Geographic_Location/Administrative_Division/Electoral_District/Ward
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/Electoral_District/Ward> rdf:type owl:Class ;
+<#Ward> rdf:type owl:Class ;
                                                                                              
                                                                                              rdfs:label "Ward"@en ;
                                                                                              
-                                                                                             rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/Electoral_District> .
+                                                                                             rdfs:subClassOf <http://rdf.fm/geographic-location#Electoral_District> .
 
 
 
 ###  Geographic_Location/Administrative_Division/State/Sovereign_State
 
-<http://rdf.fm/Geographic_Location/Administrative_Division/State/Sovereign_State> rdf:type owl:Class ;
+<#Sovereign_State> rdf:type owl:Class ;
                                                                                            
                                                                                            rdfs:label "Sovereign State"@en ;
                                                                                            
-                                                                                           rdfs:subClassOf <http://rdf.fm/Geographic_Location/Administrative_Division/State> .
+                                                                                           rdfs:subClassOf <http://rdf.fm/geographic-location#State> .
 
 
 
 ###  Geographic_Location/Landform/Archipelago
 
-<http://rdf.fm/Geographic_Location/Landform/Archipelago> rdf:type owl:Class ;
+<#Archipelago> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Archipelago"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                                  rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Basin
 
-<http://rdf.fm/Geographic_Location/Landform/Basin> rdf:type owl:Class ;
+<#Basin> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Basin"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Cave
 
-<http://rdf.fm/Geographic_Location/Landform/Cave> rdf:type owl:Class ;
+<#Cave> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Cave"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                           rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Cliff
 
-<http://rdf.fm/Geographic_Location/Landform/Cliff> rdf:type owl:Class ;
+<#Cliff> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Cliff"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Coast
 
-<http://rdf.fm/Geographic_Location/Landform/Coast> rdf:type owl:Class ;
+<#Coast> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Coast"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Continent
 
-<http://rdf.fm/Geographic_Location/Landform/Continent> rdf:type owl:Class ;
+<#Continent> rdf:type owl:Class ;
                                                                 
                                                                 rdfs:label "Continent"@en ;
                                                                 
-                                                                rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                                rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Fjord
 
-<http://rdf.fm/Geographic_Location/Landform/Fjord> rdf:type owl:Class ;
+<#Fjord> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Fjord"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Island
 
-<http://rdf.fm/Geographic_Location/Landform/Island> rdf:type owl:Class ;
+<#Island> rdf:type owl:Class ;
                                                              
                                                              rdfs:label "Island"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                             rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Lake
 
-<http://rdf.fm/Geographic_Location/Landform/Lake> rdf:type owl:Class ;
+<#Lake> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Lake"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                           rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Lowland_Area
 
-<http://rdf.fm/Geographic_Location/Landform/Lowland_Area> rdf:type owl:Class ;
+<#Lowland_Area> rdf:type owl:Class ;
                                                                    
                                                                    rdfs:label "Lowland Area"@en ;
                                                                    
-                                                                   rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                                   rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Marsh
 
-<http://rdf.fm/Geographic_Location/Landform/Marsh> rdf:type owl:Class ;
+<#Marsh> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Marsh"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Mid-Ocean_Ridge
 
-<http://rdf.fm/Geographic_Location/Landform/Mid-Ocean_Ridge> rdf:type owl:Class ;
+<#Mid-Ocean_Ridge> rdf:type owl:Class ;
                                                                       
                                                                       rdfs:label "Mid-Ocean Ridge"@en ;
                                                                       
-                                                                      rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                                      rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Mountain
 
-<http://rdf.fm/Geographic_Location/Landform/Mountain> rdf:type owl:Class ;
+<#Mountain> rdf:type owl:Class ;
                                                                
                                                                rdfs:label "Mountain"@en ;
                                                                
-                                                               rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                               rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Mountain_Range
 
-<http://rdf.fm/Geographic_Location/Landform/Mountain_Range> rdf:type owl:Class ;
+<#Mountain_Range> rdf:type owl:Class ;
                                                                      
                                                                      rdfs:label "Mountain Range"@en ;
                                                                      
-                                                                     rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                                     rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Ocean
 
-<http://rdf.fm/Geographic_Location/Landform/Ocean> rdf:type owl:Class ;
+<#Ocean> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Ocean"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Peninsula
 
-<http://rdf.fm/Geographic_Location/Landform/Peninsula> rdf:type owl:Class ;
+<#Peninsula> rdf:type owl:Class ;
                                                                 
                                                                 rdfs:label "Peninsula"@en ;
                                                                 
-                                                                rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                                rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Pond
 
-<http://rdf.fm/Geographic_Location/Landform/Pond> rdf:type owl:Class ;
+<#Pond> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Pond"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                           rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/River
 
-<http://rdf.fm/Geographic_Location/Landform/River> rdf:type owl:Class ;
+<#River> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "River"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                            rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Sea
 
-<http://rdf.fm/Geographic_Location/Landform/Sea> rdf:type owl:Class ;
+<#Sea> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Sea"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                          rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Stream
 
-<http://rdf.fm/Geographic_Location/Landform/Stream> rdf:type owl:Class ;
+<#Stream> rdf:type owl:Class ;
                                                              
                                                              rdfs:label "Stream"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                             rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Upland_Area
 
-<http://rdf.fm/Geographic_Location/Landform/Upland_Area> rdf:type owl:Class ;
+<#Upland_Area> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Upland Area"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                                  rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Valley
 
-<http://rdf.fm/Geographic_Location/Landform/Valley> rdf:type owl:Class ;
+<#Valley> rdf:type owl:Class ;
                                                              
                                                              rdfs:label "Valley"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                             rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Volcano
 
-<http://rdf.fm/Geographic_Location/Landform/Volcano> rdf:type owl:Class ;
+<#olcano> rdf:type owl:Class ;
                                                               
                                                               rdfs:label "Volcano"@en ;
                                                               
-                                                              rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                              rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Waterfall
 
-<http://rdf.fm/Geographic_Location/Landform/Waterfall> rdf:type owl:Class ;
+<#Waterfall> rdf:type owl:Class ;
                                                                 
                                                                 rdfs:label "Waterfall"@en ;
                                                                 
-                                                                rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                                rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Landform/Wetlands
 
-<http://rdf.fm/Geographic_Location/Landform/Wetlands> rdf:type owl:Class ;
+<#Wetlands> rdf:type owl:Class ;
                                                                
                                                                rdfs:label "Wetlands"@en ;
                                                                
-                                                               rdfs:subClassOf <http://rdf.fm/Geographic_Location/Landform> .
+                                                               rdfs:subClassOf <http://rdf.fm/geographic-location#Landform> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Attraction
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Attraction> rdf:type owl:Class ;
+<#Attraction> rdf:type owl:Class ;
                                                                           
                                                                           rdfs:label "Attraction"@en ;
                                                                           
-                                                                          rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_of_Interest> .
+                                                                          rdfs:subClassOf <http://rdf.fm/geographic-location#Place_of_Interest> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Historic_Building
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Historic_Building> rdf:type owl:Class ;
+<#Historic_Building> rdf:type owl:Class ;
                                                                                  
                                                                                  rdfs:label "Historic Building"@en ;
                                                                                  
-                                                                                 rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_of_Interest> .
+                                                                                 rdfs:subClassOf <http://rdf.fm/geographic-location#Place_of_Interest> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Historic_City
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Historic_City> rdf:type owl:Class ;
+<#Historic_City> rdf:type owl:Class ;
                                                                              
                                                                              rdfs:label "Historic City"@en ;
                                                                              
-                                                                             rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_of_Interest> .
+                                                                             rdfs:subClassOf <http://rdf.fm/geographic-location#Place_of_Interest> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Historic_Town
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Historic_Town> rdf:type owl:Class ;
+<#Historic_Town> rdf:type owl:Class ;
                                                                              
                                                                              rdfs:label "Historic Town"@en ;
                                                                              
-                                                                             rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_of_Interest> .
+                                                                             rdfs:subClassOf <http://rdf.fm/geographic-location#Place_of_Interest> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Historic_Village
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Historic_Village> rdf:type owl:Class ;
+<#Historic_Village> rdf:type owl:Class ;
                                                                                 
                                                                                 rdfs:label "Historic Village"@en ;
                                                                                 
-                                                                                rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_of_Interest> .
+                                                                                rdfs:subClassOf <http://rdf.fm/geographic-location#Place_of_Interest> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Park
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Park> rdf:type owl:Class ;
+<#Park> rdf:type owl:Class ;
                                                                     
                                                                     rdfs:label "Park"@en ;
                                                                     
-                                                                    rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_of_Interest> .
+                                                                    rdfs:subClassOf <http://rdf.fm/geographic-location#Place_of_Interest> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Attraction/Gallery
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Attraction/Gallery> rdf:type owl:Class ;
+<#Gallery> rdf:type owl:Class ;
                                                                                   
                                                                                   rdfs:label "Gallery"@en ;
                                                                                   
-                                                                                  rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_Of_Interest/Attraction> .
+                                                                                  rdfs:subClassOf <http://rdf.fm/geographic-location#Attraction> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Attraction/Museum
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Attraction/Museum> rdf:type owl:Class ;
+<#Museum> rdf:type owl:Class ;
                                                                                  
                                                                                  rdfs:label "Museum"@en ;
                                                                                  
-                                                                                 rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_Of_Interest/Attraction> .
+                                                                                 rdfs:subClassOf <http://rdf.fm/geographic-location#Attraction> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Attraction/Public_Garden
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Attraction/Public_Garden> rdf:type owl:Class ;
+<#Public_Garden> rdf:type owl:Class ;
                                                                                         
                                                                                         rdfs:label "Public Garden"@en ;
                                                                                         
-                                                                                        rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_Of_Interest/Attraction> .
+                                                                                        rdfs:subClassOf <http://rdf.fm/geographic-location#Attraction> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Attraction/Theme_Park
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Attraction/Theme_Park> rdf:type owl:Class ;
+<#Theme_Park> rdf:type owl:Class ;
                                                                                      
                                                                                      rdfs:label "Theme Park"@en ;
                                                                                      
-                                                                                     rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_Of_Interest/Attraction> .
+                                                                                     rdfs:subClassOf <http://rdf.fm/geographic-location#Attraction> .
 
 
 
 ###  Geographic_Location/Place_Of_Interest/Park/National_Park
 
-<http://rdf.fm/Geographic_Location/Place_Of_Interest/Park/National_Park> rdf:type owl:Class ;
+<#National_Park> rdf:type owl:Class ;
                                                                                   
                                                                                   rdfs:label "National Park"@en ;
                                                                                   
-                                                                                  rdfs:subClassOf <http://rdf.fm/Geographic_Location/Place_Of_Interest/Park> .
+                                                                                  rdfs:subClassOf <http://rdf.fm/geographic-location#Park> .
 
 
 
 ###  Geographic_Location/Settlement/City
 
-<http://rdf.fm/Geographic_Location/Settlement/City> rdf:type owl:Class ;
+<#City> rdf:type owl:Class ;
                                                              
                                                              rdfs:label "City"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Geographic_Location/Settlement> .
+                                                             rdfs:subClassOf <http://rdf.fm/geographic-location#Settlement> .
 
 
 
 ###  Geographic_Location/Settlement/Commune
 
-<http://rdf.fm/Geographic_Location/Settlement/Commune> rdf:type owl:Class ;
+<#Commune> rdf:type owl:Class ;
                                                                 
                                                                 rdfs:label "Commune"@en ;
                                                                 
-                                                                rdfs:subClassOf <http://rdf.fm/Geographic_Location/Settlement> .
+                                                                rdfs:subClassOf <http://rdf.fm/geographic-location#Settlement> .
 
 
 
 ###  Geographic_Location/Settlement/Town
 
-<http://rdf.fm/Geographic_Location/Settlement/Town> rdf:type owl:Class ;
+<#Town> rdf:type owl:Class ;
                                                              
                                                              rdfs:label "Town"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Geographic_Location/Settlement> .
+                                                             rdfs:subClassOf <http://rdf.fm/geographic-location#Settlement> .
 
 
 
 ###  Geographic_Location/Settlement/Village
 
-<http://rdf.fm/Geographic_Location/Settlement/Village> rdf:type owl:Class ;
+<#Village> rdf:type owl:Class ;
                                                                 
                                                                 rdfs:label "Village"@en ;
                                                                 
-                                                                rdfs:subClassOf <http://rdf.fm/Geographic_Location/Settlement> .
+                                                                rdfs:subClassOf <http://rdf.fm/geographic-location#Settlement> .
 
 ###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
