@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://rdf.fm/activity.owl> rdf:type owl:Ontology ;
+<http://rdf.fm/Core#Activity> rdf:type owl:Ontology ;
                                          
                                          rdfs:label "FactMint Activity Schema"@en ;
                                          
@@ -30,155 +30,155 @@
             alex.parkes@factmint.com
  """@en ;
                                          
-                                         owl:versionInfo "0.1"@en ;
+                                         owl:versionInfo "0.2"@en ;
                                                                                   
-                                         owl:imports <http://rdf.fm/core.owl> .
+                                         owl:imports <http://rdf.fm/Core> .
 
 
 
 ###  Activity/Criminal_Activity
 
-<http://rdf.fm/Activity/Criminal_Activity> rdf:type owl:Class ;
+<#Criminal_Activity> rdf:type owl:Class ;
                                                     
                                            rdfs:label "Criminal Activity"@en ;
                                           
-                                           rdfs:subClassOf <http://rdf.fm/Activity> .
+                                           rdfs:subClassOf <http://rdf.fm/Core#Activity> .
 
 
 
 ###  Activity/Leisure_Activity
 
-<http://rdf.fm/Activity/Leisure_Activity> rdf:type owl:Class ;
+<#Leisure_Activity> rdf:type owl:Class ;
                                                    
                                           rdfs:label "Leisure Activity"@en ;
                                          
-                                          rdfs:subClassOf <http://rdf.fm/Activity> .
+                                          rdfs:subClassOf <http://rdf.fm/Core#Activity> .
 
 
 
 ###  Activity/Medical_Activity
 
-<http://rdf.fm/Activity/Medical_Activity> rdf:type owl:Class ;
+<#Medical_Activity> rdf:type owl:Class ;
                                                    
                                           rdfs:label "Medical Activity"@en ;
                                          
-                                          rdfs:subClassOf <http://rdf.fm/Activity> .
+                                          rdfs:subClassOf <http://rdf.fm/Core#Activity> .
 
 
 
 ###  Activity/Political_Activity
 
-<http://rdf.fm/Activity/Political_Activity> rdf:type owl:Class ;
+<#Political_Activity> rdf:type owl:Class ;
                                                      
                                             rdfs:label "Political Activity"@en ;
                                            
-                                            rdfs:subClassOf <http://rdf.fm/Activity> .
+                                            rdfs:subClassOf <http://rdf.fm/Core#Activity> .
 
 
 
 ###  Activity/Professional_Activity
 
-<http://rdf.fm/Activity/Professional_Activity> rdf:type owl:Class ;
+<#Professional_Activity> rdf:type owl:Class ;
                                                         
                                                rdfs:label "Professional Activity"@en ;
                                               
-                                               rdfs:subClassOf <http://rdf.fm/Activity> .
+                                               rdfs:subClassOf <http://rdf.fm/Core#Activity> .
 
 
 
 ###  Activity/Sporting_Activity
 
-<http://rdf.fm/Activity/Sporting_Activity> rdf:type owl:Class ;
+<#Sporting_Activity> rdf:type owl:Class ;
                                                     
                                            rdfs:label "Sporting Activity"@en ;
                                           
-                                           rdfs:subClassOf <http://rdf.fm/Activity> .
+                                           rdfs:subClassOf <http://rdf.fm/Core#Activity> .
 
 
 
 ###  Activity/Travel_Activity
 
-<http://rdf.fm/Activity/Travel_Activity> rdf:type owl:Class ;
+<#Travel_Activity> rdf:type owl:Class ;
                                                   
                                          rdfs:label "Travel Activity"@en ;
                                         
-                                         rdfs:subClassOf <http://rdf.fm/Activity> .
+                                         rdfs:subClassOf <http://rdf.fm/Core#Activity> .
 
 
 
 ###  Activity/Criminal_Activity/Anti-Social_Behaviour
 
-<http://rdf.fm/Activity/Criminal_Activity/Anti-Social_Behaviour> rdf:type owl:Class ;
+<#Anti-Social_Behaviour> rdf:type owl:Class ;
                                                                           
                                                                           rdfs:label "Anti-Social Behaviour"@en ;
                                                                           
-                                                                          rdfs:subClassOf <http://rdf.fm/Activity/Criminal_Activity> .
+                                                                          rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
 
 
 
 ###  Activity/Criminal_Activity/Burglary
 
-<http://rdf.fm/Activity/Criminal_Activity/Burglary> rdf:type owl:Class ;
+<#Burglary> rdf:type owl:Class ;
                                                              
                                                              rdfs:label "Burglary"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Activity/Criminal_Activity> .
+                                                             rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
 
 
 
 ###  Activity/Criminal_Activity/Drug-Related_Crime
 
-<http://rdf.fm/Activity/Criminal_Activity/Drug-Related_Crime> rdf:type owl:Class ;
+<#Drug-Related_Crime> rdf:type owl:Class ;
                                                                        
                                                                        rdfs:label "Drug-Related Crime"@en ;
                                                                        
-                                                                       rdfs:subClassOf <http://rdf.fm/Activity/Criminal_Activity> .
+                                                                       rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
 
 
 
 ###  Activity/Criminal_Activity/Robbery
 
-<http://rdf.fm/Activity/Criminal_Activity/Robbery> rdf:type owl:Class ;
+<#Robbery> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Robbery"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Activity/Criminal_Activity> .
+                                                            rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
 
 
 
 ###  Activity/Criminal_Activity/Theft
 
-<http://rdf.fm/Activity/Criminal_Activity/Theft> rdf:type owl:Class ;
+<#Theft> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Theft"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Activity/Criminal_Activity> .
+                                                          rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
 
 
 
 ###  Activity/Criminal_Activity/Vehicle_Crime
 
-<http://rdf.fm/Activity/Criminal_Activity/Vehicle_Crime> rdf:type owl:Class ;
+<#Vehicle_Crime> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Vehicle Crime"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Activity/Criminal_Activity> .
+                                                                  rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
 
 
 
 ###  Activity/Criminal_Activity/Violent_Crime
 
-<http://rdf.fm/Activity/Criminal_Activity/Violent_Crime> rdf:type owl:Class ;
+<#Violent_Crime> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Violent Crime"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Activity/Criminal_Activity> .
+                                                                  rdfs:subClassOf <http://rdf.fm/Activity#Criminal_Activity> .
 
 
 
 ###  Activity/Leisure_Activity/Hobby
 
-<http://rdf.fm/Activity/Leisure_Activity/Hobby> rdf:type owl:Class ;
+<#Hobby> rdf:type owl:Class ;
                                                          
                                                          rdfs:label "Hobby"@en ;
                                                          
@@ -186,133 +186,133 @@
 
 
 
-###  Activity/Medical_Activity/Investigation
+###  Activity/Medical_Activity/Medical_Investigation
 
-<http://rdf.fm/Activity/Medical_Activity/Investigation> rdf:type owl:Class ;
+<#Medical_Investigation> rdf:type owl:Class ;
                                                                  
                                                                  rdfs:label "Investigation"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Activity/Medical_Activity> .
+                                                                 rdfs:subClassOf <http://rdf.fm/Activity#Medical_Activity> .
 
 
 
 ###  Activity/Medical_Activity/Treatment
 
-<http://rdf.fm/Activity/Medical_Activity/Treatment> rdf:type owl:Class ;
+<#Treatment> rdf:type owl:Class ;
                                                              
                                                              rdfs:label "Treatment"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Activity/Medical_Activity> .
+                                                             rdfs:subClassOf <http://rdf.fm/Activity#Medical_Activity> .
 
 
 
-###  Activity/Medical_Activity/Treatment/Regimen
+###  Activity/Medical_Activity/Treatment/Medical_Regimen
 
-<http://rdf.fm/Activity/Medical_Activity/Treatment/Regimen> rdf:type owl:Class ;
+<#Medical_Regimen> rdf:type owl:Class ;
                                                                      
                                                                      rdfs:label "Regimen"@en ;
                                                                      
-                                                                     rdfs:subClassOf <http://rdf.fm/Activity/Medical_Activity/Treatment> .
+                                                                     rdfs:subClassOf <http://rdf.fm/Activity#Treatment> .
 
 
 
 ###  Activity/Professional_Activity/Occupation
 
-<http://rdf.fm/Activity/Professional_Activity/Occupation> rdf:type owl:Class ;
+<#Occupation> rdf:type owl:Class ;
                                                                    
                                                                    rdfs:label "Occupation"@en ;
                                                                    
-                                                                   rdfs:subClassOf <http://rdf.fm/Activity/Professional_Activity> .
+                                                                   rdfs:subClassOf <http://rdf.fm/Activity#Professional_Activity> .
 
 
 
 ###  Activity/Sporting_Activity/Association_Football
 
-<http://rdf.fm/Activity/Sporting_Activity/Association_Football> rdf:type owl:Class ;
+<#Association_Football> rdf:type owl:Class ;
                                                                          
                                                                          rdfs:label "Association Football"@en ;
                                                                          
-                                                                         rdfs:subClassOf <http://rdf.fm/Activity/Sporting_Activity> .
+                                                                         rdfs:subClassOf <http://rdf.fm/Activity#Sporting_Activity> .
 
 
 
 ###  Activity/Sporting_Activity/Cricket
 
-<http://rdf.fm/Activity/Sporting_Activity/Cricket> rdf:type owl:Class ;
+<#Cricket> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Cricket"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Activity/Sporting_Activity> .
+                                                            rdfs:subClassOf <http://rdf.fm/Activity#Sporting_Activity> .
 
 
 
 ###  Activity/Sporting_Activity/Cycling
 
-<http://rdf.fm/Activity/Sporting_Activity/Cycling> rdf:type owl:Class ;
+<#Cycling> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Cycling"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Activity/Sporting_Activity> .
+                                                            rdfs:subClassOf <http://rdf.fm/Activity#Sporting_Activity> .
 
 
 
 ###  Activity/Sporting_Activity/Rugby
 
-<http://rdf.fm/Activity/Sporting_Activity/Rugby> rdf:type owl:Class ;
+<#Rugby> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Rugby"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Activity/Sporting_Activity> .
+                                                          rdfs:subClassOf <http://rdf.fm/Activity#Sporting_Activity> .
 
 
 
 ###  Activity/Sporting_Activity/Tennis
 
-<http://rdf.fm/Activity/Sporting_Activity/Tennis> rdf:type owl:Class ;
+<#Tennis> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Tennis"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Activity/Sporting_Activity> .
+                                                           rdfs:subClassOf <http://rdf.fm/Activity#Sporting_Activity> .
 
 
 
 ###  Activity/Sporting_Activity/Cycling/Mountain_Biking
 
-<http://rdf.fm/Activity/Sporting_Activity/Cycling/Mountain_Biking> rdf:type owl:Class ;
+<#Mountain_Biking> rdf:type owl:Class ;
                                                                             
                                                                             rdfs:label "Mountain Biking"@en ;
                                                                             
-                                                                            rdfs:subClassOf <http://rdf.fm/Activity/Sporting_Activity/Cycling> .
+                                                                            rdfs:subClassOf <http://rdf.fm/Activity#Cycling> .
 
 
 
 ###  Activity/Sporting_Activity/Cycling/Road_Cycling
 
-<http://rdf.fm/Activity/Sporting_Activity/Cycling/Road_Cycling> rdf:type owl:Class ;
+<#Road_Cycling> rdf:type owl:Class ;
                                                                          
                                                                          rdfs:label "Road Cycling"@en ;
                                                                          
-                                                                         rdfs:subClassOf <http://rdf.fm/Activity/Sporting_Activity/Cycling> .
+                                                                         rdfs:subClassOf <http://rdf.fm/Activity#Cycling> .
 
 
 
 ###  Activity/Sporting_Activity/Cycling/Track_Cycling
 
-<http://rdf.fm/Activity/Sporting_Activity/Cycling/Track_Cycling> rdf:type owl:Class ;
+<#Track_Cycling> rdf:type owl:Class ;
                                                                           
                                                                           rdfs:label "Track Cycling"@en ;
                                                                           
-                                                                          rdfs:subClassOf <http://rdf.fm/Activity/Sporting_Activity/Cycling> .
+                                                                          rdfs:subClassOf <http://rdf.fm/Activity#Cycling> .
 
 
 
 ###  Activity/Travel_Activity/Journey
 
-<http://rdf.fm/Activity/Travel_Activity/Journey> rdf:type owl:Class ;
+<#Journey> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Journey"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Activity/Travel_Activity> .
+                                                          rdfs:subClassOf <http://rdf.fm/Activity#Travel_Activity> .
 
 
 
