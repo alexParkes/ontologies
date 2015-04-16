@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://rdf.fm/object.owl> rdf:type owl:Ontology ;
+<http://rdf.fm/core#Object> rdf:type owl:Ontology ;
                                          
                                          rdfs:label "FactMint Object Schema"@en ;
                                          
@@ -32,879 +32,879 @@
                                          
                                          owl:versionInfo "0.1"@en ;
                                                                                   
-                                         owl:imports <http://rdf.fm/core.owl> .
+                                         owl:imports <http://rdf.fm/core> .
 
 
 
 
 ###  Object/Artificial_Object
 
-<http://rdf.fm/Object/Artificial_Object> rdf:type owl:Class ;
+<#Artificial_Object> rdf:type owl:Class ;
                                                   
                                                   rdfs:label "Artificial Object"@en ;
                                                   
-                                                  rdfs:subClassOf <http://rdf.fm/Object> .
+                                                  rdfs:subClassOf <http://rdf.fm/core#Object> .
 
 
 
 ###  Object/Natural_Object
 
-<http://rdf.fm/Object/Natural_Object> rdf:type owl:Class ;
+<#Natural_Object> rdf:type owl:Class ;
                                                
                                                rdfs:label "Natural Object"@en ;
                                                
-                                               rdfs:subClassOf <http://rdf.fm/Object> .
+                                               rdfs:subClassOf <http://rdf.fm/core#Object> .
 
 
 
 ###  Object/Artificial_Object/Clothing
 
-<http://rdf.fm/Object/Artificial_Object/Clothing> rdf:type owl:Class ;
+<#Clothing> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Clothing"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object> .
+                                                           rdfs:subClassOf <http://rdf.fm/object#Artificial_Object> .
 
 
 
 ###  Object/Artificial_Object/Decorative_Object
 
-<http://rdf.fm/Object/Artificial_Object/Decorative_Object> rdf:type owl:Class ;
+<#Decorative_Object> rdf:type owl:Class ;
                                                                     
                                                                     rdfs:label "Decorative Object"@en ;
                                                                     
-                                                                    rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object> .
+                                                                    rdfs:subClassOf <http://rdf.fm/object#Artificial_Object> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment> rdf:type owl:Class ;
+<#Electrical_Equipment> rdf:type owl:Class ;
                                                                        
                                                                        rdfs:label "Electrical Equipment"@en ;
                                                                        
-                                                                       rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object> .
+                                                                       rdfs:subClassOf <http://rdf.fm/object#Artificial_Object> .
 
 
 
 ###  Object/Artificial_Object/Home_Appliance
 
-<http://rdf.fm/Object/Artificial_Object/Home_Appliance> rdf:type owl:Class ;
+<#Home_Appliance> rdf:type owl:Class ;
                                                                  
                                                                  rdfs:label "Home Appliance"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object> .
+                                                                 rdfs:subClassOf <http://rdf.fm/object#Artificial_Object> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Coat
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Coat> rdf:type owl:Class ;
+<#Coat> rdf:type owl:Class ;
                                                                 
                                                                 rdfs:label "Coat"@en ;
                                                                 
-                                                                rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Dress
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Dress> rdf:type owl:Class ;
+<#Dress> rdf:type owl:Class ;
                                                                  
                                                                  rdfs:label "Dress"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                 rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Footwear
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Footwear> rdf:type owl:Class ;
+<#Footwear> rdf:type owl:Class ;
                                                                     
                                                                     rdfs:label "Footwear"@en ;
                                                                     
-                                                                    rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                    rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Gloves
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Gloves> rdf:type owl:Class ;
+<#Gloves> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Gloves"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                  rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Jacket
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Jacket> rdf:type owl:Class ;
+<#Jacket> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Jacket"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                  rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Jewellery
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Jewellery> rdf:type owl:Class ;
+<#Jewellery> rdf:type owl:Class ;
                                                                      
                                                                      rdfs:label "Jewellery"@en ;
                                                                      
-                                                                     rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                     rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Scarf
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Scarf> rdf:type owl:Class ;
+<#Scarf> rdf:type owl:Class ;
                                                                  
                                                                  rdfs:label "Scarf"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                 rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Shirts
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Shirts> rdf:type owl:Class ;
+<#Shirts> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Shirt"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                  rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Skirt
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Skirt> rdf:type owl:Class ;
+<#Skirt> rdf:type owl:Class ;
                                                                  
                                                                  rdfs:label "Skirt"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                 rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Sweater
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Sweater> rdf:type owl:Class ;
+<#Sweater> rdf:type owl:Class ;
                                                                    
                                                                    rdfs:label "Sweater"@en ;
                                                                    
-                                                                   rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                   rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Trousers
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Trousers> rdf:type owl:Class ;
+<#Trousers> rdf:type owl:Class ;
                                                                     
                                                                     rdfs:label "Trousers"@en ;
                                                                     
-                                                                    rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                    rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Underwear
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Underwear> rdf:type owl:Class ;
+<#Underwear> rdf:type owl:Class ;
                                                                      
                                                                      rdfs:label "Underwear"@en ;
                                                                      
-                                                                     rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing> .
+                                                                     rdfs:subClassOf <http://rdf.fm/object#Clothing> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Footwear/Boots
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Footwear/Boots> rdf:type owl:Class ;
+<#Boots> rdf:type owl:Class ;
                                                                           
                                                                           rdfs:label "Boots"@en ;
                                                                           
-                                                                          rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing/Footwear> .
+                                                                          rdfs:subClassOf <http://rdf.fm/object#Footwear> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Footwear/Sandals
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Footwear/Sandals> rdf:type owl:Class ;
+<#Sandals> rdf:type owl:Class ;
                                                                             
                                                                             rdfs:label "Sandals"@en ;
                                                                             
-                                                                            rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing/Footwear> .
+                                                                            rdfs:subClassOf <http://rdf.fm/object#Footwear> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Footwear/Shoes
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Footwear/Shoes> rdf:type owl:Class ;
+<#Shoes> rdf:type owl:Class ;
                                                                           
                                                                           rdfs:label "Shoes"@en ;
                                                                           
-                                                                          rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing/Footwear> .
+                                                                          rdfs:subClassOf <http://rdf.fm/object#Footwear> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Footwear/Slippers
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Footwear/Slippers> rdf:type owl:Class ;
+<#Slippers> rdf:type owl:Class ;
                                                                              
                                                                              rdfs:label "Slippers"@en ;
                                                                              
-                                                                             rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing/Footwear> .
+                                                                             rdfs:subClassOf <http://rdf.fm/object#Footwear> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Underwear/Brassiere
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Underwear/Brassiere> rdf:type owl:Class ;
+<#Brassiere> rdf:type owl:Class ;
                                                                                
                                                                                rdfs:label "Brassiere"@en ;
                                                                                
-                                                                               rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing/Underwear> .
+                                                                               rdfs:subClassOf <http://rdf.fm/object#Underwear> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Underwear/Socks
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Underwear/Socks> rdf:type owl:Class ;
+<#Socks> rdf:type owl:Class ;
                                                                            
                                                                            rdfs:label "Socks"@en ;
                                                                            
-                                                                           rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing/Underwear> .
+                                                                           rdfs:subClassOf <http://rdf.fm/object#Underwear> .
 
 
 
 ###  Object/Artificial_Object/Clothing/Underwear/Underpants
 
-<http://rdf.fm/Object/Artificial_Object/Clothing/Underwear/Underpants> rdf:type owl:Class ;
+<#Underpants> rdf:type owl:Class ;
                                                                                 
                                                                                 rdfs:label "Underpants"@en ;
                                                                                 
-                                                                                rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Clothing/Underwear> .
+                                                                                rdfs:subClassOf <http://rdf.fm/object#Underwear> .
 
 
 
 ###  Object/Artificial_Object/Decorative_Object/Ornament
 
-<http://rdf.fm/Object/Artificial_Object/Decorative_Object/Ornament> rdf:type owl:Class ;
+<#Ornament> rdf:type owl:Class ;
                                                                              
                                                                              rdfs:label "Ornament"@en ;
                                                                              
-                                                                             rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Decorative_Object> .
+                                                                             rdfs:subClassOf <http://rdf.fm/object#Decorative_Object> .
 
 
 
 ###  Object/Artificial_Object/Decorative_Object/Painting
 
-<http://rdf.fm/Object/Artificial_Object/Decorative_Object/Painting> rdf:type owl:Class ;
+<#Painting> rdf:type owl:Class ;
                                                                              
                                                                              rdfs:label "Painting"@en ;
                                                                              
-                                                                             rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Decorative_Object> .
+                                                                             rdfs:subClassOf <http://rdf.fm/object#Decorative_Object> .
 
 
 
 ###  Object/Artificial_Object/Decorative_Object/Photograph
 
-<http://rdf.fm/Object/Artificial_Object/Decorative_Object/Photograph> rdf:type owl:Class ;
+<#Photograph> rdf:type owl:Class ;
                                                                                
                                                                                rdfs:label "Photograph"@en ;
                                                                                
-                                                                               rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Decorative_Object> .
+                                                                               rdfs:subClassOf <http://rdf.fm/object#Decorative_Object> .
 
 
 
 ###  Object/Artificial_Object/Decorative_Object/Poster
 
-<http://rdf.fm/Object/Artificial_Object/Decorative_Object/Poster> rdf:type owl:Class ;
+<#Poster> rdf:type owl:Class ;
                                                                            
                                                                            rdfs:label "Poster"@en ;
                                                                            
-                                                                           rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Decorative_Object> .
+                                                                           rdfs:subClassOf <http://rdf.fm/object#Decorative_Object> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Audio-Visual_Equipment
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Audio-Visual_Equipment> rdf:type owl:Class ;
+<#Audio-Visual_Equipment> rdf:type owl:Class ;
                                                                                               
                                                                                               rdfs:label "Audio-Visual Equipment"@en ;
                                                                                               
-                                                                                              rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment> .
+                                                                                              rdfs:subClassOf <http://rdf.fm/object#Electrical_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Communications_Equipment
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment> rdf:type owl:Class ;
+<#Communications_Equipment> rdf:type owl:Class ;
                                                                                                 
                                                                                                 rdfs:label "Communications Equipment"@en ;
                                                                                                 
-                                                                                                rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment> .
+                                                                                                rdfs:subClassOf <http://rdf.fm/object#Electrical_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Computer_Equipment
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Computer_Equipment> rdf:type owl:Class ;
+<#Computer_Equipment> rdf:type owl:Class ;
                                                                                           
                                                                                           rdfs:label "Computer Equipment"@en ;
                                                                                           
-                                                                                          rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment> .
+                                                                                          rdfs:subClassOf <http://rdf.fm/object#Electrical_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Photographic_Equipment
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Photographic_Equipment> rdf:type owl:Class ;
+<#Photographic_Equipment> rdf:type owl:Class ;
                                                                                               
                                                                                               rdfs:label "Photographic Equipment"@en ;
                                                                                               
-                                                                                              rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment> .
+                                                                                              rdfs:subClassOf <http://rdf.fm/object#Electrical_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Audio-Visual_Equipment/Radio
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Audio-Visual_Equipment/Radio> rdf:type owl:Class ;
+<#Radio> rdf:type owl:Class ;
                                                                                                     
                                                                                                     rdfs:label "Radio"@en ;
                                                                                                     
-                                                                                                    rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Audio-Visual_Equipment> .
+                                                                                                    rdfs:subClassOf <http://rdf.fm/object#Audio-Visual_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Audio-Visual_Equipment/Television_Set
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Audio-Visual_Equipment/Television_Set> rdf:type owl:Class ;
+<#Television_Set> rdf:type owl:Class ;
                                                                                                              
                                                                                                              rdfs:label "Television Set"@en ;
                                                                                                              
-                                                                                                             rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Audio-Visual_Equipment> .
+                                                                                                             rdfs:subClassOf <http://rdf.fm/object#Audio-Visual_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Pager
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Pager> rdf:type owl:Class ;
+<#Pager> rdf:type owl:Class ;
                                                                                                       
                                                                                                       rdfs:label "Pager"@en ;
                                                                                                       
-                                                                                                      rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment> .
+                                                                                                      rdfs:subClassOf <http://rdf.fm/object#Communications_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone> rdf:type owl:Class ;
+<#Telephone> rdf:type owl:Class ;
                                                                                                           
                                                                                                           rdfs:label "Telephone"@en ;
                                                                                                           
-                                                                                                          rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment> .
+                                                                                                          rdfs:subClassOf <http://rdf.fm/object#Communications_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone/Fixed-Line_Telephone
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone/Fixed-Line_Telephone> rdf:type owl:Class ;
+<#Fixed-Line_Telephone> rdf:type owl:Class ;
                                                                                                                                
                                                                                                                                rdfs:label "Fixed-Line Telephone"@en ;
                                                                                                                                
-                                                                                                                               rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone> .
+                                                                                                                               rdfs:subClassOf <http://rdf.fm/object#Telephone> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone/Mobile_Telephone
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone/Mobile_Telephone> rdf:type owl:Class ;
+<#Mobile_Telephone> rdf:type owl:Class ;
                                                                                                                            
                                                                                                                            rdfs:label "Mobile Telephone"@en ;
                                                                                                                            
-                                                                                                                           rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone> .
+                                                                                                                           rdfs:subClassOf <http://rdf.fm/object#Telephone> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone/Public_Telephone
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone/Public_Telephone> rdf:type owl:Class ;
+<#Public_Telephone> rdf:type owl:Class ;
                                                                                                                            
                                                                                                                            rdfs:label "Public Telephone"@en ;
                                                                                                                            
-                                                                                                                           rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Communications_Equipment/Telephone> .
+                                                                                                                           rdfs:subClassOf <http://rdf.fm/object#Telephone> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Computer_Equipment/Desktop_Computer
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Computer_Equipment/Desktop_Computer> rdf:type owl:Class ;
+<#Desktop_Computer> rdf:type owl:Class ;
                                                                                                            
                                                                                                            rdfs:label "Desktop Computer"@en ;
                                                                                                            
-                                                                                                           rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Computer_Equipment> .
+                                                                                                           rdfs:subClassOf <http://rdf.fm/object#Computer_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Computer_Equipment/Laptop_Computer
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Computer_Equipment/Laptop_Computer> rdf:type owl:Class ;
+<#Laptop_Computer> rdf:type owl:Class ;
                                                                                                           
                                                                                                           rdfs:label "Laptop Computer"@en ;
                                                                                                           
-                                                                                                          rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Computer_Equipment> .
+                                                                                                          rdfs:subClassOf <http://rdf.fm/object#Computer_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Computer_Equipment/Tablet_Computer
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Computer_Equipment/Tablet_Computer> rdf:type owl:Class ;
+<#Tablet_Computer> rdf:type owl:Class ;
                                                                                                           
                                                                                                           rdfs:label "Tablet Computer"@en ;
                                                                                                           
-                                                                                                          rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Computer_Equipment> .
+                                                                                                          rdfs:subClassOf <http://rdf.fm/object#Computer_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Photographic_Equipment/Camera
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Photographic_Equipment/Camera> rdf:type owl:Class ;
+<#Camera> rdf:type owl:Class ;
                                                                                                      
                                                                                                      rdfs:label "Camera"@en ;
                                                                                                      
-                                                                                                     rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Photographic_Equipment> .
+                                                                                                     rdfs:subClassOf <http://rdf.fm/object#Photographic_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Electrical_Equipment/Photographic_Equipment/Video_Camera
 
-<http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Photographic_Equipment/Video_Camera> rdf:type owl:Class ;
+<#Video_Camera> rdf:type owl:Class ;
                                                                                                            
                                                                                                            rdfs:label "Video Camera"@en ;
                                                                                                            
-                                                                                                           rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Electrical_Equipment/Photographic_Equipment> .
+                                                                                                           rdfs:subClassOf <http://rdf.fm/object#Photographic_Equipment> .
 
 
 
 ###  Object/Artificial_Object/Home_Appliance/Blender
 
-<http://rdf.fm/Object/Artificial_Object/Home_Appliance/Blender> rdf:type owl:Class ;
+<#Blender> rdf:type owl:Class ;
                                                                          
                                                                          rdfs:label "Blender"@en ;
                                                                          
-                                                                         rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Home_Appliance> .
+                                                                         rdfs:subClassOf <http://rdf.fm/object#Home_Appliance> .
 
 
 
 ###  Object/Artificial_Object/Home_Appliance/Boiler
 
-<http://rdf.fm/Object/Artificial_Object/Home_Appliance/Boiler> rdf:type owl:Class ;
+<#Boiler> rdf:type owl:Class ;
                                                                         
                                                                         rdfs:label "Boiler"@en ;
                                                                         
-                                                                        rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Home_Appliance> .
+                                                                        rdfs:subClassOf <http://rdf.fm/object#Home_Appliance> .
 
 
 
 ###  Object/Artificial_Object/Home_Appliance/Coffee_Maker
 
-<http://rdf.fm/Object/Artificial_Object/Home_Appliance/Coffee_Maker> rdf:type owl:Class ;
+<#Coffee_Maker> rdf:type owl:Class ;
                                                                               
                                                                               rdfs:label "Coffee Maker"@en ;
                                                                               
-                                                                              rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Home_Appliance> .
+                                                                              rdfs:subClassOf <http://rdf.fm/object#Home_Appliance> .
 
 
 
 ###  Object/Artificial_Object/Home_Appliance/Oven
 
-<http://rdf.fm/Object/Artificial_Object/Home_Appliance/Oven> rdf:type owl:Class ;
+<#Oven> rdf:type owl:Class ;
                                                                       
                                                                       rdfs:label "Oven"@en ;
                                                                       
-                                                                      rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Home_Appliance> .
+                                                                      rdfs:subClassOf <http://rdf.fm/object#Home_Appliance> .
 
 
 
 ###  Object/Artificial_Object/Home_Appliance/Refridgerator
 
-<http://rdf.fm/Object/Artificial_Object/Home_Appliance/Refridgerator> rdf:type owl:Class ;
+<#Refridgerator> rdf:type owl:Class ;
                                                                                
                                                                                rdfs:label "Refridgerator"@en ;
                                                                                
-                                                                               rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Home_Appliance> .
+                                                                               rdfs:subClassOf <http://rdf.fm/object#Home_Appliance> .
 
 
 
 ###  Object/Artificial_Object/Home_Appliance/Toaster
 
-<http://rdf.fm/Object/Artificial_Object/Home_Appliance/Toaster> rdf:type owl:Class ;
+<#Toaster> rdf:type owl:Class ;
                                                                          
                                                                          rdfs:label "Toaster"@en ;
                                                                          
-                                                                         rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Home_Appliance> .
+                                                                         rdfs:subClassOf <http://rdf.fm/object#Home_Appliance> .
 
 
 
 ###  Object/Artificial_Object/Home_Appliance/Vacuum_Cleaner
 
-<http://rdf.fm/Object/Artificial_Object/Home_Appliance/Vacuum_Cleaner> rdf:type owl:Class ;
+<#Vacuum_Cleaner> rdf:type owl:Class ;
                                                                                 
                                                                                 rdfs:label "Vacuum Cleaner"@en ;
                                                                                 
-                                                                                rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Home_Appliance> .
+                                                                                rdfs:subClassOf <http://rdf.fm/object#Home_Appliance> .
 
 
 
 ###  Object/Artificial_Object/Home_Appliance/Washing_Machine
 
-<http://rdf.fm/Object/Artificial_Object/Home_Appliance/Washing_Machine> rdf:type owl:Class ;
+<#Washing_Machine> rdf:type owl:Class ;
                                                                                  
                                                                                  rdfs:label "Washing Machine"@en ;
                                                                                  
-                                                                                 rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object/Home_Appliance> .
+                                                                                 rdfs:subClassOf <http://rdf.fm/object#Home_Appliance> .
 
 
 
-###  Object/Man-Made_Object/Furniture
+###  Object/Artificial_Object/Furniture
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture> rdf:type owl:Class ;
+<#Furniture> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Furniture"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object> .
+                                                          rdfs:subClassOf <http://rdf.fm/object#Artificial_Object> .
 
 
 
-###  Object/Man-Made_Object/Structure
+###  Object/Artificial_Object/Structure
 
-<http://rdf.fm/Object/Man-Made_Object/Structure> rdf:type owl:Class ;
+<#Structure> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Structure"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object> .
+                                                          rdfs:subClassOf <http://rdf.fm/object#Artificial_Object> .
 
 
 
-###  Object/Man-Made_Object/Tool
+###  Object/Artificial_Object/Tool
 
-<http://rdf.fm/Object/Man-Made_Object/Tool> rdf:type owl:Class ;
+<#Tool> rdf:type owl:Class ;
                                                      
                                                      rdfs:label "Tool"@en ;
                                                      
-                                                     rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object> .
+                                                     rdfs:subClassOf <http://rdf.fm/object#Artificial_Object> .
 
 
 
-###  Object/Man-Made_Object/Vehicle
+###  Object/Artificial_Object/Vehicle
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle> rdf:type owl:Class ;
+<#Vehicle> rdf:type owl:Class ;
                                                         
                                                         rdfs:label "Vehicle"@en ;
                                                         
-                                                        rdfs:subClassOf <http://rdf.fm/Object/Artificial_Object> .
+                                                        rdfs:subClassOf <http://rdf.fm/object#Artificial_Object> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Bed
+###  Object/Artificial_Object/Furniture/Bed
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Bed> rdf:type owl:Class ;
+<#Bed> rdf:type owl:Class ;
                                                               
-                                                              rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture> .
+                                                              rdfs:subClassOf <http://rdf.fm/object#Furniture> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Seating
+###  Object/Artificial_Object/Furniture/Seating
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Seating> rdf:type owl:Class ;
+<#Seating> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Seating"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture> .
+                                                                  rdfs:subClassOf <http://rdf.fm/object#Furniture> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Storage
+###  Object/Artificial_Object/Furniture/Storage
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Storage> rdf:type owl:Class ;
+<#Storage> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Storage"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture> .
+                                                                  rdfs:subClassOf <http://rdf.fm/object#Furniture> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Table
+###  Object/Artificial_Object/Furniture/Table
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Table> rdf:type owl:Class ;
+<#Table> rdf:type owl:Class ;
                                                                 
-                                                                rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture> .
+                                                                rdfs:subClassOf <http://rdf.fm/object#Furniture> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Seating/Bench
+###  Object/Artificial_Object/Furniture/Seating/Bench
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Seating/Bench> rdf:type owl:Class ;
+<#Bench> rdf:type owl:Class ;
                                                                         
                                                                         rdfs:label "Bench"@en ;
                                                                         
-                                                                        rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture/Seating> .
+                                                                        rdfs:subClassOf <http://rdf.fm/object#Seating> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Seating/Chair
+###  Object/Artificial_Object/Furniture/Seating/Chair
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Seating/Chair> rdf:type owl:Class ;
+<#Chair> rdf:type owl:Class ;
                                                                         
                                                                         rdfs:label "Chair"@en ;
                                                                         
-                                                                        rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture/Seating> .
+                                                                        rdfs:subClassOf <http://rdf.fm/object#Seating> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Seating/Sofa
+###  Object/Artificial_Object/Furniture/Seating/Sofa
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Seating/Sofa> rdf:type owl:Class ;
+<#Sofa> rdf:type owl:Class ;
                                                                        
                                                                        rdfs:label "Sofa"@en ;
                                                                        
-                                                                       rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture/Seating> .
+                                                                       rdfs:subClassOf <http://rdf.fm/object#Seating> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Seating/Stool
+###  Object/Artificial_Object/Furniture/Seating/Stool
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Seating/Stool> rdf:type owl:Class ;
+<#Stool> rdf:type owl:Class ;
                                                                         
                                                                         rdfs:label "Stool"@en ;
                                                                         
-                                                                        rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture/Seating> .
+                                                                        rdfs:subClassOf <http://rdf.fm/object#Seating> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Storage/Cupboard
+###  Object/Artificial_Object/Furniture/Storage/Cupboard
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Storage/Cupboard> rdf:type owl:Class ;
+<#Cupboard> rdf:type owl:Class ;
                                                                            
                                                                            rdfs:label "Cupboard"@en ;
                                                                            
-                                                                           rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture/Storage> .
+                                                                           rdfs:subClassOf <http://rdf.fm/object#Storage> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Storage/Drawers
+###  Object/Artificial_Object/Furniture/Storage/Drawers
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Storage/Drawers> rdf:type owl:Class ;
+<#Drawers> rdf:type owl:Class ;
                                                                           
                                                                           rdfs:label "Drawers"@en ;
                                                                           
-                                                                          rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture/Storage> .
+                                                                          rdfs:subClassOf <http://rdf.fm/object#Storage> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Storage/Shelving
+###  Object/Artificial_Object/Furniture/Storage/Shelving
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Storage/Shelving> rdf:type owl:Class ;
+<#Shelving> rdf:type owl:Class ;
                                                                            
                                                                            rdfs:label "Shelving"@en ;
                                                                            
-                                                                           rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture/Storage> .
+                                                                           rdfs:subClassOf <http://rdf.fm/object#Storage> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Storage/Trunk
+###  Object/Artificial_Object/Furniture/Storage/Trunk
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Storage/Trunk> rdf:type owl:Class ;
+<#Trunk> rdf:type owl:Class ;
                                                                         
                                                                         rdfs:label "Trunk"@en ;
                                                                         
-                                                                        rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture/Storage> .
+                                                                        rdfs:subClassOf <http://rdf.fm/object#Storage> .
 
 
 
-###  Object/Man-Made_Object/Furniture/Storage/Wardrobe
+###  Object/Artificial_Object/Furniture/Storage/Wardrobe
 
-<http://rdf.fm/Object/Man-Made_Object/Furniture/Storage/Wardrobe> rdf:type owl:Class ;
+<#Wardrobe> rdf:type owl:Class ;
                                                                            
                                                                            rdfs:label "Wardrobe"@en ;
                                                                            
-                                                                           rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Furniture/Storage> .
+                                                                           rdfs:subClassOf <http://rdf.fm/object#Storage> .
 
 
 
-###  Object/Man-Made_Object/Structure/Bridge
+###  Object/Artificial_Object/Structure/Bridge
 
-<http://rdf.fm/Object/Man-Made_Object/Structure/Bridge> rdf:type owl:Class ;
+<#Bridge> rdf:type owl:Class ;
                                                                  
                                                                  rdfs:label "Bridge"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Structure> .
+                                                                 rdfs:subClassOf <http://rdf.fm/object#Structure> .
 
 
 
-###  Object/Man-Made_Object/Structure/Building
+###  Object/Artificial_Object/Structure/Building
 
-<http://rdf.fm/Object/Man-Made_Object/Structure/Building> rdf:type owl:Class ;
+<#Building> rdf:type owl:Class ;
                                                                    
                                                                    rdfs:label "Building"@en ;
                                                                    
-                                                                   rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Structure> .
+                                                                   rdfs:subClassOf <http://rdf.fm/object#Structure> .
 
 
 
-###  Object/Man-Made_Object/Structure/Tunnel
+###  Object/Artificial_Object/Structure/Tunnel
 
-<http://rdf.fm/Object/Man-Made_Object/Structure/Tunnel> rdf:type owl:Class ;
+<#Tunnel> rdf:type owl:Class ;
                                                                  
                                                                  rdfs:label "Tunnel"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Structure> .
+                                                                 rdfs:subClassOf <http://rdf.fm/object#Structure> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Air_Vehicle
+###  Object/Artificial_Object/Vehicle/Air_Vehicle
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Air_Vehicle> rdf:type owl:Class ;
+<#Air_Vehicle> rdf:type owl:Class ;
                                                                     
                                                                     rdfs:label "Air Vehicle"@en ;
                                                                     
-                                                                    rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle> .
+                                                                    rdfs:subClassOf <http://rdf.fm/object#Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Land_Vehicle
+###  Object/Artificial_Object/Vehicle/Land_Vehicle
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Land_Vehicle> rdf:type owl:Class ;
+<#Land_Vehicle> rdf:type owl:Class ;
                                                                      
                                                                      rdfs:label "Land Vehicle"@en ;
                                                                      
-                                                                     rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle> .
+                                                                     rdfs:subClassOf <http://rdf.fm/object#Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Sea_Vehicle
+###  Object/Artificial_Object/Vehicle/Sea_Vehicle
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Sea_Vehicle> rdf:type owl:Class ;
+<#Sea_Vehicle> rdf:type owl:Class ;
                                                                     
                                                                     rdfs:label "Sea Vehicle"@en ;
                                                                     
-                                                                    rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle> .
+                                                                    rdfs:subClassOf <http://rdf.fm/object#Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Space_Vehicle
+###  Object/Artificial_Object/Vehicle/Space_Vehicle
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Space_Vehicle> rdf:type owl:Class ;
+<#Space_Vehicle> rdf:type owl:Class ;
                                                                       
                                                                       rdfs:label "Space Vehicle"@en ;
                                                                       
-                                                                      rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle> .
+                                                                      rdfs:subClassOf <http://rdf.fm/object#Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Air_Vehicle/Aeroplane
+###  Object/Artificial_Object/Vehicle/Air_Vehicle/Aeroplane
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Air_Vehicle/Aeroplane> rdf:type owl:Class ;
+<#Aeroplane> rdf:type owl:Class ;
                                                                               
                                                                               rdfs:label "Aeroplane"@en ;
                                                                               
-                                                                              rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle/Air_Vehicle> .
+                                                                              rdfs:subClassOf <http://rdf.fm/object#Air_Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Air_Vehicle/Helicopter
+###  Object/Artificial_Object/Vehicle/Air_Vehicle/Helicopter
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Air_Vehicle/Helicopter> rdf:type owl:Class ;
+<#Helicopter> rdf:type owl:Class ;
                                                                                
                                                                                rdfs:label "Helicopter"@en ;
                                                                                
-                                                                               rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle/Air_Vehicle> .
+                                                                               rdfs:subClassOf <http://rdf.fm/object#Air_Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Land_Vehicle/Automobile
+###  Object/Artificial_Object/Vehicle/Land_Vehicle/Automobile
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Land_Vehicle/Automobile> rdf:type owl:Class ;
+<#Automobile> rdf:type owl:Class ;
                                                                                 
                                                                                 rdfs:label "Automobile"@en ;
                                                                                 
-                                                                                rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle/Land_Vehicle> .
+                                                                                rdfs:subClassOf <http://rdf.fm/object#Land_Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Land_Vehicle/Bicycle
+###  Object/Artificial_Object/Vehicle/Land_Vehicle/Bicycle
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Land_Vehicle/Bicycle> rdf:type owl:Class ;
+<#Bicycle> rdf:type owl:Class ;
                                                                              
                                                                              rdfs:label "Bicycle"@en ;
                                                                              
-                                                                             rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle/Land_Vehicle> .
+                                                                             rdfs:subClassOf <http://rdf.fm/object#Land_Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Land_Vehicle/Lorry
+###  Object/Artificial_Object/Vehicle/Land_Vehicle/Lorry
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Land_Vehicle/Lorry> rdf:type owl:Class ;
+<#Lorry> rdf:type owl:Class ;
                                                                            
                                                                            rdfs:label "Lorry"@en ;
                                                                            
-                                                                           rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle/Land_Vehicle> .
+                                                                           rdfs:subClassOf <http://rdf.fm/object#Land_Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Land_Vehicle/Motorcycle
+###  Object/Artificial_Object/Vehicle/Land_Vehicle/Motorcycle
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Land_Vehicle/Motorcycle> rdf:type owl:Class ;
+<#Motorcycle> rdf:type owl:Class ;
                                                                                 
                                                                                 rdfs:label "Motorcycle"@en ;
                                                                                 
-                                                                                rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle/Land_Vehicle> .
+                                                                                rdfs:subClassOf <http://rdf.fm/object#Land_Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Sea_Vehicle/Hovercraft
+###  Object/Artificial_Object/Vehicle/Sea_Vehicle/Hovercraft
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Sea_Vehicle/Hovercraft> rdf:type owl:Class ;
+<#Hovercraft> rdf:type owl:Class ;
                                                                                
                                                                                rdfs:label "Hovercraft"@en ;
                                                                                
-                                                                               rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle/Sea_Vehicle> .
+                                                                               rdfs:subClassOf <http://rdf.fm/object#Sea_Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Sea_Vehicle/Ship
+###  Object/Artificial_Object/Vehicle/Sea_Vehicle/Ship
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Sea_Vehicle/Ship> rdf:type owl:Class ;
+<#Ship> rdf:type owl:Class ;
                                                                          
                                                                          rdfs:label "Ship"@en ;
                                                                          
-                                                                         rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle/Sea_Vehicle> .
+                                                                         rdfs:subClassOf <http://rdf.fm/object#Sea_Vehicle> .
 
 
 
-###  Object/Man-Made_Object/Vehicle/Sea_Vehicle/Submarine
+###  Object/Artificial_Object/Vehicle/Sea_Vehicle/Submarine
 
-<http://rdf.fm/Object/Man-Made_Object/Vehicle/Sea_Vehicle/Submarine> rdf:type owl:Class ;
+<#Submarine> rdf:type owl:Class ;
                                                                               
                                                                               rdfs:label "Submarine"@en ;
                                                                               
-                                                                              rdfs:subClassOf <http://rdf.fm/Object/Man-Made_Object/Vehicle/Sea_Vehicle> .
+                                                                              rdfs:subClassOf <http://rdf.fm/object#Sea_Vehicle> .
 
 
 
 ###  Object/Natural_Object/Element
 
-<http://rdf.fm/Object/Natural_Object/Element> rdf:type owl:Class ;
+<#Element> rdf:type owl:Class ;
                                                        
-                                                       rdfs:subClassOf <http://rdf.fm/Object/Natural_Object> .
+                                                       rdfs:subClassOf <http://rdf.fm/object#Natural_Object> .
 
 
 
 ###  Object/Natural_Object/Rock
 
-<http://rdf.fm/Object/Natural_Object/Rock> rdf:type owl:Class ;
+<#Rock> rdf:type owl:Class ;
                                                     
-                                                    rdfs:subClassOf <http://rdf.fm/Object/Natural_Object> .
+                                                    rdfs:subClassOf <http://rdf.fm/object#Natural_Object> .
 
 ###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
