@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://rdf.fm/event.owl> rdf:type owl:Ontology ;
+<http://rdf.fm/core#Event> rdf:type owl:Ontology ;
                                          
                                          rdfs:label "FactMint Event Schema"@en ;
                                          
@@ -30,9 +30,9 @@
             alex.parkes@factmint.com
  """@en ;
                                          
-                                         owl:versionInfo "0.1"@en ;
+                                         owl:versionInfo "0.2"@en ;
                                                                                   
-                                         owl:imports <http://rdf.fm/core.owl> .
+                                         owl:imports <http://rdf.fm/core> .
 
 
 
@@ -42,490 +42,480 @@
 
 ###  Event/Assessment
 
-<http://rdf.fm/Event/Assessment> rdf:type owl:Class ;
+<#Assessment> rdf:type owl:Class ;
                                           
                                           rdfs:label "Assessment"@en ;
                                           
-                                          rdfs:subClassOf <http://rdf.fm/Event> .
+                                          rdfs:subClassOf <http://rdf.fm/core#Event> .
 
 
 
 ###  Event/Criminal_Event
 
-<http://rdf.fm/Event/Criminal_Event> rdf:type owl:Class ;
+<#Criminal_Event> rdf:type owl:Class ;
                                               
                                               rdfs:label "Criminal Event"@en ;
                                               
-                                              rdfs:subClassOf <http://rdf.fm/Event> .
+                                              rdfs:subClassOf <http://rdf.fm/core#Event> .
 
 
 
 ###  Event/Cultural_Event
 
-<http://rdf.fm/Event/Cultural_Event> rdf:type owl:Class ;
+<#Cultural_Event> rdf:type owl:Class ;
                                               
                                               rdfs:label "Cultural Event"@en ;
                                               
-                                              rdfs:subClassOf <http://rdf.fm/Event> .
+                                              rdfs:subClassOf <http://rdf.fm/core#Event> .
 
 
 
 ###  Event/Financial_Event
 
-<http://rdf.fm/Event/Financial_Event> rdf:type owl:Class ;
+<#Financial_Event> rdf:type owl:Class ;
                                                
                                                rdfs:label "Financial Event"@en ;
                                                
-                                               rdfs:subClassOf <http://rdf.fm/Event> .
+                                               rdfs:subClassOf <http://rdf.fm/core#Event> .
 
 
 
 ###  Event/Legal_Event
 
-<http://rdf.fm/Event/Legal_Event> rdf:type owl:Class ;
+<#Legal_Event> rdf:type owl:Class ;
                                            
                                            rdfs:label "Legal Event"@en ;
                                            
-                                           rdfs:subClassOf <http://rdf.fm/Event> .
+                                           rdfs:subClassOf <http://rdf.fm/core#Event> .
 
 
 
 ###  Event/Medical_Event
 
-<http://rdf.fm/Event/Medical_Event> rdf:type owl:Class ;
+<#Medical_Event> rdf:type owl:Class ;
                                              
                                              rdfs:label "Medical Event"@en ;
                                              
-                                             rdfs:subClassOf <http://rdf.fm/Event> .
+                                             rdfs:subClassOf <http://rdf.fm/core#Event> .
 
 
 
 ###  Event/Natural_Disaster
 
-<http://rdf.fm/Event/Natural_Disaster> rdf:type owl:Class ;
+<#Natural_Disaster> rdf:type owl:Class ;
                                                 
                                                 rdfs:label "Natural Disaster"@en ;
                                                 
-                                                rdfs:subClassOf <http://rdf.fm/Event> .
+                                                rdfs:subClassOf <http://rdf.fm/core#Event> .
 
 
 
 ###  Event/Political_Event
 
-<http://rdf.fm/Event/Political_Event> rdf:type owl:Class ;
+<#Political_Event> rdf:type owl:Class ;
                                                
                                                rdfs:label "Political Event"@en ;
                                                
-                                               rdfs:subClassOf <http://rdf.fm/Event> .
+                                               rdfs:subClassOf <http://rdf.fm/core#Event> .
 
 
 
 ###  Event/Sporting_Event
 
-<http://rdf.fm/Event/Sporting_Event> rdf:type owl:Class ;
+<#Sporting_Event> rdf:type owl:Class ;
                                               
                                               rdfs:label "Sporting Event"@en ;
                                               
-                                              rdfs:subClassOf <http://rdf.fm/Event> .
+                                              rdfs:subClassOf <http://rdf.fm/core#Event> .
 
 
 
 ###  Event/Assessment/Examination
 
-<http://rdf.fm/Event/Assessment/Examination> rdf:type owl:Class ;
+<#Examination> rdf:type owl:Class ;
                                                       
                                                       rdfs:label "Examination"@en ;
                                                       
-                                                      rdfs:subClassOf <http://rdf.fm/Event/Assessment> .
+                                                      rdfs:subClassOf <http://rdf.fm/event#Assessment> .
 
 
 
 ###  Event/Assessment/Survey
 
-<http://rdf.fm/Event/Assessment/Survey> rdf:type owl:Class ;
+<#Survey> rdf:type owl:Class ;
                                                  
                                                  rdfs:label "Survey"@en ;
                                                  
-                                                 rdfs:subClassOf <http://rdf.fm/Event/Assessment> .
+                                                 rdfs:subClassOf <http://rdf.fm/event#Assessment> .
 
 
 
 ###  Event/Cultural_Event/Concert
 
-<http://rdf.fm/Event/Cultural_Event/Concert> rdf:type owl:Class ;
+<#Concert> rdf:type owl:Class ;
                                                       
                                                       rdfs:label "Concert"@en ;
                                                       
-                                                      rdfs:subClassOf <http://rdf.fm/Event/Cultural_Event> .
+                                                      rdfs:subClassOf <http://rdf.fm/event#Cultural_Event> .
 
 
 
 ###  Event/Cultural_Event/Film_Showing
 
-<http://rdf.fm/Event/Cultural_Event/Film_Showing> rdf:type owl:Class ;
+<#Film_Showing> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Film Showing"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Event/Cultural_Event> .
+                                                           rdfs:subClassOf <http://rdf.fm/event#Cultural_Event> .
 
 
 
 ###  Event/Cultural_Event/Television_Broadcast
 
-<http://rdf.fm/Event/Cultural_Event/Television_Broadcast> rdf:type owl:Class ;
+<#Television_Broadcast> rdf:type owl:Class ;
                                                                    
                                                                    rdfs:label "Television Broadcast"@en ;
                                                                    
-                                                                   rdfs:subClassOf <http://rdf.fm/Event/Cultural_Event> .
+                                                                   rdfs:subClassOf <http://rdf.fm/event#Cultural_Event> .
 
 
 
 ###  Event/Financial_Event/Payment
 
-<http://rdf.fm/Event/Financial_Event/Payment> rdf:type owl:Class ;
+<#Payment> rdf:type owl:Class ;
                                                        
                                                        rdfs:label "Payment"@en ;
                                                        
-                                                       rdfs:subClassOf <http://rdf.fm/Event/Financial_Event> .
+                                                       rdfs:subClassOf <http://rdf.fm/event#Financial_Event> .
 
 
 
 ###  Event/Financial_Event/Receipt_of_Money
 
-<http://rdf.fm/Event/Financial_Event/Receipt_of_Money> rdf:type owl:Class ;
+<#Receipt_of_Money> rdf:type owl:Class ;
                                                                 
                                                                 rdfs:label "Receipt of Money"@en ;
                                                                 
-                                                                rdfs:subClassOf <http://rdf.fm/Event/Financial_Event> .
+                                                                rdfs:subClassOf <http://rdf.fm/event#Financial_Event> .
 
 
 
 ###  Event/Financial_Event/Payment/Contribution
 
-<http://rdf.fm/Event/Financial_Event/Payment/Contribution> rdf:type owl:Class ;
+<#Contribution> rdf:type owl:Class ;
                                                                     
                                                                     rdfs:label "Contribution"@en ;
                                                                     
-                                                                    rdfs:subClassOf <http://rdf.fm/Event/Financial_Event/Payment> .
+                                                                    rdfs:subClassOf <http://rdf.fm/event#Payment> .
 
 
 
 ###  Event/Legal_Event/Criminal_Charge
 
-<http://rdf.fm/Event/Legal_Event/Criminal_Charge> rdf:type owl:Class ;
+<#Criminal_Charge> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Criminal Charge"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Event/Legal_Event> .
+                                                           rdfs:subClassOf <http://rdf.fm/event#Legal_Event> .
 
 
 
 ###  Event/Legal_Event/Hearing
 
-<http://rdf.fm/Event/Legal_Event/Hearing> rdf:type owl:Class ;
+<#Hearing> rdf:type owl:Class ;
                                                    
                                                    rdfs:label "Hearing"@en ;
                                                    
-                                                   rdfs:subClassOf <http://rdf.fm/Event/Legal_Event> .
+                                                   rdfs:subClassOf <http://rdf.fm/event#Legal_Event> .
 
 
 
 ###  Event/Medical_Event/Symptom
 
-<http://rdf.fm/Event/Medical_Event/Symptom> rdf:type owl:Class ;
+<#Symptom> rdf:type owl:Class ;
                                                      
                                                      rdfs:label "Symptom"@en ;
                                                      
-                                                     rdfs:subClassOf <http://rdf.fm/Event/Medical_Event> .
+                                                     rdfs:subClassOf <http://rdf.fm/event#Medical_Event> .
 
 
 
 ###  Event/Natural_Disaster/Avalanche
 
-<http://rdf.fm/Event/Natural_Disaster/Avalanche> rdf:type owl:Class ;
+<#Avalanche> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Avalanche"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                          rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Blizzard
 
-<http://rdf.fm/Event/Natural_Disaster/Blizzard> rdf:type owl:Class ;
+<#Blizzard> rdf:type owl:Class ;
                                                          
                                                          rdfs:label "Blizzard"@en ;
                                                          
-                                                         rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                         rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Drought
 
-<http://rdf.fm/Event/Natural_Disaster/Drought> rdf:type owl:Class ;
+<#Drought> rdf:type owl:Class ;
                                                         
                                                         rdfs:label "Drought"@en ;
                                                         
-                                                        rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                        rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Earthquake
 
-<http://rdf.fm/Event/Natural_Disaster/Earthquake> rdf:type owl:Class ;
+<#Earthquake> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Earthquake"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                           rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Famine
 
-<http://rdf.fm/Event/Natural_Disaster/Famine> rdf:type owl:Class ;
+<#Famine> rdf:type owl:Class ;
                                                        
                                                        rdfs:label "Famine"@en ;
                                                        
-                                                       rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                       rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Flood
 
-<http://rdf.fm/Event/Natural_Disaster/Flood> rdf:type owl:Class ;
+<#Flood> rdf:type owl:Class ;
                                                       
                                                       rdfs:label "Flood"@en ;
                                                       
-                                                      rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                      rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Heat_Wave
 
-<http://rdf.fm/Event/Natural_Disaster/Heat_Wave> rdf:type owl:Class ;
+<#Heat_Wave> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Heat Wave"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                          rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Landslide
 
-<http://rdf.fm/Event/Natural_Disaster/Landslide> rdf:type owl:Class ;
+<#Landslide> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Landslide"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                          rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Lightning_Strike
 
-<http://rdf.fm/Event/Natural_Disaster/Lightning_Strike> rdf:type owl:Class ;
+<#Lightning_Strike> rdf:type owl:Class ;
                                                                  
                                                                  rdfs:label "Lightning Strike"@en ;
                                                                  
-                                                                 rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                                 rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Storm
 
-<http://rdf.fm/Event/Natural_Disaster/Storm> rdf:type owl:Class ;
+<#Storm> rdf:type owl:Class ;
                                                       
                                                       rdfs:label "Storm"@en ;
                                                       
-                                                      rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                      rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Tsunami
 
-<http://rdf.fm/Event/Natural_Disaster/Tsunami> rdf:type owl:Class ;
+<#Tsunami> rdf:type owl:Class ;
                                                         
                                                         rdfs:label "Tsunami"@en ;
                                                         
-                                                        rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                        rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Volcanic_Eruption
 
-<http://rdf.fm/Event/Natural_Disaster/Volcanic_Eruption> rdf:type owl:Class ;
+<#Volcanic_Eruption> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Volcanic Eruption"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                                  rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Natural_Disaster/Wild_Fire
 
-<http://rdf.fm/Event/Natural_Disaster/Wild_Fire> rdf:type owl:Class ;
+<#Wild_Fire> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Wild Fire"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Event/Natural_Disaster> .
+                                                          rdfs:subClassOf <http://rdf.fm/event#Natural_Disaster> .
 
 
 
 ###  Event/Political_Event/Election
 
-<http://rdf.fm/Event/Political_Event/Election> rdf:type owl:Class ;
+<#Election> rdf:type owl:Class ;
                                                         
                                                         rdfs:label "Election"@en ;
                                                         
-                                                        rdfs:subClassOf <http://rdf.fm/Event/Political_Event> .
+                                                        rdfs:subClassOf <http://rdf.fm/event#Political_Event> .
 
 
 
 ###  Event/Political_Event/Vote
 
-<http://rdf.fm/Event/Political_Event/Vote> rdf:type owl:Class ;
+<#Vote> rdf:type owl:Class ;
                                                     
                                                     rdfs:label "Vote"@en ;
                                                     
-                                                    rdfs:subClassOf <http://rdf.fm/Event/Political_Event> .
+                                                    rdfs:subClassOf <http://rdf.fm/event#Political_Event> .
 
 
 
 ###  Event/Political_Event/Election/Local_Election
 
-<http://rdf.fm/Event/Political_Event/Election/Local_Election> rdf:type owl:Class ;
+<#Local_Election> rdf:type owl:Class ;
                                                                        
                                                                        rdfs:label "Local Election"@en ;
                                                                        
-                                                                       rdfs:subClassOf <http://rdf.fm/Event/Political_Event/Election> .
+                                                                       rdfs:subClassOf <http://rdf.fm/event#Election> .
 
 
 
 ###  Event/Political_Event/Election/National_Election
 
-<http://rdf.fm/Event/Political_Event/Election/National_Election> rdf:type owl:Class ;
+<#National_Election> rdf:type owl:Class ;
                                                                           
                                                                           rdfs:label "National Election"@en ;
                                                                           
-                                                                          rdfs:subClassOf <http://rdf.fm/Event/Political_Event/Election> .
+                                                                          rdfs:subClassOf <http://rdf.fm/event#Election> .
 
 
 
 ###  Event/Political_Event/Election/Super-National_Election
 
-<http://rdf.fm/Event/Political_Event/Election/Super-National_Election> rdf:type owl:Class ;
+<#Super-National_Election> rdf:type owl:Class ;
                                                                                 
                                                                                 rdfs:label "Super-National Election"@en ;
                                                                                 
-                                                                                rdfs:subClassOf <http://rdf.fm/Event/Political_Event/Election> .
+                                                                                rdfs:subClassOf <http://rdf.fm/event#Election> .
 
 
 
 ###  Event/Sporting_Event/Match
 
-<http://rdf.fm/Event/Sporting_Event/Match> rdf:type owl:Class ;
+<#Match> rdf:type owl:Class ;
                                                     
                                                     rdfs:label "Match"@en ;
                                                     
-                                                    rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event> .
+                                                    rdfs:subClassOf <http://rdf.fm/event#Sporting_Event> .
 
 
 
 ###  Event/Sporting_Event/Meet
 
-<http://rdf.fm/Event/Sporting_Event/Meet> rdf:type owl:Class ;
+<#Meet> rdf:type owl:Class ;
                                                    
                                                    rdfs:label "Meet"@en ;
                                                    
-                                                   rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event> .
+                                                   rdfs:subClassOf <http://rdf.fm/event#Sporting_Event> .
 
 
 
 ###  Event/Sporting_Event/Race
 
-<http://rdf.fm/Event/Sporting_Event/Race> rdf:type owl:Class ;
+<#Race> rdf:type owl:Class ;
                                                    
                                                    rdfs:label "Race"@en ;
                                                    
-                                                   rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event> .
+                                                   rdfs:subClassOf <http://rdf.fm/event#Sporting_Event> .
 
 
 
 ###  Event/Sporting_Event/Race_Stage
 
-<http://rdf.fm/Event/Sporting_Event/Race_Stage> rdf:type owl:Class ;
+<#Race_Stage> rdf:type owl:Class ;
                                                          
                                                          rdfs:label "Race Stage"@en ;
                                                          
-                                                         rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event> .
+                                                         rdfs:subClassOf <http://rdf.fm/event#Sporting_Event> .
 
 
 
 ###  Event/Sporting_Event/Season
 
-<http://rdf.fm/Event/Sporting_Event/Season> rdf:type owl:Class ;
+<#Season> rdf:type owl:Class ;
                                                      
                                                      rdfs:label "Season"@en ;
                                                      
-                                                     rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event> .
+                                                     rdfs:subClassOf <http://rdf.fm/event#Sporting_Event> .
 
 
 
 ###  Event/Sporting_Event/Series
 
-<http://rdf.fm/Event/Sporting_Event/Series> rdf:type owl:Class ;
+<#Series> rdf:type owl:Class ;
                                                      
                                                      rdfs:label "Series"@en ;
                                                      
-                                                     rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event> .
+                                                     rdfs:subClassOf <http://rdf.fm/event#Sporting_Event> .
 
 
 
 ###  Event/Sporting_Event/Tournament
 
-<http://rdf.fm/Event/Sporting_Event/Tournament> rdf:type owl:Class ;
+<#Tournament> rdf:type owl:Class ;
                                                          
                                                          rdfs:label "Tournament"@en ;
                                                          
-                                                         rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event> .
+                                                         rdfs:subClassOf <http://rdf.fm/event#Sporting_Event> .
 
 
 
 ###  Event/Sporting_Event/Race/Multi_Stage_Race
 
-<http://rdf.fm/Event/Sporting_Event/Race/Multi_Stage_Race> rdf:type owl:Class ;
+<#Multi_Stage_Race> rdf:type owl:Class ;
                                                                     
                                                                     rdfs:label "Multi Stage Race"@en ;
                                                                     
-                                                                    rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event/Race> .
+                                                                    rdfs:subClassOf <http://rdf.fm/event#Race> .
 
 
 
 ###  Event/Sporting_Event/Race/Single_Stage_Race
 
-<http://rdf.fm/Event/Sporting_Event/Race/Single_Stage_Race> rdf:type owl:Class ;
+<#Single_Stage_Race> rdf:type owl:Class ;
                                                                      
                                                                      rdfs:label "Single Stage Race"@en ;
                                                                      
-                                                                     rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event/Race> .
+                                                                     rdfs:subClassOf <http://rdf.fm/event#Race> .
 
 
 
 ###  Event/Sporting_Event/Race/Multi_Stage_Race/Cycling_Race
 
-<http://rdf.fm/Event/Sporting_Event/Race/Multi_Stage_Race/Cycling_Race> rdf:type owl:Class ;
+<#Cycling_Race> rdf:type owl:Class ;
                                                                                  
                                                                                  rdfs:label "Cycling Race"@en ;
                                                                                  
-                                                                                 rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event/Race/Multi_Stage_Race> .
-
-
-
-###  Event/Sporting_Event/Race/Multi_Stage_Race/Cycling_Race/Tour_de_France
-
-<http://rdf.fm/Event/Sporting_Event/Race/Multi_Stage_Race/Cycling_Race/Tour_de_France> rdf:type owl:Class ;
-                                                                                                
-                                                                                                rdfs:label "Tour de France"@en ;
-                                                                                                
-                                                                                                rdfs:subClassOf <http://rdf.fm/Event/Sporting_Event/Race/Multi_Stage_Race/Cycling_Race> .
+                                                                                 rdfs:subClassOf <http://rdf.fm/event#Multi_Stage_Race> .
 
 ###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net

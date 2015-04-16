@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://rdf.fm/document.owl> rdf:type owl:Ontology ;
+<http://rdf.fm/core#Document> rdf:type owl:Ontology ;
                                          
                                          rdfs:label "FactMint Document Schema"@en ;
                                          
@@ -30,9 +30,9 @@
             alex.parkes@factmint.com
  """@en ;
                                          
-                                         owl:versionInfo "0.1"@en ;
+                                         owl:versionInfo "0.2"@en ;
                                                                                   
-                                         owl:imports <http://rdf.fm/core.owl> .
+                                         owl:imports <http://rdf.fm/core> .
 
 
 #################################################################
@@ -44,13 +44,13 @@
 
 ###  http://rdf.fm/hasLocation/hasLogicalLocation
 
-<http://rdf.fm/hasLocation/hasLogicalLocation> rdf:type owl:ObjectProperty ;
+<#hasLogicalLocation> rdf:type owl:ObjectProperty ;
                                                                                                      
                                                rdfs:label "has logical location"@en ;
 
                                                rdfs:comment "This property is so that documents can be given a logical location in either a virtual environment like a file system, or a conceptual environment like a classification system."@en ;
                                                
-                                               rdfs:subPropertyOf <http://rdf.fm/hasLocation> .
+                                               rdfs:subPropertyOf <http://rdf.fm/core#hasLocation> .
 
 
 
@@ -69,7 +69,7 @@
                                        
                                        rdfs:label "has date of publication"@en ;
                                        
-                                       rdfs:subPropertyOf <http://rdf.fm/hasStartOfExistence> .
+                                       rdfs:subPropertyOf <http://rdf.fm/core#hasStartOfExistence> .
 
 
 
@@ -79,9 +79,9 @@
                                         
                                         rdfs:label "has title"@en ;
                                         
-                                        rdfs:domain <http://rdf.fm/Document> ;
+                                        rdfs:domain <http://rdf.fm/core#Document> ;
                                         
-                                        rdfs:subPropertyOf <http://rdf.fm/hasName> ;
+                                        rdfs:subPropertyOf <http://rdf.fm/core#hasName> ;
                                         
                                         rdfs:range xsd:Name .
 
@@ -98,231 +98,231 @@
 
 ###  Document/Audio-Visual_Document
 
-<http://rdf.fm/Document/Audio-Visual_Document> rdf:type owl:Class ;
+<#Audio-Visual_Document> rdf:type owl:Class ;
                                                         
                                                         rdfs:label "Audio-Visual Document"@en ;
                                                         
-                                                        rdfs:subClassOf <http://rdf.fm/Document> .
+                                                        rdfs:subClassOf <http://rdf.fm/core#Document> .
 
 
 
 ###  Document/Audio_Document
 
-<http://rdf.fm/Document/Audio_Document> rdf:type owl:Class ;
+<#Audio_Document> rdf:type owl:Class ;
                                                  
                                                  rdfs:label "Audio Document"@en ;
                                                  
-                                                 rdfs:subClassOf <http://rdf.fm/Document> .
+                                                 rdfs:subClassOf <http://rdf.fm/core#Document> .
 
 
 
 ###  Document/Visual_Document
 
-<http://rdf.fm/Document/Visual_Document> rdf:type owl:Class ;
+<#Visual_Document> rdf:type owl:Class ;
                                                   
                                                   rdfs:label "Visual Document"@en ;
                                                   
-                                                  rdfs:subClassOf <http://rdf.fm/Document> .
+                                                  rdfs:subClassOf <http://rdf.fm/core#Document> .
 
 
 
 ###  Document/Written_Document
 
-<http://rdf.fm/Document/Written_Document> rdf:type owl:Class ;
+<#Written_Document> rdf:type owl:Class ;
                                                    
                                                    rdfs:label "Written Document"@en ;
                                                    
-                                                   rdfs:subClassOf <http://rdf.fm/Document> .
+                                                   rdfs:subClassOf <http://rdf.fm/core#Document> .
 
 
 
 ###  Document/Audio-Visual_Document/Film
 
-<http://rdf.fm/Document/Audio-Visual_Document/Film> rdf:type owl:Class ;
+<#Film> rdf:type owl:Class ;
                                                              
                                                              rdfs:label "Film"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Document/Audio-Visual_Document> .
+                                                             rdfs:subClassOf <http://rdf.fm/document#Audio-Visual_Document> .
 
 
 
 ###  Document/Audio-Visual_Document/Slideshow_with_Commentary
 
-<http://rdf.fm/Document/Audio-Visual_Document/Slideshow_with_Commentary> rdf:type owl:Class ;
+<#Slideshow_with_Commentary> rdf:type owl:Class ;
                                                                                   
                                                                                   rdfs:label "Slideshow with Commentary"@en ;
                                                                                   
-                                                                                  rdfs:subClassOf <http://rdf.fm/Document/Audio-Visual_Document> .
+                                                                                  rdfs:subClassOf <http://rdf.fm/document#Audio-Visual_Document> .
 
 
 
 ###  Document/Audio_Document/Album
 
-<http://rdf.fm/Document/Audio_Document/Album> rdf:type owl:Class ;
+<#Album> rdf:type owl:Class ;
                                                        
                                                        rdfs:label "Album"@en ;
                                                        
-                                                       rdfs:subClassOf <http://rdf.fm/Document/Audio_Document> .
+                                                       rdfs:subClassOf <http://rdf.fm/document#Audio_Document> .
 
 
 
 ###  Document/Audio_Document/Audio_Book
 
-<http://rdf.fm/Document/Audio_Document/Audio_Book> rdf:type owl:Class ;
+<#Audio_Book> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Audio Book"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Document/Audio_Document> .
+                                                            rdfs:subClassOf <http://rdf.fm/document#Audio_Document> .
 
 
 
 ###  Document/Audio_Document/Podcast
 
-<http://rdf.fm/Document/Audio_Document/Podcast> rdf:type owl:Class ;
+<#Podcast> rdf:type owl:Class ;
                                                          
                                                          rdfs:label "Podcast"@en ;
                                                          
-                                                         rdfs:subClassOf <http://rdf.fm/Document/Audio_Document> .
+                                                         rdfs:subClassOf <http://rdf.fm/document#Audio_Document> .
 
 
 
 ###  Document/Audio_Document/Song
 
-<http://rdf.fm/Document/Audio_Document/Song> rdf:type owl:Class ;
+<#Song> rdf:type owl:Class ;
                                                       
                                                       rdfs:label "Song"@en ;
                                                       
-                                                      rdfs:subClassOf <http://rdf.fm/Document/Audio_Document> .
+                                                      rdfs:subClassOf <http://rdf.fm/document#Audio_Document> .
 
 
 
 ###  Document/Visual_Document/Drawing
 
-<http://rdf.fm/Document/Visual_Document/Drawing> rdf:type owl:Class ;
+<#Drawing> rdf:type owl:Class ;
                                                           
                                                           rdfs:label "Drawing"@en ;
                                                           
-                                                          rdfs:subClassOf <http://rdf.fm/Document/Visual_Document> .
+                                                          rdfs:subClassOf <http://rdf.fm/document#Visual_Document> .
 
 
 
 ###  Document/Visual_Document/Map
 
-<http://rdf.fm/Document/Visual_Document/Map> rdf:type owl:Class ;
+<#Map> rdf:type owl:Class ;
                                                       
                                                       rdfs:label "Map"@en ;
                                                       
-                                                      rdfs:subClassOf <http://rdf.fm/Document/Visual_Document> .
+                                                      rdfs:subClassOf <http://rdf.fm/document#Visual_Document> .
 
 
 
 ###  Document/Visual_Document/Painting
 
-<http://rdf.fm/Document/Visual_Document/Painting> rdf:type owl:Class ;
+<#Painting> rdf:type owl:Class ;
                                                            
                                                            rdfs:label "Painting"@en ;
                                                            
-                                                           rdfs:subClassOf <http://rdf.fm/Document/Visual_Document> .
+                                                           rdfs:subClassOf <http://rdf.fm/document#Visual_Document> .
 
 
 
 ###  Document/Visual_Document/Photograph
 
-<http://rdf.fm/Document/Visual_Document/Photograph> rdf:type owl:Class ;
+<#Photograph> rdf:type owl:Class ;
                                                              
                                                              rdfs:label "Photograph"@en ;
                                                              
-                                                             rdfs:subClassOf <http://rdf.fm/Document/Visual_Document> .
+                                                             rdfs:subClassOf <http://rdf.fm/document#Visual_Document> .
 
 
 
 ###  Document/Visual_Document/Slideshow
 
-<http://rdf.fm/Document/Visual_Document/Slideshow> rdf:type owl:Class ;
+<#Slideshow> rdf:type owl:Class ;
                                                             
                                                             rdfs:label "Slideshow"@en ;
                                                             
-                                                            rdfs:subClassOf <http://rdf.fm/Document/Visual_Document> .
+                                                            rdfs:subClassOf <http://rdf.fm/document#Visual_Document> .
 
 
 
 ###  Document/Written_Document/Correspondence
 
-<http://rdf.fm/Document/Written_Document/Correspondence> rdf:type owl:Class ;
+<#Correspondence> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Correspondence"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Document/Written_Document> .
+                                                                  rdfs:subClassOf <http://rdf.fm/document#Written_Document> .
 
 
 
 ###  Document/Written_Document/Guide_Book
 
-<http://rdf.fm/Document/Written_Document/Guide_Book> rdf:type owl:Class ;
+<#Guide_Book> rdf:type owl:Class ;
                                                               
                                                               rdfs:label "Guide Book"@en ;
                                                               
-                                                              rdfs:subClassOf <http://rdf.fm/Document/Written_Document> .
+                                                              rdfs:subClassOf <http://rdf.fm/document#Written_Document> .
 
 
 
 ###  Document/Written_Document/Legal_Document
 
-<http://rdf.fm/Document/Written_Document/Legal_Document> rdf:type owl:Class ;
+<#Legal_Document> rdf:type owl:Class ;
                                                                   
                                                                   rdfs:label "Legal Document"@en ;
                                                                   
-                                                                  rdfs:subClassOf <http://rdf.fm/Document/Written_Document> .
+                                                                  rdfs:subClassOf <http://rdf.fm/document#Written_Document> .
 
 
 
 ###  Document/Written_Document/Novel
 
-<http://rdf.fm/Document/Written_Document/Novel> rdf:type owl:Class ;
+<#Novel> rdf:type owl:Class ;
                                                          
                                                          rdfs:label "Novel"@en ;
                                                          
-                                                         rdfs:subClassOf <http://rdf.fm/Document/Written_Document> .
+                                                         rdfs:subClassOf <http://rdf.fm/document#Written_Document> .
 
 
 
 ###  Document/Written_Document/Poem
 
-<http://rdf.fm/Document/Written_Document/Poem> rdf:type owl:Class ;
+<#Poem> rdf:type owl:Class ;
                                                         
                                                         rdfs:label "Poem"@en ;
                                                         
-                                                        rdfs:subClassOf <http://rdf.fm/Document/Written_Document> .
+                                                        rdfs:subClassOf <http://rdf.fm/document#Written_Document> .
 
 
 
 ###  Document/Written_Document/Legal_Document/Contract
 
-<http://rdf.fm/Document/Written_Document/Legal_Document/Contract> rdf:type owl:Class ;
+<#Contract> rdf:type owl:Class ;
                                                                            
                                                                            rdfs:label "Contract"@en ;
                                                                            
-                                                                           rdfs:subClassOf <http://rdf.fm/Document/Written_Document/Legal_Document> .
+                                                                           rdfs:subClassOf <http://rdf.fm/document#Legal_Document> .
 
 
 
 ###  Document/Written_Document/Legal_Document/Deeds
 
-<http://rdf.fm/Document/Written_Document/Legal_Document/Deeds> rdf:type owl:Class ;
+<#Deeds> rdf:type owl:Class ;
                                                                         
                                                                         rdfs:label "Deeds"@en ;
                                                                         
-                                                                        rdfs:subClassOf <http://rdf.fm/Document/Written_Document/Legal_Document> .
+                                                                        rdfs:subClassOf <http://rdf.fm/document#Legal_Document> .
 
 
 
 ###  Document/Written_Document/Legal_Document/Will
 
-<http://rdf.fm/Document/Written_Document/Legal_Document/Will> rdf:type owl:Class ;
+<#Will> rdf:type owl:Class ;
                                                                        
                                                                        rdfs:label "Will"@en ;
                                                                        
-                                                                       rdfs:subClassOf <http://rdf.fm/Document/Written_Document/Legal_Document> .
+                                                                       rdfs:subClassOf <http://rdf.fm/document#Legal_Document> .
 
 
 
