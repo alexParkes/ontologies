@@ -37,24 +37,36 @@
 
 #################################################################
 #
-#    Object Properties
+#    Datatype Properties
 #
 #################################################################
 
 
 
-###  http://rdf.fm/hasLocation/hasGeographicLocation
+###  http://rdf/fm/hasLocation/hasGeographicLocation/hasPointLocation
 
-<#hasGeographicLocation> rdf:type owl:ObjectProperty ;
-                                                                                                        
-                                                  rdfs:label "has geographic location"@en ;
-                                                  
-                                                  rdfs:comment "This is intended to cover where things are in a geographical sense, e.g. the country, town or street that something is in."@en ;
-                                                  
+<#hasPointLocation> rdf:type owl:DatatypeProperty ;
+                                                      
+                                                                  rdfs:label "has point location"@en ;
+                                                                  
+                                                                  rdfs:comment "This is supposed to cover arbitrary geographic points in space (arguably areas themselves, as they can presumably by sub-divided infinitely). In a more practical sense, this is supposed to cover measurements such as co-ordinates etc."@en ;
+                                                                  
                                                   rdfs:subPropertyOf <http://rdf.fm/core#hasLocation> .
 
+<#latitude> rdf:type owl:DatatypeProperty ;
+            rdfs:label  "latitude"@en ;
+            rdfs:subPropertyOf  <#hasPointLocation> .
+
+<#longitude> rdf:type owl:DatatypeProperty ;
+            rdfs:label  "longitude"@en ;
+            rdfs:subPropertyOf  <#hasPointLocation> .
 
 
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
 
 
 ###  http://rdf/fm/hasLocation/hasGeographicLocation/hasAreaLocation
@@ -65,19 +77,9 @@
                                                      
                                                      rdfs:comment "This is intended to cover geographic areas such as regions, towns and streets."@en ;
                                                      
-                                                     rdfs:subPropertyOf <http://rdf.fm#hasGeographicLocation> .
+                                                  rdfs:subPropertyOf <http://rdf.fm/core#hasLocation> .
 
 
-
-###  http://rdf/fm/hasLocation/hasGeographicLocation/hasPointLocation
-
-<#hasPointLocation> rdf:type owl:ObjectProperty ;
-                                                      
-                                                                  rdfs:label "has point location"@en ;
-                                                                  
-                                                                  rdfs:comment "This is supposed to cover arbitrary geographic points in space (arguably areas themselves, as they can presumably by sub-divided infinitely). In a more practical sense, this is supposed to cover measurements such as co-ordinates etc."@en ;
-                                                                  
-                                                                  rdfs:subPropertyOf <http://rdf.fm/geographic_location#hasGeographicLocation> .
 
 ###  http://rdf/fm/hasLocation/hasGeographicLocation/includes
 
